@@ -19,7 +19,7 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td>Registration
-    <td>2:00 PM?
+    <td>(2-3:00) PM
     <td>8:00 PM
   </tr>
   <tr>
@@ -66,14 +66,13 @@ so you can navigate back and forth by selecting the titles
   <tr>
 	<td class="time">5:00 PM</td>
 	<td ></td>
-	<td class="planned" rowspan="1">Open Program Generation</td>        
-	<td class="planned" rowspan="1">Opening Ceremony</td>                
-
+	<td ></td>
+	<td class="planned" rowspan="2">Opening Ceremony</td>                
   </tr>
   <tr>
 	<td class="time">5:30 PM</td>
 	<td ></td>
-	<td ></td>        
+	<td class="planned" rowspan="1">Open Program Generation</td>        
 	<td ></td>
   </tr>
   <tr>
@@ -153,7 +152,6 @@ so you can navigate back and forth by selecting the titles
     <td>9:00 AM, 8:00 PM
     <td>5:30 PM, 12:00 AM
   </tr>
-  Artists' Alley II from 10 AM - 2 PM, III from 2 - 6 PM, IV from 6 - 10 PM 
 </table>
 <table class="schedule">
   <tr>
@@ -460,7 +458,7 @@ Description detail goes here for Schedule Slot 01
 
 
 ### <a id="detail_06"></a> <a href="#schedule_06"> Mirror Charades </a>
-something something something chicken?
+* Jason supplying description *
 
 ### <a id="detail_07"></a> <a href="#schedule_07"> <!-- title here --> </a>
 ### <a id="detail_08"></a> <a href="#schedule_08"> <!-- title here --> </a>
