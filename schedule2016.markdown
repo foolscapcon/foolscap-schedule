@@ -458,7 +458,7 @@ Description detail goes here for Schedule Slot 01
 
 
 ### <a id="detail_06"></a> <a href="#schedule_06"> Mirror Charades </a>
-* Jason supplying description *
+Mirror Charades is just like charades - but the person who knows the clue can’t be seen by the guessers, and the person who’s acting it out doesn’t know what they’re trying to clue. Of course, they can’t talk to each other, either. Chaos ensues.
 
 ### <a id="detail_07"></a> <a href="#schedule_07"> <!-- title here --> </a>
 ### <a id="detail_08"></a> <a href="#schedule_08"> <!-- title here --> </a>
