@@ -19,7 +19,7 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td>Registration
-    <td>(2-3:00) PM
+    <td>2:00 PM
     <td>8:00 PM
   </tr>
   <tr>
@@ -39,8 +39,8 @@ so you can navigate back and forth by selecting the titles
   </tr>  
   <tr>
     <td>Hospitality (Room 2105)
-    <td>4:00 PM
-    <td>12:00 AM
+    <td>8:00 PM
+    <td>11:00 PM
   </tr>  
 </table>
 
@@ -90,7 +90,7 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">8:00 PM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_01"></a><a href="#detail_01">Schedule Slot 01</a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_01"></a><a href="#detail_01"></a></td>
 	<td class="openspace" rowspan="2"><a id="schedule_02"></a><a href="#detail_02"></a></td>
   </tr>
   <tr>
