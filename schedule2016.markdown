@@ -445,13 +445,13 @@ so you can navigate back and forth by selecting the titles
 ### Test title<a id="detail_01"></a>
 Description goes here
   -->
-### <a id="detail_01"></a><a href="#schedule_01">Schedule Slot 01</a>
-Description detail goes here for Schedule Slot 01
+### <a id="detail_01"></a><a href="#schedule_01">Hugo Pitch Session</a>
 
-### <a id="detail_02"></a> <a href="#schedule_02"> <!-- title here --> </a>
-### <a id="detail_03"></a> <a href="#schedule_03"> <!-- title here --> </a>
 
-### <a id="detail_04"></a> <a href="#schedule_04"> <!-- title here --> </a>
+### <a id="detail_02"></a> <a href="#schedule_02"> Micro RPG<!-- title here --> </a>
+### <a id="detail_03"></a> <a href="#schedule_03"> <!-- title here --> Ask a Brown Girl</a>
+
+### <a id="detail_04"></a> <a href="#schedule_04"> <!-- title here --> Thorwn with Great Force - Classics we Won't Finish</a>
 
 
 ### <a id="detail_05"></a> <a href="#schedule_05"><!-- title here --> </a>
