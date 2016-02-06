@@ -129,28 +129,23 @@ so you can navigate back and forth by selecting the titles
 <table class="schedule">
   <tr>
     <td>Registration
-    <td>10:00 AM
-    <td>5:30 PM
+    <td>11:00 AM
+    <td>6:30 PM
   </tr>
   <tr>
     <td>Art Show
     <td>10:00 AM
-    <td>5:30 PM      
+    <td>6:30 PM      
   </tr>
   <tr>
     <td>Dealers' Hall
-    <td>10:00 AM
-    <td>5:30 PM
+    <td>11:00 AM
+    <td>6:30 PM
   </tr>
   <tr>
-    <td>Artists' Alley
-    <td>10:00 AM
-    <td>5:30 PM
-  </tr>  
-  <tr>
-    <td>Hospitality 
-    <td>9:00 AM, 8:00 PM
-    <td>5:30 PM, 12:00 AM
+    <td>Hospitality (Closed during meals) (2105) 
+    <td>9:00 AM
+    <td>11:00 PM
   </tr>
 </table>
 <table class="schedule">
@@ -201,8 +196,8 @@ so you can navigate back and forth by selecting the titles
   <tr>
 	<td class="time">12:00 PM</td>
 	<td ></td>
+	<td class="planned" rowspan="2">Open Program Generation</td>	
 	<td ></td>
-	<td class="planned" rowspan="2">Open Program Generation</td>
   </tr>
   <tr>
 	<td class="time">12:30 PM</td>
@@ -390,6 +385,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">1:30 PM</td>
+    <TD></TD>
+    <TD></TD>
     	<td class="planned" rowspan="3">Foolscap Auction</td>    
   </tr>
   <tr>
@@ -414,7 +411,7 @@ so you can navigate back and forth by selecting the titles
 
 	<td ></td>
   </tr>
-  <tr>
+  <!--tr>
     <td class="time">4:00 PM</td>
     	<td class="planned" rowspan="5"></td>
   </tr>
@@ -432,7 +429,7 @@ so you can navigate back and forth by selecting the titles
 	<td class="time">5:30 PM</td>
 	<td ></td>
 	<td ></td>
-  </tr>
+  </tr-->
 </table>
 
 ## Open Space Panel Descriptions
@@ -477,7 +474,9 @@ According to science, when Sue Storm of Violet turns invisible, she would also g
 - Dave Howell
 ### <a id="detail_09"></a> <a href="#schedule_09"> <!-- title here --> Pen Addiction</a>
 People interested in fine writing instruments, ink, paper.  Bring your pens!
+
 - Douglas Beal
+
 Needs tables for writing
 ### <a id="detail_10"></a> <a href="#schedule_10"> <!-- title here --> Taxidermy: What? Is it gross or not?</a>
 Draconian, a trained taxidermist will happily answer questions you have or never through you'd have about this fascinating craft?  History, techniques.
