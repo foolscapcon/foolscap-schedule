@@ -90,16 +90,16 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">8:00 PM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_01"></a><a href="#detail_01"></a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_02"></a><a href="#detail_02"></a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_01"></a><a href="#detail_01">Hugo Pitch Session</a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_02"></a><a href="#detail_02">Micro RPG</a></td>
   </tr>
   <tr>
 	<td class="time">8:30 PM</td>
   </tr>
   <tr>
     <td class="time">9:00 PM</td>
-    <td class="openspace" rowspan="2"><a id="schedule_03"></a><a href="#detail_03"></a></td>
-    <td class="openspace" rowspan="2"><a id="schedule_04"></a><a href="#detail_04"></a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_03"></a><a href="#detail_03">Ask a Brown Girl</a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_04"></a><a href="#detail_04">Thrown with Great Force - Classics we Won't Finish</a></td>
 
   </tr>
   <tr>
@@ -108,7 +108,7 @@ so you can navigate back and forth by selecting the titles
   <tr>
     <td class="time">10:00 PM</td>
     <td class="" rowspan="4"><a id="schedule_05"></a><a href="#detail_05"></a></td>
-    <td class="planned" rowspan="4"><a id="schedule_06"></a><a href="#detail_06">Mirror Charades</a></td>
+    <td class="planned" rowspan="4"><a id="schedule_06"></a><a href="#detail_06">Mirror Charades Against Humanities</a></td>
     <td ></td>
 
   </tr>
@@ -457,8 +457,10 @@ Description detail goes here for Schedule Slot 01
 ### <a id="detail_05"></a> <a href="#schedule_05"><!-- title here --> </a>
 
 
-### <a id="detail_06"></a> <a href="#schedule_06"> Mirror Charades </a>
+### <a id="detail_06"></a> <a href="#schedule_06"> Mirror Charades Against Humanities </a>
 Mirror Charades is just like charades - but the person who knows the clue can’t be seen by the guessers, and the person who’s acting it out doesn’t know what they’re trying to clue. Of course, they can’t talk to each other, either. Chaos ensues.
+
+Topics will be inflicted from Cards against humanities  
 
 ### <a id="detail_07"></a> <a href="#schedule_07"> <!-- title here --> </a>
 ### <a id="detail_08"></a> <a href="#schedule_08"> <!-- title here --> </a>
