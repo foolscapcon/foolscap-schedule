@@ -180,8 +180,8 @@ so you can navigate back and forth by selecting the titles
   </tr -->
   <tr>
     <td class="time">10:00 AM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_07"></a><a href="#detail_07"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_08"></a><a href="#detail_08"> <!-- title here --> </a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_07"></a><a href="#detail_07"> Future What?<!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_08"></a><a href="#detail_08"> Super Powers vs. Reality<!-- title here --> </a></td>
 	<td ></td>
   </tr>
   <tr>
@@ -189,8 +189,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">11:00 AM</td>
-	<td class="openspace" rowspan="2"><a id="schedule_09"></a><a href="#detail_09"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_10"></a><a href="#detail_10"> <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_09"></a><a href="#detail_09">Pen Addiction <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_10"></a><a href="#detail_10"> Taxidermy: What? Is it gross, or not?<!-- title here --> </a></td>
 
   </tr>
   <tr>
@@ -469,10 +469,20 @@ Charades... with a CAH twist! When it's your turn to perform, pick 5 white chard
 Mirror Charades is just like charades - but the person who knows the clue can’t be seen by the guessers, and the person who’s acting it out doesn’t know what they’re trying to clue. Of course, they can’t talk to each other, either. Chaos ensues.
 
 
-### <a id="detail_07"></a> <a href="#schedule_07"> <!-- title here --> </a>
-### <a id="detail_08"></a> <a href="#schedule_08"> <!-- title here --> </a>
-### <a id="detail_09"></a> <a href="#schedule_09"> <!-- title here --> </a>
-### <a id="detail_10"></a> <a href="#schedule_10"> <!-- title here --> </a>
+### <a id="detail_07"></a> <a href="#schedule_07"> <!-- title here --> Future What?</a>
+What technologies are coming up that will have a profound social impact and what will those impacts and technologies be?
+- Ari Goldstein
+### <a id="detail_08"></a> <a href="#schedule_08"> <!-- title here --> Super Powers vs. Reality</a>
+According to science, when Sue Storm of Violet turns invisible, she would also go blind. The Flash can't disappear from a room any more than a Ferrari can vanish without "burning rubber," not enough traction.  If Steve Austin tried to lift one end of a car, he would merely crush his spine.  What superpowers DO work in the real world
+- Dave Howell
+### <a id="detail_09"></a> <a href="#schedule_09"> <!-- title here --> Pen Addiction</a>
+People interested in fine writing instruments, ink, paper.  Bring your pens!
+- Douglas Beal
+Needs tables for writing
+### <a id="detail_10"></a> <a href="#schedule_10"> <!-- title here --> Taxidermy: What? Is it gross or not?</a>
+Draconian, a trained taxidermist will happily answer questions you have or never through you'd have about this fascinating craft?  History, techniques.
+Expected to have R-rated or potentially triggering content. [blood/core/death mentioned]
+- Dracontia
 ### <a id="detail_11"></a> <a href="#schedule_11"> <!-- title here --> </a>
 ### <a id="detail_12"></a> <a href="#schedule_12"> <!-- title here --> </a>
 ### <a id="detail_13"></a> <a href="#schedule_13"> <!-- title here --> </a>
