@@ -485,7 +485,7 @@ Expected to have R-rated or potentially triggering content. [blood/core/death me
 ### <a id="detail_11"></a> <a href="#schedule_11"> Stone Cutting<!-- title here --> </a>
 Jerry tells us about Rocks [presentation/demo]
 - Jerry Chilson
-### <a id="detail_12"></a> <a href="#schedule_12"> Star Trek 50 years on - What are its cultural influences<!-- title here --> </a>
+### <a id="detail_12"></a> <a href="#schedule_12"> Star Trek 50 years on: What are its cultural influences<!-- title here --> </a>
 Star Trek show as influential., New series, new movie, good idea?
 - Linda Deneron
 ### <a id="detail_13"></a> <a href="#schedule_13">How to Build a person.  AIs in SciFI <!-- title here --> </a>
