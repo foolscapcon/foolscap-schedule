@@ -222,8 +222,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">3:00 PM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_11"></a><a href="#detail_11"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_12"></a><a href="#detail_12"> <!-- title here --> </a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_11"></a><a href="#detail_11"> Stone Cutting<!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_12"></a><a href="#detail_12"> Star Trek 50 years on!-- title here --> </a></td>
 	<td ></td>
   </tr>
   <tr>
@@ -232,8 +232,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">4:00 PM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_13"></a><a href="#detail_13"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_14"></a><a href="#detail_14"> <!-- title here --> </a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_13"></a><a href="#detail_13"> How to Build a Person. AIs in SciFi<!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_14"></a><a href="#detail_14">Major Tom to Blackstar <!-- title here --> </a></td>
 	<td ></td>
 
   </tr>
@@ -243,7 +243,7 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">5:00 PM</td>
-    	<td class="openspace" rowspan="2"><a id="schedule_15"></a><a href="#detail_15"> <!-- title here --> </a></td>
+    	<td class="openspace" rowspan="2"><a id="schedule_15"></a><a href="#detail_15"> Video game as narrative fiction<!-- title here --> </a></td>
 	<td class="openspace" rowspan="2"><a id="schedule_16"></a><a href="#detail_16"> <!-- title here --> </a></td>
 	<td ></td>
   </tr>
@@ -266,8 +266,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
 	<td class="time">8:00 PM</td>
-	<td class="openspace" rowspan="2"><a id="schedule_17"></a><a href="#detail_17"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_18"></a><a href="#detail_18"> <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_17"></a><a href="#detail_17">new media and brain development <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_18"></a><a href="#detail_18">Hannibal pannibal for fannibals  <!-- title here --> </a></td>
 	<td ></td>
   </tr>
   <tr>
@@ -276,8 +276,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">9:00 PM</td>
-    <td class="openspace" rowspan="2"><a id="schedule_19"></a><a href="#detail_19"> <!-- title here --> </a></td>
-    <td class="openspace" rowspan="2"><a id="schedule_20"></a><a href="#detail_20"><!-- title here --> </a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_19"></a><a href="#detail_19">inside the mind of a publisher <!-- title here --> </a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_20"></a><a href="#detail_20">fighting dirty<!-- title here --> </a></td>
     <td ></td>
   </tr>
   <tr>
@@ -346,8 +346,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">9:30 AM</td>
-    <td class="openspace" rowspan="2"><a id="schedule_24"></a><a href="#detail_24"> <!-- title here --> </a></td>
-    <td class="openspace" rowspan="2"><a id="schedule_25"></a><a href="#detail_25"> <!-- title here --> </a></td>        
+    <td class="openspace" rowspan="2"><a id="schedule_24"></a><a href="#detail_24"> spoilerS!<!-- title here --> </a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_25"></a><a href="#detail_25">first convention, lasting impressions <!-- title here --> </a></td>        
     <td ></td>
   </tr>
   <tr>
@@ -356,8 +356,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">10:30 AM</td>
-    <td class="openspace" rowspan="2"><a id="schedule_26"></a><a href="#detail_26"> <!-- title here --> </a></td>
-    <td class="openspace" rowspan="2"><a id="schedule_27"></a><a href="#detail_27"> <!-- title here --> </a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_26"></a><a href="#detail_26">bring your own book <!-- title here --> </a></td>
+    <td class="openspace" rowspan="2"><a id="schedule_27"></a><a href="#detail_27">what makes a civilized society? <!-- title here --> </a></td>
     <td ></td>
   </tr>
   <tr>
@@ -367,8 +367,8 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
 	<td class="time">11:30 AM</td>
-	<td class="openspace" rowspan="2"><a id="schedule_28"></a><a href="#detail_28"> <!-- title here --> </a></td>
-	<td class="openspace" rowspan="2"><a id="schedule_29"></a><a href="#detail_29"> <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_28"></a><a href="#detail_28">pitch your fandom <!-- title here --> </a></td>
+	<td class="openspace" rowspan="2"><a id="schedule_29"></a><a href="#detail_29">numinous experience <!-- title here --> </a></td>
 	<td ></td>
   </tr>
   <tr>
@@ -482,28 +482,72 @@ Needs tables for writing
 Draconian, a trained taxidermist will happily answer questions you have or never through you'd have about this fascinating craft?  History, techniques.
 Expected to have R-rated or potentially triggering content. [blood/core/death mentioned]
 - Dracontia
-### <a id="detail_11"></a> <a href="#schedule_11"> <!-- title here --> </a>
-### <a id="detail_12"></a> <a href="#schedule_12"> <!-- title here --> </a>
-### <a id="detail_13"></a> <a href="#schedule_13"> <!-- title here --> </a>
-### <a id="detail_14"></a> <a href="#schedule_14"> <!-- title here --> </a>
-### <a id="detail_15"></a> <a href="#schedule_15"> <!-- title here --> </a>
-### <a id="detail_16"></a> <a href="#schedule_16"> <!-- title here --> </a>
-### <a id="detail_17"></a> <a href="#schedule_17"> <!-- title here --> </a>
-### <a id="detail_18"></a> <a href="#schedule_18"> <!-- title here --> </a>
-### <a id="detail_19"></a> <a href="#schedule_19"> <!-- title here --> </a>
-### <a id="detail_20"></a> <a href="#schedule_20">Radio Play</a>
+### <a id="detail_11"></a> <a href="#schedule_11"> Stone Cutting<!-- title here --> </a>
+Jerry tells us about Rocks [presentation/demo]
+- Jerry Chilson
+### <a id="detail_12"></a> <a href="#schedule_12"> Star Trek 50 years on - What are its cultural influences<!-- title here --> </a>
+Star Trek show as influential., New series, new movie, good idea?
+- Linda Deneron
+### <a id="detail_13"></a> <a href="#schedule_13">How to Build a person.  AIs in SciFI <!-- title here --> </a>
+So tires about computer that become sentient and how characters create them.  Technical ideas allowed
+- David Whitten
+### <a id="detail_14"></a> <a href="#schedule_14">Major Tom to Blacksgtar: SFnal themes in and around the music of David Bowie <!-- title here --> </a>
+Throughout his career, David Bowie explored SF themes.  What songs were most successful?  With him gone, where do we go now?
+### <a id="detail_15"></a> <a href="#schedule_15"> Video game as narrative fiction<!-- title here --> </a>
+Have video games take over narrative fiction? Do they qualify as narrative fiction
+- Nick Fraser
+
+### <a id="detail_16"></a> <a href="#schedule_16">Star Wars: The Force Awakens Grumble Session <!-- title here --> </a>
+Are we being too forgiving to this quite mediocre film?  Bring your biases.
+- Brooks Peck
+### <a id="detail_17"></a> <a href="#schedule_17">New media and Brain Development <!-- title here --> </a>
+Neurological Development is differ in pre-literate societies than literate. How is new media changing how we think?
+- Jeff Olhoefer
+### <a id="detail_18"></a> <a href="#schedule_18"> <!-- title here --> The Hannible Pannibal for Fannials</a>
+Come discuss the various incarnations of Hannible lenter, from Red Dragon to the NBC series.
+
+Trigger warning: canon-typical violence
+- Berlynn Wohl
+### <a id="detail_19"></a> <a href="#schedule_19">Inside the Mind of a Publisher <!-- title here --> </a>
+3 different publishers will talk about how they chose titles, deal with stores + generally survive
+- Ben Coles - Promontory Press
+- Aishe Knoff - Razorgirl Press
+- Defcon Publishing
+### <a id="detail_20"></a> <a href="#schedule_20">Fighting Dirty <!-- title here --> </a>
+Underhanded debate tactics and how to shut it down.  Argument Pet Peeves, etc.
+- Elizabeth Adams
+### <a id="detail_21"></a> <a href="#schedule_21">Radio Play</a>
 This year the Foolscap Radio Play is trying something new: an anthology of shorts instead of one big play. Come on out and try – there will be many more chances to take part this year, and a wide variety of roles, as our stories range from Sherlock Holmes Victoriana to far-future space opera.
 Casting will be by our usual open-audition, no-one-guaranteed-anything, anyone-could-be-a-star! process, with a public audition in the afternoon, and then a public performance in the evening after a single rehearsal.
 We are proud to be presenting Vonda McIntyre’s “Adventure of the Field Theorems”, L. Sprague de Camp’s “Nothing in the Rules”, and a Buck Godot story from past Foolscap goh Phil Foglio.
-### <a id="detail_21"></a> <a href="#schedule_21"> <!-- title here --> </a>
+
 ### <a id="detail_22"></a> <a href="#schedule_22">Improv Micropanels</a>
-### <a id="detail_23"></a> <a href="#schedule_23"> <!-- title here --> </a>
-### <a id="detail_24"></a> <a href="#schedule_24"> <!-- title here --> </a>
-### <a id="detail_25"></a> <a href="#schedule_25"> <!-- title here --> </a>
-### <a id="detail_26"></a> <a href="#schedule_26"> <!-- title here --> </a>
-### <a id="detail_27"></a> <a href="#schedule_27"> <!-- title here --> </a>
-### <a id="detail_28"></a> <a href="#schedule_28"> <!-- title here --> </a>
-### <a id="detail_29"></a> <a href="#schedule_29"> <!-- title here --> </a>
+### <a id="detail_23"></a> <a href="#schedule_23"> <!-- skip title here --> </a>
+### <a id="detail_24"></a> <a href="#schedule_24"> Spoilers!<!-- title here --> </a>
+What is the statue of limitations on spoilers (or is there one)? Whose responsibility is spoiler avoidance? Are there particular works that go better with foreknowledge, or that absolutely must not be spoiled
+
+WARNING: Spoilers
+- Steven Standicki
+
+### <a id="detail_25"></a> <a href="#schedule_25"> <!-- title here --> First convention, lasting impressions</a>
+When, where, and why was your fist convention experience. What made you want to come back for more? 3 minutes per person.
+- Karen Anderson
+
+### <a id="detail_26"></a> <a href="#schedule_26"> <!-- title here --> Bring Your Own Book</a>
+Play B.Y.O.B prototype.  Select a book from the magic book box.  It will be your source material to come up with the winning response to the card.
+
+Triggering content: depends on source books
+- Douglas Beal
+
+### <a id="detail_27"></a> <a href="#schedule_27"> <!-- title here --> What makes a civilized society?</a>
+What constitutes "civilization"?  Behavioral standards? Living standards? Is "civilization" itself still a valid concept or is it outdated/imperialist?
+- ELIZABETH Adams
+### <a id="detail_28"></a> <a href="#schedule_28"> <!-- title here --> Pitch your Fandom</a>
+What fandom are you a part of that you would like to tell the rest of us about?
+- Dave W
+### <a id="detail_29"></a> <a href="#schedule_29"> <!-- title here --> Numinous Experience</a>
+What experiences, in and out of organized religion, reach beyond the mundane? How can we talked about them? Do they have something in common? What?
+- Kai
 ### <a id="detail_30"></a> <a href="#schedule_30"> <!-- title here --> </a>
 ### <a id="detail_31"></a> <a href="#schedule_31"> <!-- title here --> </a>
 ### <a id="detail_32"></a> <a href="#schedule_32"> <!-- title here --> </a>
