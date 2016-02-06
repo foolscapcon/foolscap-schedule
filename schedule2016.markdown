@@ -450,8 +450,11 @@ Hugo nomiations are open. What have you read or seen that you think people shoul
  - Dave W
 
 ###<a id="detail_02"></a> <a href="#schedule_02"> Micro RPG<!-- title here --> </a>
+Choose from a selection of RPG's whose instructions are 200 words or fewer.  Play for 30 minutes, then try another.
+ - Berlynn Wohl
 ### <a id="detail_03"></a> <a href="#schedule_03"> <!-- title here --> Ask a Brown Girl</a>
-
+Liz yells at you about racism and explains (to the best of her ability) why things are offensive.
+Expected R-rating or potentially triggering content.  If you're not uncomfortable, I'm doing it wrong.
 ### <a id="detail_04"></a> <a href="#schedule_04"> <!-- title here --> Thorwn with Great Force - Classics we Won't Finish</a>
 
 
