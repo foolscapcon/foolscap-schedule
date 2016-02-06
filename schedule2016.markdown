@@ -456,8 +456,10 @@ Choose from a selection of RPG's whose instructions are 200 words or fewer.  Pla
 Liz yells at you about racism and explains (to the best of her ability) why things are offensive.
 Expected R-rating or potentially triggering content.  If you're not uncomfortable, I'm doing it wrong.
 ### <a id="detail_04"></a> <a href="#schedule_04"> <!-- title here --> Thorwn with Great Force - Classics we Won't Finish</a>
-
-
+There are "classics of SF - "Dune" "Foundation" "Frankenstein"
+Which ones are better left on the shelf?
+Which genre classics aren't that much fun to read today, and why?
+- Beth Mitcham
 ### <a id="detail_05"></a> <a href="#schedule_05"><!-- title here --> </a>
 
 
