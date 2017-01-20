@@ -65,7 +65,7 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">...</td>
-  </tr>  
+  </tr>
   <tr>
     <td class="time">11:30 PM</td>
     <td ></td>
@@ -129,11 +129,11 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">...</td>
-  </tr>  
+  </tr>
   <tr>
     <td class="time">11:30 PM</td>
     <td ></td>
-  </tr>  
+  </tr>
 </table>
 
 ## Sunday
@@ -148,15 +148,15 @@ so you can navigate back and forth by selecting the titles
 <table class="schedule">
   <tr>
     <th ></th>
-    <th ></th>    
+    <th ></th>
   </tr>
   <tr>
     <td class="time">9:00 AM</td>
     <td ></td>
   </tr>
-    <tr>
+  <tr>
     <td class="time">...</td>
-  </tr>  
+  </tr>
   <tr>
     <td class="time">12:30 PM</td>
     <td class="break" rowspan="2">Lunch/Banquet</td>
@@ -171,42 +171,29 @@ so you can navigate back and forth by selecting the titles
   <tr>
     <td class="time">2:00 PM</td>
     <td ></td>
-
-    <td ></td>
   </tr>
   <tr>
     <td class="time">2:30 PM</td>
     <td ></td>
-    <td ></td>
   </tr>
   <tr>
     <td class="time">3:00 PM</td>
-        <td class="planned" rowspan="2">Closing Ceremony &amp; Foolscap Feedback</td>
-    <td ></td>
+    <td class="planned" rowspan="2">Closing Ceremony &amp; Foolscap Feedback</td>
   </tr>
   <tr>
     <td class="time">3:30 PM</td>
-
-
-    <td ></td>
   </tr>
   <tr>
     <td class="time">4:00 PM</td>
-        <td class="planned" rowspan="5"></td>
+    <td class="planned" rowspan="4"></td>
   </tr>
   <tr>
     <td class="time">4:30 PM</td>
-    <td ></td>
-    <td ></td>
   </tr>
   <tr>
     <td class="time">5:00 PM</td>
-    <td ></td>
-    <td ></td>
   </tr>
   <tr>
     <td class="time">5:30 PM</td>
-    <td ></td>
-    <td ></td>
   </tr>
 </table>
