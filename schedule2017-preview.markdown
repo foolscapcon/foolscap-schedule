@@ -3,7 +3,6 @@
 .schedule .planned {border: 1px solid black;}
 .schedule .break {text-align: center; vertical-align: middle; background-color: #999;}
 .schedule .openspace {text-align: center; border: 1px solid black;}
-.schedule a {text-decoration: none}
 </style>
 <!--
  #schedule_XX anchors in the schedule blocks
@@ -43,7 +42,9 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">5:30 PM</td>
-    <td class="planned" rowspan="2">Open Program Generation</td>
+    <td class="planned" rowspan="2">
+    Meet to Create <a href="/events/#participatory-programming">Open Programming</a>
+    </td>
   </tr>
   <tr>
     <td class="time">6:00 PM</td>
@@ -93,7 +94,9 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">12:00 PM</td>
-    <td class="planned" rowspan="2">Open Program Generation</td>
+    <td class="planned" rowspan="2">
+    Meet to Create <a href="/events/#participatory-programming">Open Programming</a>
+    </td>
   </tr>
   <tr>
     <td class="time">12:30 PM</td>
@@ -159,14 +162,14 @@ so you can navigate back and forth by selecting the titles
   </tr>
   <tr>
     <td class="time">12:30 PM</td>
-    <td class="break" rowspan="2">Lunch/Banquet</td>
+    <td class="break" rowspan="2">Lunch/<a href="/events/#banquet">Banquet</a></td>
   </tr>
   <tr>
     <td class="time">1:00 PM</td>
   </tr>
   <tr>
     <td class="time">1:30 PM</td>
-    <td class="planned">Foolscap Auction</td>
+    <td class="planned"><a href="/events/#auction">Foolscap Auction</a></td>
   </tr>
   <tr>
     <td class="time">2:00 PM</td>
