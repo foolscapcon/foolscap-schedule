@@ -1,6 +1,9 @@
 # foolscap-schedule
+# to run
+# bash README.md | pbcopy && bash README.md > test.md
+# gem install liquid
+# gem install liquid-cli
 
-#gem install liquid-cli
 filename="schedule2017-preview"
 file="${filename}.markdown"
 json="${filename}.json"
