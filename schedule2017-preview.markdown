@@ -50,12 +50,12 @@ so you can navigate back and forth by selecting the titles
 
 
 
-  <tr> 
+  <tr>
   {% capture ampm %}{% if hour >= 12 %}PM{% else %}AM{% endif %}{% endcapture %}
-  {% if debug == true %}<!-- ampm:{{ampm}} hh:{{half-hour}} h:{{hour}} m:{{hour-minutes}} st:{{day.hourly.start-time}} -->{% endif %}  
+  {% if debug == true %}<!-- ampm:{{ampm}} hh:{{half-hour}} h:{{hour}} m:{{hour-minutes}} st:{{day.hourly.start-time}} -->{% endif %}
     <td class="time">{% if hour > 12 %}{{ hour | minus: 12 }}{% else %} {{hour}}{% endif %}:{{ hour-minutes }} {{ampm}}
-    
-    
+
+
     {% for panel in day.hourly.time-slots[forloop.index0] %}
     <td class="{{panel.class}}" rowspan="{{panel.slots}}"> {{panel.label}}
     {% endfor %}
@@ -64,4 +64,3 @@ so you can navigate back and forth by selecting the titles
 </table>
 
 {% endfor %}
-
