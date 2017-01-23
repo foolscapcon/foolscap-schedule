@@ -5,19 +5,26 @@
 # gem install liquid
 # gem install liquid-cli
 
-filename="schedule2017-preview"
-file="${filename}.markdown"
-json="${filename}.json"
-out="build/${filename}.out.markdown"
-error="build/${filename}.error"
+template="schedule-template.md.liquid"
+file="${template}"
+
+
 
 mkdir -p build
 
 #cat $file | liquid "$(< $json)"
-cat $file | ruby run.rb "$(< $json)" > "${out}" 2> "${error}"
-cat "${out}" | pbcopy
-if [ "$?" -ne 0 ]; then
-    echo "json error?"
-    cat $json | json_pp -f json > "${error}" 2>&1
-fi
+for datafile in *.json; do
+    filename="${datafile%%.*}"
+    json="${filename}.json"
+    out="build/${filename}.out.markdown"
+    error="build/${filename}.error"    
+    echo "build ${file} with ${datafile} to ${out}"
+    cat $file | ruby run.rb "$(< $json)" > "${out}" 2> "${error}"
+    cat "${out}" | pbcopy
+    if [ "$?" -ne 0 ]; then
+        echo "json error?"
+        cat $json | json_pp -f json > "${error}" 2>&1
+    fi
+done
 
+echo "build complete and copied to pasteboard"
