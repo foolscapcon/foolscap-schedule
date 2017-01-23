@@ -19,25 +19,32 @@ module Liquid
   end
 end
 
-class SaveTime < Liquid::Tag
+class Save < Liquid::Tag
   def initialize(tag_name, markup, tokens)
     super
 
-    @slot, @time = variables_from_string(markup)
+    @name, @value = variables_from_string(markup)
   end
 
   def render(context)
     #binding.pry    
-    context.registers[:slottime] ||= Hash.new(0)
-    context.stack do
-      slot = context.evaluate(@slot).to_s
-      time = context.evaluate(@time).to_s
-      context.registers[:slottime][slot] = time
-      time
+    context.registers[:savevalue] ||= Hash.new(0)
+    if @value
+      context.stack do
+        name = context.evaluate(@name).to_s
+        value = context.evaluate(@value).to_s
+        context.registers[:savevalue][name] = value
+      end
+      return
+    else
+      #binding.pry
+      context.stack do
+        name = context.evaluate(@name)
+        context.registers[:savevalue][name]
+      end
     end
-    return
   end
-
+    
   def variables_from_string(markup)
     markup.split(',').collect do |var|
       var =~ /\s*(#{Liquid::QuotedFragment})\s*/o
@@ -45,7 +52,7 @@ class SaveTime < Liquid::Tag
     end.compact
   end  
 end
-Liquid::Template.register_tag('savetime', SaveTime)
+Liquid::Template.register_tag('save', Save)
 
 files = ARGV
 json = nil

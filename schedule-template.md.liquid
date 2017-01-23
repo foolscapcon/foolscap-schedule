@@ -58,7 +58,8 @@
 {%- for panel in day.hourly.time-slots[forloop.index0] %}
   {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
   {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
-  {%- savetime slot_id, time %}
+  {%- capture fulltime %}{{day.label}} {{time}} in {{schedule.columns[forloop.index].label}}{% endcapture %}
+  {%- save cap_id, fulltime %}
     <td class="{{panel.class}}" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a>
 {%- endfor %}
   </tr>
@@ -75,8 +76,9 @@
           {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
           {%- if panel.class == "openspace" %}
 <div class="page-break"></div>          
-
-### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> [{{time}}]
+{% capture time %}{% save cap_id %}{% endcapture %}
+### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a>
+####  {{time}}
           {%- if panel.details != %}
               {{panel.details}}
           {%- endif %}
@@ -85,5 +87,5 @@
        {%- endfor %}
    {%- endfor %}
 {%- endfor %}
-{{slottime}}
-{{page}}
+
+
