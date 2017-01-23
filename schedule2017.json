@@ -1,0 +1,302 @@
+{
+    "schedule" : {
+        "class-type": "schedule",
+        "columns": [
+            {
+                "label": "<!-- time -->",
+                "width": "1*"
+            },
+            {
+                "label": "<!-- Columbia A -->",
+                "width": "10*"
+            },
+            {
+                "label": "<!-- Columbia B -->",
+                "width": "10*"
+            },
+            {
+                "hide": true,
+                "label": "<!-- Commons -->",
+                "width": "32%"
+            }
+        ],
+        "calendar" : [
+            {
+                "label": "Friday",
+
+                "all-day": [
+                    {
+                        "label": "Writing Workshop",
+                        "start-time": "9:30 AM",
+                        "stop-time": "3:00 PM"
+                    },
+                    {
+                        "label": "Registration",
+                        "start-time": "2:00 PM",
+                        "stop-time": "8:00 PM"
+                    }
+                ],
+                "hourly": {
+                    "start-time": "17",
+                    "half-hour-slot-count": "14",
+                    "time-slots": [
+                        [
+                            {
+                                "label": "Opening Ceremony",
+                                "class": "planned",
+                                "slots": 1,
+                                "colspan": 3
+                            }
+                        ],
+                        [
+                            {
+                                "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
+                                "class": "planned",
+                                "slots": 2,
+                                "colspan": 3
+                            }
+                        ],
+                        [],
+                        [
+                            {
+                                "label": "Dinner (1.5 hrs)",
+                                "class": "break",
+                                "slots": 3,
+                                "colspan": 3
+                            }
+                        ], [], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        []
+                    ]
+                }
+            },
+            {
+                "label": "Saturday",
+                "all-day": [
+                    {
+                        "label": "Registration",
+                        "start-time": "10:00 AM",
+                        "stop-time": "5:30 PM"
+                    }
+                ],
+                "hourly": {
+                    "start-time": "10",
+                    "half-hour-slot-count": "28",
+                    "time-slots": [
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
+                                "class": "planned",
+                                "slots": 2,
+                                "colspan": 3
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Lunch (2 hrs)",
+                                "class": "break",
+                                "slots": 4,
+                                "colspan": 3
+                            }
+                        ], [], [],[],
+                        [
+                            {
+                                "label": "Patricia Briggs",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Dinner (2 hrs)",
+                                "class": "break",
+                                "slots": 4,
+                                "colspan": 3
+                            }
+                        ], [], [],[],
+                        [
+                            {
+                                "label": "Patricia Briggs",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Mike Briggs",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        []
+                    ]
+                }
+            },
+            {
+                "label": "Sunday",
+                "all-day": [
+                    {
+                        "label": "Registration",
+                        "start-time": "10:00 AM",
+                        "stop-time": "4:00 PM"
+                    }
+                ],
+                "hourly": {
+                    "start-time": "9",
+                    "half-hour-slot-count": "15",
+                    "time-slots": [
+                        [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Lunch/<a href=\"/events/#banquet\">Banquet</a>",
+                                "class": "break",
+                                "slots": 2,
+                                "colspan": 3
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "<a href=\"/events/#auction\">Foolscap Auction</a>",
+                                "class": "planned",
+                                "slots": 2,
+                                "colspan": 3
+                            }
+                        ], [],
+                        [], [],
+                        [
+                            {
+                                "label": "Closing Ceremony & Foolscap Feedback",
+                                "class": "planned",
+                                "slots": 2,
+                                "colspan": 3
+                            }
+                        ], [],
+                        []
+                    ]
+                }
+            }
+        ]
+    }
+}
