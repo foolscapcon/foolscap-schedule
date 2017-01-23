@@ -7,16 +7,15 @@
                 "width": "1*"
             },
             {
-                "label": "<!-- Columbia A -->",
+                "label": "Columbia A<!-- Columbia A -->",
                 "width": "10*"
             },
             {
-                "label": "<!-- Columbia B -->",
+                "label": "Columbia B<!-- Columbia B -->",
                 "width": "10*"
             },
             {
-                "hide": true,
-                "label": "<!-- Commons -->",
+                "label": "Commons <!-- Commons -->",
                 "width": "32%"
             }
         ],
@@ -26,7 +25,7 @@
 
                 "all-day": [
                     {
-                        "label": "Writing Workshop",
+                        "label": "Writing Workshop [TODO: WHERE]",
                         "start-time": "9:30 AM",
                         "stop-time": "3:00 PM"
                     },
@@ -34,18 +33,35 @@
                         "label": "Registration",
                         "start-time": "2:00 PM",
                         "stop-time": "8:00 PM"
+                    },
+                    {
+                        "label": "Art Show",
+                        "start-time": "4:00 PM",
+                        "stop-time": "8:00 PM"
+                    },
+                    {
+                        "label": "Dealers",
+                        "start-time": "4:00 PM",
+                        "stop-time": "8:00 PM"
+                    },
+                    {
+                        "label": "Hospitality (Room 2105)",
+                        "start-time": "8:00 PM",
+                        "stop-time": "11:00 PM"
                     }
+
                 ],
                 "hourly": {
                     "start-time": "17",
                     "half-hour-slot-count": "14",
                     "time-slots": [
                         [
+                            {}, {},
                             {
                                 "label": "Opening Ceremony",
                                 "class": "planned",
                                 "slots": 1,
-                                "colspan": 3
+                                "colspan": 1
                             }
                         ],
                         [
@@ -67,24 +83,24 @@
                         ], [], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
@@ -100,6 +116,21 @@
                         "label": "Registration",
                         "start-time": "10:00 AM",
                         "stop-time": "5:30 PM"
+                    },
+                    {
+                        "label": "Art Show",
+                        "start-time": "10:00 PM",
+                        "stop-time": "8:00 PM"
+                    },
+                    {
+                        "label": "Dealers",
+                        "start-time": "11:00 PM",
+                        "stop-time": "6:30 PM"
+                    },
+                    {
+                        "label": "Hospitality (Room 2105)",
+                        "start-time": "9:00 AM",
+                        "stop-time": "11:00 PM"
                     }
                 ],
                 "hourly": {
@@ -108,24 +139,24 @@
                     "time-slots": [
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
@@ -153,31 +184,31 @@
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
@@ -204,12 +235,12 @@
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
@@ -225,6 +256,21 @@
                         "label": "Registration",
                         "start-time": "10:00 AM",
                         "stop-time": "4:00 PM"
+                    },
+                    {
+                        "label": "Art Show",
+                        "start-time": "10:00 PM",
+                        "stop-time": "12:00 PM"
+                    },
+                    {
+                        "label": "Dealers",
+                        "start-time": "10:00 PM",
+                        "stop-time": "3:00 PM"
+                    },
+                    {
+                        "label": "Hospitality (Room 2105)",
+                        "start-time": "9:00 AM",
+                        "stop-time": "5:00 PM"
                     }
                 ],
                 "hourly": {
@@ -234,47 +280,53 @@
                         [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "Panel/Discussion/Demo TBA",
+                                "label": "TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Lunch/<a href=\"/events/#banquet\">Banquet</a>",
+                                "label": "Lunch",
                                 "class": "break",
                                 "slots": 2,
-                                "colspan": 3
-                            }
+                                "colspan": 2
+                            },
+                            {
+                                "label": "<a href=\"/events/#banquet\">Banquet</a>",
+                                "class": "planned",
+                                "slots": 2,
+                                "colspan": 1
+                            }                            
                         ], [],
                         [
                             {
