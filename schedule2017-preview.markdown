@@ -12,6 +12,7 @@ so you can navigate back and forth by selecting the titles
 -->
 {% for day in schedule.calendar %}
 ## {{ day.label }}
+
 <table class="{{ schedule.class-type }}">
 <!-- all-day -->
 {% for event in day.all-day %}
@@ -24,25 +25,15 @@ so you can navigate back and forth by selecting the titles
 </table>
 
 <!-- hourly -->
-{% if debug == true %}
-<!--
-{{day}}
--->
-{% endif %}
 
 <table class="{{ schedule.class-type }}">
-<tr>
-    <th></th><!-- time -->
-    <th></th>
-</tr>
-{% if debug == true %}<!--
-{{day.hourly.time-slots}}
-{{day.hourly.time-slots.first}}
-{{day.hourly.time-slots[0]}}
-{{day.hourly.time-slots[0][0]}}
-{{day.hourly.time-slots[0][0].label}}
-{{day.hourly.time-slots[1]}}
--->{% endif %}
+    <tr>
+        {% for column in schedule.columns %}
+          {% if column.hide == true %}<!-- skip -->{% continue %}{% endif %}
+          {% capture width %}{% if column.width != nil %}width="{{column.width}}"{% endif %}{% endcapture %}        
+        <th {{width}}>{{column.label}}</th>
+        {% endfor %}
+    </tr>
 
 {% for half-hour in (0..day.hourly.half-hour-slot-count) %}
 {% assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
@@ -56,9 +47,14 @@ so you can navigate back and forth by selecting the titles
     <td class="time">{% if hour > 12 %}{{ hour | minus: 12 }}{% else %} {{hour}}{% endif %}:{{ hour-minutes }} {{ampm}}
 
 
-    {% for panel in day.hourly.time-slots[forloop.index0] %}
-    <td class="{{panel.class}}" rowspan="{{panel.slots}}"> {{panel.label}}
-    {% endfor %}
+
+
+
+{% for panel in day.hourly.time-slots[forloop.index0] %}
+
+  {% capture colspan %}{% if panel.colspan != nil %}colspan="{{panel.colspan}}"{% endif %}{% endcapture %}
+    <td class="{{panel.class}}" rowspan="{{panel.slots}}" {{colspan}}> {{panel.label}}
+{% endfor %}
   </tr>
 {% endfor %}
 </table>

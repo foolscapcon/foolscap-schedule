@@ -1,9 +1,29 @@
 {
     "schedule" : {
         "class-type": "schedule",
+        "columns": [
+            {
+                "label": "<!-- time -->",
+                "width": "1*"
+            },
+            {
+                "label": "<!-- Columbia A -->",
+                "width": "10*"
+            },
+            {
+                "label": "<!-- Columbia B -->",
+                "width": "10*"
+            },
+            {
+                "hide": true,
+                "label": "<!-- Commons -->",
+                "width": "32%"
+            }
+        ],
         "calendar" : [
             {
                 "label": "Friday",
+
                 "all-day": [
                     {
                         "label": "Writing Workshop",
@@ -24,14 +44,16 @@
                             {
                                 "label": "Opening Ceremony",
                                 "class": "planned",
-                                "slots": 1
+                                "slots": 1,
+                                "colspan": 3
                             }
                         ],
                         [
                             {
                                 "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
                                 "class": "planned",
-                                "slots": 2
+                                "slots": 2,
+                                "colspan": 3
                             }
                         ],
                         [],
@@ -39,7 +61,8 @@
                             {
                                 "label": "Dinner (1.5 hrs)",
                                 "class": "break",
-                                "slots": 3
+                                "slots": 3,
+                                "colspan": 3
                             }
                         ], [], [],
                         [
@@ -47,9 +70,19 @@
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
                                 "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
                             }
                         ], [],
-                                                [
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -78,9 +111,19 @@
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
                                 "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
                             }
                         ], [],
                         [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -91,19 +134,26 @@
                             {
                                 "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
                                 "class": "planned",
-                                "slots": 2
+                                "slots": 2,
+                                "colspan": 3
                             }
                         ], [],
                         [
                             {
                                 "label": "Lunch (2 hrs)",
                                 "class": "break",
-                                "slots": 4
+                                "slots": 4,
+                                "colspan": 3
                             }
                         ], [], [],[],
                         [
                             {
                                 "label": "Patricia Briggs",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
                                 "slots": 2
                             }
@@ -113,9 +163,19 @@
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
                                 "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
                             }
                         ], [],
                         [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -126,7 +186,8 @@
                             {
                                 "label": "Dinner (2 hrs)",
                                 "class": "break",
-                                "slots": 4
+                                "slots": 4,
+                                "colspan": 3
                             }
                         ], [], [],[],
                         [
@@ -139,9 +200,14 @@
                                 "label": "Mike Briggs",
                                 "class": "planned",
                                 "slots": 2
-                            }                            
+                            }
                         ], [],
                         [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -171,9 +237,7 @@
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
                                 "slots": 2
-                            }
-                        ], [],
-                        [
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -181,6 +245,23 @@
                             }
                         ], [],
                         [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            }
+                        ], [],
+                        [
+                            {
+                                "label": "Panel/Discussion/Demo TBA",
+                                "class": "planned",
+                                "slots": 2
+                            },
                             {
                                 "label": "Panel/Discussion/Demo TBA",
                                 "class": "planned",
@@ -191,27 +272,30 @@
                             {
                                 "label": "Lunch/<a href=\"/events/#banquet\">Banquet</a>",
                                 "class": "break",
-                                "slots": 2
+                                "slots": 2,
+                                "colspan": 3
                             }
                         ], [],
                         [
                             {
                                 "label": "<a href=\"/events/#auction\">Foolscap Auction</a>",
                                 "class": "planned",
-                                "slots": 2
+                                "slots": 2,
+                                "colspan": 3
                             }
                         ], [],
-                        [], [], 
+                        [], [],
                         [
                             {
                                 "label": "Closing Ceremony & Foolscap Feedback",
                                 "class": "planned",
-                                "slots": 2
+                                "slots": 2,
+                                "colspan": 3
                             }
                         ], [],
                         []
                     ]
-                }                
+                }
             }
         ]
     }
