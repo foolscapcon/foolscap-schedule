@@ -20,11 +20,11 @@ for datafile in *.json; do
     error="build/${filename}.error"    
     echo "build ${file} with ${datafile} to ${out}"
     cat $file | ruby run.rb "$(< $json)" > "${out}" 2> "${error}"
-    cat "${out}" | pbcopy
     if [ "$?" -ne 0 ]; then
-        echo "json error?"
-        cat $json | json_pp -f json > "${error}" 2>&1
+        echo "json error ${json}?" >> "${error}"
+        cat $json | json_pp -f json >> "${error}" 2>&1
     fi
 done
 
-echo "build complete and copied to pasteboard"
+cat "${out}" | pbcopy        
+echo "build complete and copied to pasteboard [$out] $(date)"
