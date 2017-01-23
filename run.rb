@@ -1,5 +1,7 @@
 require 'json'
 require 'liquid'
+require 'pry'
+
 
 module Liquid
   class Cli
@@ -20,18 +22,20 @@ end
 class SaveTime < Liquid::Tag
   def initialize(tag_name, markup, tokens)
     super
-    @variables = variables_from_string(markup)
+
+    @slot, @time = variables_from_string(markup)
   end
 
   def render(context)
-    #context.registers[:page]['slottime'] ||= Hash.new(0)
-    # context.stack do
-    #   slot = context.evaluate(@variables[0]).to_s
-    #   time = context.evaluate(@variables[1]).to_s
-    #   context.register[:page]['slottime'][slot] = time
-    #   time
-    # end
-    @variables[0].to_s
+    #binding.pry    
+    context.registers[:slottime] ||= Hash.new(0)
+    context.stack do
+      slot = context.evaluate(@slot).to_s
+      time = context.evaluate(@time).to_s
+      context.registers[:slottime][slot] = time
+      time
+    end
+    return
   end
 
   def variables_from_string(markup)
@@ -43,6 +47,23 @@ class SaveTime < Liquid::Tag
 end
 Liquid::Template.register_tag('savetime', SaveTime)
 
-$stdout.write(
-  Liquid::Cli.new(ARGV.first || '{}').render($stdin.read)
+files = ARGV
+json = nil
+template = $stdin
+out = $stdout
+if files.empty?
+  $stderr.write("json filename not supplied")
+elsif files.size == 1
+  json = File.open(files.pop)
+elsif files.size == 2
+  json = File.open(files.pop)  
+  template = File.open(files.pop)
+else
+  out = File.open(files.pop, 'w')
+  json = File.open(files.pop)  
+  template = File.open(files.pop)
+end
+      
+out.write(
+  Liquid::Cli.new(json.read || '{}').render(template.read)
 )

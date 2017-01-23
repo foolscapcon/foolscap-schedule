@@ -19,7 +19,7 @@ for datafile in *.json; do
     out="build/${filename}.out.markdown"
     error="build/${filename}.error"    
     echo "build ${file} with ${datafile} to ${out}"
-    cat $file | ruby run.rb "$(< $json)" > "${out}" 2> "${error}"
+    ruby run.rb "$file" "$json" "${out}" 2> "${error}"
     if [ "$?" -ne 0 ]; then
         echo "json error ${json}?" >> "${error}"
         cat $json | json_pp -f json >> "${error}" 2>&1
