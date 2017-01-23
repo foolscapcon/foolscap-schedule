@@ -4,11 +4,27 @@
 .schedule .planned {border: 1px solid black;}
 .schedule .break {text-align: center; vertical-align: middle; background-color: #999;}
 .schedule .openspace {text-align: center; border: 1px solid black;}
+@media all {
+.page-break { display: none; }
+
+}
+@media print {
+.page-break { display: block; page-break-before: always; }
+.site-head { display: none; }
+.topnav_anchor { display: none; }
+.topnav { display: none; }
+.site-footer { display: none; }
+.post-title { display: none; }
+.schedule-grid { display: none; }
+@page {size: landscape; }
+
+}
 </style>
+
 
 {%- for day in schedule.calendar %}
 ## {{ day.label }}
-
+<div class="schedule-grid">
 <table class="{{ schedule.class-type }}">
 <!-- all-day -->
 {%- for event in day.all-day %}
@@ -35,20 +51,22 @@
 {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
 {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
   <tr>
-  {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-  {%- if debug == true %}<!-- ampm:{{ampm}} hh:{{half-hour}} h:{{hour}} m:{{hour-minutes}} st:{{day.hourly.start-time}} -->{%- endif %}
-    <td class="time">{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}
+      {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+      {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}      
+    <td class="time">{{time}}
 
 {%- for panel in day.hourly.time-slots[forloop.index0] %}
   {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
   {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
+  {%- savetime slot_id, time %}
     <td class="{{panel.class}}" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a>
 {%- endfor %}
   </tr>
 {%- endfor %}
 </table>
-
+</div>
 {%- endfor %}
+
 
 ## Panel Details
 {%- for day in schedule.calendar %}
@@ -56,11 +74,16 @@
       {%- for panel in time-slot %}
           {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
           {%- if panel.class == "openspace" %}
-### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a>
+<div class="page-break"></div>          
+
+### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> [{{time}}]
           {%- if panel.details != %}
               {{panel.details}}
           {%- endif %}
-         {%- endif %}
+{%- endif %}
+
        {%- endfor %}
    {%- endfor %}
 {%- endfor %}
+{{slottime}}
+{{page}}
