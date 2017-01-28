@@ -1,24 +1,27 @@
 {%- assign debug = false %}
 <style>
-.schedule .time { font-size: 75%;}
-.schedule .planned {border: 1px solid black;}
-.schedule .break {text-align: center; vertical-align: middle; background-color: #999;}
-.schedule .openspace {text-align: center; border: 1px solid black;}
-@media all {
-.page-break { display: none; }
-
-}
-@media print {
-.page-break { display: block; page-break-before: always; }
-.site-head { display: none; }
-.topnav_anchor { display: none; }
-.topnav { display: none; }
-.site-footer { display: none; }
-.post-title { display: none; }
-.schedule-grid { display: none; }
-@page {size: landscape; }
-
-}
+ .schedule .time { font-size: 75%;}
+ .schedule .planned {border: 1px solid black;}
+ .schedule .break {
+     text-align: center;
+     vertical-align: middle;
+     background-color: #999;
+ }
+ .schedule .openspace {text-align: center; border: 1px solid black;}
+ @media all {
+     .page-break { display: none; }
+     
+ }
+ @media print {
+     .page-break { display: block; page-break-before: always; }
+     .site-head { display: none; }
+     .topnav_anchor { display: none; }
+     .topnav { display: none; }
+     .site-footer { display: none; }
+     .post-title { display: none; }
+     .schedule-grid { display: none; }
+     @page {size: landscape; }
+ }
 </style>
 
 
