@@ -148,7 +148,7 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBD",
+                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\"",
                                 "class": "planned",
                                 "slots": 2
                             },
@@ -192,7 +192,7 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "Panel/Discussion/Demo TBD",
+                                "label": "Appreciation of Patricia Briggs and Mike Briggs",
                                 "class": "planned",
                                 "slots": 2
                             },
