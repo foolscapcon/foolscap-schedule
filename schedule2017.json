@@ -1,4 +1,5 @@
 {
+
     "schedule" : {
         "class-type": "schedule",
         "columns": [
@@ -16,7 +17,7 @@
             },
             {
                 "label": "Commons <!-- Commons -->",
-                "width": "32%"
+                "width": "10*"
             }
         ],
         "calendar" : [
@@ -25,7 +26,7 @@
 
                 "all-day": [
                     {
-                        "label": "Writing Workshop [TODO: WHERE]",
+                        "label": "Writing Workshop [Columbia B]",
                         "start-time": "9:30 AM",
                         "stop-time": "3:00 PM"
                     },
@@ -46,8 +47,8 @@
                     },
                     {
                         "label": "Hospitality (Room 2105)",
-                        "start-time": "8:00 PM",
-                        "stop-time": "11:00 PM"
+                        "start-time": "7:30 PM",
+                        "stop-time": "11:30 PM"
                     }
 
                 ],
@@ -65,12 +66,14 @@
                             }
                         ],
                         [
+                            {},
                             {
                                 "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
                                 "class": "planned",
                                 "slots": 2,
-                                "colspan": 3
-                            }
+                                "colspan": 1
+                            },
+                            {}
                         ],
                         [],
                         [
@@ -83,16 +86,17 @@
                         ], [], [],
                         [
                             {
-                                "label": "Cat Ipsum - A Furrier Lorem Ipsum",
+                                "label": "Placeholder - Cat Ipsum - A Furrier Lorem Ipsum",
                                 "class": "openspace",
                                 "slots": 2,
                                 "details": "Details here.  Attack feet stare out the window, yet jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Roll on the floor purring your whiskers off dream about hunting birds but lick sellotape for toy mouse squeak roll over wake up human for food at 4am roll on the floor purring your whiskers off. Chase red laser dot. Use lap as chair then cats take over the world yet pushes butt to face groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked!. "
 
                             },
                             {
-                                "label": "TBD",
+                                "label": "Placeholder - Pet Lover Ipsum",
                                 "class": "openspace",
-                                "slots": 2
+                                "slots": 2,
+                                "details": "Puppy kitty ipsum dolor sit good dog . Treats dragging stay litter dragging vitamins scratcher field wet nose Scooby snacks kisses. Chew window toy Mittens cockatiel litter box play finch water Buddy park stay litter box kitty warm small animals run fast tongue kisses behavior. Chew kisses heel dragging Spike dinnertime lick park Buddy pet purr cat. Cage nap vaccination heel cage heel."
                             }
                         ], [],
                         [
@@ -121,17 +125,17 @@
                     },
                     {
                         "label": "Art Show",
-                        "start-time": "10:00 PM",
+                        "start-time": "10:00 AM",
                         "stop-time": "8:00 PM"
                     },
                     {
                         "label": "Dealers",
-                        "start-time": "11:00 PM",
+                        "start-time": "10:00 AM",
                         "stop-time": "6:30 PM"
                     },
                     {
-                        "label": "Hospitality (Room 2105)",
-                        "start-time": "9:00 AM",
+                        "label": "Hospitality (Room 2105) [Closed for Dinner]",
+                        "start-time": "9:30 AM",
                         "stop-time": "11:00 PM"
                     }
                 ],
@@ -164,12 +168,14 @@
                             }
                         ], [],
                         [
+                            {},
                             {
                                 "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
                                 "class": "planned",
                                 "slots": 2,
-                                "colspan": 3
-                            }
+                                "colspan": 1
+                            },
+                            {}
                         ], [],
                         [
                             {
@@ -181,7 +187,7 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\"",
                                 "class": "planned",
                                 "slots": 2
                             },
@@ -225,13 +231,13 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Appreciation of Patricia Briggs and Mike Briggs",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
                                 "label": "TBD",
-                                "class": "planned",
+                                "class": "openspace",
                                 "slots": 2
                             }
                         ], [],
@@ -261,12 +267,12 @@
                     },
                     {
                         "label": "Art Show",
-                        "start-time": "10:00 PM",
+                        "start-time": "10:00 AM",
                         "stop-time": "12:00 PM"
                     },
                     {
                         "label": "Dealers",
-                        "start-time": "10:00 PM",
+                        "start-time": "10:00 AM",
                         "stop-time": "3:00 PM"
                     },
                     {
