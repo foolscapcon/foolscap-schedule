@@ -77,7 +77,7 @@
    {%- for time-slot in day.hourly.time-slots %}
       {%- for panel in time-slot %}
           {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
-          {%- if panel.class == "openspace" %}
+          {%- if panel.class == "openspace" or panel.class == "planned" %}
 <div class="page-break"></div>          
 {% capture time %}{% save cap_id %}{% endcapture %}
 ### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a>
