@@ -59,7 +59,7 @@
 
 <table class="{{ schedule.class-type }}">
     <tr>
-        {%- for column in schedule.columns %}
+        {%- for column in day.columns %}
           {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
           {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
         <th {{width}}>{{column.label}}</th>

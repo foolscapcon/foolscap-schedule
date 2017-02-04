@@ -2,24 +2,7 @@
 
     "schedule" : {
         "class-type": "schedule",
-        "columns": [
-            {
-                "label": "<!-- time -->",
-                "width": "1*"
-            },
-            {
-                "label": "Columbia A<!-- Columbia A -->",
-                "width": "10*"
-            },
-            {
-                "label": "Columbia B<!-- Columbia B -->",
-                "width": "10*"
-            },
-            {
-                "label": "Commons <!-- Commons -->",
-                "width": "10*"
-            }
-        ],
+
         "calendar" : [
             {
                 "label": "Friday",
@@ -52,6 +35,24 @@
                     }
 
                 ],
+                "columns": [
+                    {
+                        "label": "<!-- time -->",
+                        "width": "1*"
+                    },
+                    {
+                        "label": "Columbia A<!-- Columbia A -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Columbia B<!-- Columbia B -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Commons <!-- Commons -->",
+                        "width": "10*"
+                    }
+                ],                
                 "hourly": {
                     "start-time": "17",
                     "half-hour-slot-count": "14",
@@ -118,7 +119,7 @@
                               "label": "Yes and No",
                               "class": "openspace",
                               "details": "Game. A touching improve game about consent for all ages.  Gavin White.",
-                              "slots": 2                              
+                              "slots": 2
                         } ],
                         [
                             {}, {},
@@ -126,8 +127,8 @@
                                 "label": "Pandemic",
                                 "class": "openspace",
                                 "details": "Game. Play the boardgame Pandemic with Doug and Beth.",
-                              "slots": 2                              
-                            } 
+                                "slots": 2
+                            }
                         ]
                     ]
                 }
@@ -154,6 +155,28 @@
                         "label": "Hospitality (Room 2105) [Closed for Dinner]",
                         "start-time": "9:30 AM",
                         "stop-time": "11:00 PM"
+                    }
+                ],
+                "columns": [
+                    {
+                        "label": "<!-- time -->",
+                        "width": "2*"
+                    },
+                    {
+                        "label": "Columbia A<!-- Columbia A -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Columbia B<!-- Columbia B -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Board Room<!-- Board Room -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Commons <!-- Commons -->",
+                        "width": "10*"
                     }
                 ],
                 "hourly": {
@@ -208,38 +231,55 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\"",
+                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\" followed by dicussion",
                                 "class": "planned",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Tea Earl Grey, Hot",
                                 "class": "openspace",
+                                "details": "In Hospitality.",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Peak Experiences",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "The Latest in Science",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
+                            },
+                            {
+                                "label": "Readings",
+                                "class": "openspace",
+                                "details": "",
+                                "slots": 4
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Favotite Program Items",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Laws of Magic",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
+                            },
+                            {
+                                "label": "Magic: The Gathering Cube Draft",
+                                "class": "openspace",
+                                "details": "Come draft my all-unc ommons cube! Traditional booster with as many games as you can fit. Cards and Lands provided.  Name not provided. ",
+                                "slots": 4
                             }
                         ], [],
                         [
@@ -254,26 +294,47 @@
                             {
                                 "label": "Appreciation of Patricia Briggs and Mike Briggs",
                                 "class": "planned",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Actually I was promised a corporate state distopia",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "This Foolscap Thing",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "NaNoWriMo - worth it or waste of time",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             }
-                        ], [],
+                        ],
+                        [],
+                        [
+                            {},
+                            {},
+                            {
+                                "label": "Writing Prompts - Tea & Cookies Writing Slam",
+                                "class": "openspace",
+                                "details": "",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Pandemic",
+                                "class": "openspace",
+                                "details": "Game, Hospitality. Play the boardgame Pandemic with Doug and Beth.",
+                                "slots": 2
+                            }
+                        ],
                         []
                     ]
                 }
@@ -302,6 +363,28 @@
                         "stop-time": "5:00 PM"
                     }
                 ],
+                "columns": [
+                    {
+                        "label": "<!-- time -->",
+                        "width": "2*"
+                    },
+                    {
+                        "label": "Columbia A<!-- Columbia A -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Columbia B<!-- Columbia B -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Board Room<!-- Board Room -->",
+                        "width": "10*"
+                    },
+                    {
+                        "label": "Commons <!-- Commons -->",
+                        "width": "10*"
+                    }
+                ],
                 "hourly": {
                     "start-time": "9",
                     "half-hour-slot-count": "15",
@@ -309,37 +392,49 @@
                         [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Formative Fiction - What Hooked You",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Dystopian Resistance w/Tech.  Asking for a Frienc",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Crosover Genres",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Should I Stay or Should I Go",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Ask a Black Girl 201: Implicit Bias and You",
                                 "class": "openspace",
+                                "details": "",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "The Last Questions",
                                 "class": "openspace",
+                                "details": "",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Massage Demo/Discussion",
+                                "class": "openspace",
+                                "details": "Commons - at massage table. Tom Whitmore.",
                                 "slots": 2
                             }
                         ], [],
@@ -355,7 +450,7 @@
                                 "class": "planned",
                                 "slots": 2,
                                 "colspan": 1
-                            }                            
+                            }
                         ], [],
                         [
                             {
