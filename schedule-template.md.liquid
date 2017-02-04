@@ -10,23 +10,39 @@
  .schedule .openspace {text-align: center; border: 1px solid black;}
  @media all {
      .page-break { display: none; }
-     
+     .schedule-print-grind { display: none; }
+     .hide-on-normal { display: none; !important}
+     .hide-on-print { display: block; !important}
+
  }
  @media print {
+     .hide-on-print { display: none; !important}
+     .hide-on-normal { display: block; !important}
      .page-break { display: block; page-break-before: always; }
+     .schedule-print-grind { display: block; }
      .site-head { display: none; }
      .topnav_anchor { display: none; }
      .topnav { display: none; }
      .site-footer { display: none; }
      .post-title { display: none; }
      .schedule-grid { display: none; }
+     img { display: none; }
+
+     h3 { font-size: 400%; }
+     h4 { font-size: 200%; }
+     .grid-label { font-size: 700%; }
+     .panel-detail { font-size: 225%; line-height: 1.1 }
+     .time { height: 3.5in; margin: 0; padding: 0; }
+     .time:nth-of-type(odd) { page-break-before: always; }
+     .panel-page { page-break-before: always; }
+
      @page {size: landscape; }
  }
 </style>
 
 
 {%- for day in schedule.calendar %}
-## {{ day.label }}
+<h2 class="hide-on-print"> {{ day.label }} </h2>
 <div class="schedule-grid">
 <table class="{{ schedule.class-type }}">
 <!-- all-day -->
@@ -55,7 +71,7 @@
 {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
   <tr>
       {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-      {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}      
+      {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
     <td class="time">{{time}}
 
 {%- for panel in day.hourly.time-slots[forloop.index0] %}
@@ -71,26 +87,57 @@
 </div>
 {%- endfor %}
 
-![Hotel Map](/content/images/2017/02/foolscap-map.png)
+<img src="/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
 
-## Panel Details
+<h2 class="hide-on-print"> Panel Details </h2>
+
 {%- for day in schedule.calendar %}
    {%- for time-slot in day.hourly.time-slots %}
       {%- for panel in time-slot %}
           {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
           {%- if panel.class == "openspace" or panel.class == "planned" %}
-<div class="page-break"></div>          
-{% capture time %}{% save cap_id %}{% endcapture %}
-### <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a>
-####  {{time}}
-          {%- if panel.details != %}
-              {{panel.details}}
-          {%- endif %}
-{%- endif %}
+<div class="panel-page">
+              {% capture time %}{% save cap_id %}{% endcapture %}
+<h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
+<h4 class="hide-on-print">  {{time}} </h4>
+<div class="panel-detail">
+    {%- if panel.details != %}
+        {{panel.details}}
+    {%- endif %}
+</div>
+</div>
 
-       {%- endfor %}
+<!-- panel print with time for room -->
+<div class="panel-page hide-on-normal">
+    <h3>{{panel.label}}</h3>
+    <h4 class="">  {{time}} </h4>
+    <div class="panel-detail">
+        {%- if panel.details != %}
+            {{panel.details}}
+        {%- endif %}
+    </div>
+</div>
+          {%- endif %}
+      {%- endfor %}
    {%- endfor %}
 {%- endfor %}
+
+<div class="schedule-print-grind">
+    {%- for column in schedule.columns %}
+        {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
+        <h1 class="grid-label room">{{column.label}}</h1>
+        <div class="page-break"></div>
+    {%- endfor %}
+    {%- for day in schedule.calendar %}
+        <div class="page-break"></div>
+        {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
+            {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
+            {%- capture cycle-name %}{{day.label}}_2{% endcapture %}
+            {%- capture hour-minutes %}{%- cycle cycle-name: '00', '30' %}{%- endcapture %}
+            {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+            <h1 class="grid-label time">{{time}}
+        {%- endfor %}
+    {%- endfor %}
+</div>
 <div class="page-break"></div>
-
-
