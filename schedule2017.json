@@ -86,32 +86,49 @@
                         ], [], [],
                         [
                             {
-                                "label": "Placeholder - Cat Ipsum - A Furrier Lorem Ipsum",
+                                "label": "What have you discovered this year?",
                                 "class": "openspace",
                                 "slots": 2,
-                                "details": "Details here.  Attack feet stare out the window, yet jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Roll on the floor purring your whiskers off dream about hunting birds but lick sellotape for toy mouse squeak roll over wake up human for food at 4am roll on the floor purring your whiskers off. Chase red laser dot. Use lap as chair then cats take over the world yet pushes butt to face groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked!. "
+                                "details": "Open Discussion. Group discussion of what books, games, movies, or TV we have discovered this year. Dave W "
 
                             },
                             {
-                                "label": "Placeholder - Pet Lover Ipsum",
+                                "label": "Organizing Against Oppression",
                                 "class": "openspace",
                                 "slots": 2,
-                                "details": "Puppy kitty ipsum dolor sit good dog . Treats dragging stay litter dragging vitamins scratcher field wet nose Scooby snacks kisses. Chew window toy Mittens cockatiel litter box play finch water Buddy park stay litter box kitty warm small animals run fast tongue kisses behavior. Chew kisses heel dragging Spike dinnertime lick park Buddy pet purr cat. Cage nap vaccination heel cage heel."
+                                "details": "Open Discussion. Exchange of ideas and resources for effective political organization to defy an oppressive regime. David Levine"
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Seeing yourself in other species.",
                                 "class": "openspace",
+                                "details": "Open Discussion. People have an affinity for animals and see human traits in them Why? AKA Wither furries? Jason W",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Ask a black girl 101",
                                 "class": "openspace",
+                                "details": "Open Discussion.  Elizabeth Adams.  In this hour I'll answer to the best of my ability, questions about race, racism, and allyship. Be prepared for me to go into why the premise of the question is racist as part of the answer.  There may be ranting.  <b>Trigger Warning</b>",
                                 "slots": 2
                             }
-                        ], [],
-                        []
+                        ],
+                        [ {}, {},
+                          {
+                              "label": "Yes and No",
+                              "class": "openspace",
+                              "details": "Game. A touching improve game about consent for all ages.  Gavin White.",
+                              "slots": 2                              
+                        } ],
+                        [
+                            {}, {},
+                            {
+                                "label": "Pandemic",
+                                "class": "openspace",
+                                "details": "Game. Play the boardgame Pandemic with Doug and Beth.",
+                              "slots": 2                              
+                            } 
+                        ]
                     ]
                 }
             },
@@ -145,25 +162,29 @@
                     "time-slots": [
                         [
                             {
-                                "label": "TBD",
+                                "label": "Extermomorph/Normamorph",
                                 "class": "openspace",
+                                "details": "Open/Panel Discussion. I've [Dave Howell] ... most people experience the world quite differently than I: Discuss.",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Fountain Pens",
                                 "class": "openspace",
+                                "details": "Discuss and play with analogue tools, especially Fountain Pens.",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "TBD",
+                                "label": "Next Hugo",
                                 "class": "openspace",
+                                "details": "What have you read (watched, heard) that we should nominate for a Hugo?  Beth Mitcham, Tom?",
                                 "slots": 2
                             },
                             {
-                                "label": "TBD",
+                                "label": "Art & Money",
                                 "class": "openspace",
+                                "details": "Open Discussion.  Cultural devaluation of creativity, esp myths of \"starving\" vs. \"selling out\". Candid discussions about realities of make ends meet (outside help, partners with day jobs, insurance)",
                                 "slots": 2
                             }
                         ], [],
