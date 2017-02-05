@@ -1,5 +1,10 @@
 {%- assign debug = false %}
-<style>
+<style> 
+ .hourly {
+     position: relative;
+     left: calc(-48vw + 50%);
+     width: 96vw;
+ }
  .schedule .time { font-size: 75%;}
  .schedule .planned {border: 1px solid black;}
  .schedule .break {
@@ -59,7 +64,7 @@
 
 <!-- hourly -->
 
-<table class="{{ schedule.class-type }}">
+<table class="{{ schedule.class-type }} hourly">
     <tr>
         {%- for column in day.columns %}
           {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
