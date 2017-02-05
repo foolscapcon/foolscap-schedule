@@ -11,13 +11,13 @@
  @media all {
      .page-break { display: none; }
      .schedule-print-grind { display: none; }
-     .hide-on-normal { display: none; !important}
-     .hide-on-print { display: block; !important}
+     .hide-on-normal { display: none; }
+     .hide-on-print { display: block; }
 
  }
  @media print {
-     .hide-on-print { display: none; !important}
-     .hide-on-normal { display: block; !important}
+     .hide-on-print { display: none; }
+     .hide-on-normal { display: block; }
      .page-break { display: block; page-break-before: always; }
      .schedule-print-grind { display: block; }
      .site-head { display: none; }
@@ -33,8 +33,10 @@
      .grid-label { font-size: 700%; }
      .panel-detail { font-size: 225%; line-height: 1.1 }
      .time { height: 3.5in; margin: 0; padding: 0; }
-     .time:nth-of-type(odd) { page-break-before: always; }
+     //  .time:nth-of-type(odd) { page-break-before: always; }
+     .time { page-break-before: always; }     
      .panel-page { page-break-before: always; }
+     .room { page-break-before: always; }
 
      @page {size: landscape; }
  }
@@ -71,13 +73,13 @@
 {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
   <tr>
       {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-      {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+      {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
     <td class="time">{{time}}
 
 {%- for panel in day.hourly.time-slots[forloop.index0] %}
   {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
   {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
-  {%- capture fulltime %}{{day.label}} {{time}} in {{schedule.columns[forloop.index].label}}{% endcapture %}
+  {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
   {%- save cap_id, fulltime %}
     <td class="{{panel.class}}" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a>
 {%- endfor %}
@@ -99,11 +101,19 @@
 <div class="panel-page">
               {% capture time %}{% save cap_id %}{% endcapture %}
 <h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
-<h4 class="hide-on-print">  {{time}} </h4>
+<h4 class="hide-on-print">{{time}}</h4>
 <div class="panel-detail">
     {%- if panel.details != %}
-        {{panel.details}}
+        <p>
+            {{panel.details}}
+        </p>
     {%- endif %}
+    {%- if panel.notes != %}
+        <p class="hide-on-print">
+            <h5>Panels Notes</h5>
+            {{panel.notes}}
+        </p>
+    {%- endif %}    
 </div>
 </div>
 
@@ -122,22 +132,29 @@
    {%- endfor %}
 {%- endfor %}
 
-<div class="schedule-print-grind">
-    {%- for column in schedule.columns %}
-        {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
-        <h1 class="grid-label room">{{column.label}}</h1>
-        <div class="page-break"></div>
-    {%- endfor %}
+
+{%- for column in day.columns %}
+    {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
+    {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
+    <th {{width}}>{{column.label}}</th>
+{%- endfor %}
+
+<!-- wall schedule grid labels for print -->
+<div class="hide-on-normal">
     {%- for day in schedule.calendar %}
-        <div class="page-break"></div>
-        {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
-            {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
-            {%- capture cycle-name %}{{day.label}}_2{% endcapture %}
-            {%- capture hour-minutes %}{%- cycle cycle-name: '00', '30' %}{%- endcapture %}
+        <!-- {{day.label}} -->
+        {%- for column in day.columns %}
+            {%- if column.hide == true or column.label == "" %}<!-- skip -->{%- continue %}{%- endif %}
+            <h1 class="grid-label room">{{column.label}}</h1>
+        {%- endfor %}
+
+        {%- for hour in (day.hourly.start-time..24) %}
+            {%- assign hour-minutes = day.hourly.time-minutes-offset %}
             {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %} {{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
             <h1 class="grid-label time">{{time}}
         {%- endfor %}
     {%- endfor %}
+    </div>
 </div>
 <div class="page-break"></div>

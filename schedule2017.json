@@ -52,10 +52,11 @@
                         "label": "Commons <!-- Commons -->",
                         "width": "10*"
                     }
-                ],                
+                ],
                 "hourly": {
                     "start-time": "17",
                     "half-hour-slot-count": "14",
+                    "time-minutes-offset": "00",
                     "time-slots": [
                         [
                             {}, {},
@@ -182,6 +183,7 @@
                 "hourly": {
                     "start-time": "10",
                     "half-hour-slot-count": "28",
+                    "time-minutes-offset": "00",
                     "time-slots": [
                         [
                             {
@@ -202,6 +204,7 @@
                                 "label": "Next Hugo",
                                 "class": "openspace",
                                 "details": "What have you read (watched, heard) that we should nominate for a Hugo?  Beth Mitcham, Tom?",
+                                "notes": "<p>2016 Hugo Possibilities: These are the things we (people in the room) might personally nominateNovel<ul><li>Arabella of Mars, David Levine<li>Shepherd's Crown, Terry Pratchett<li>Lovecraft Country, Matt Ruff<li>Obelisk Gate, N.K. Jemison<li>Raven and the Raindeer, Ursula Vernon /  T. Kingfisher<li>Central Station, Lavie Tidhar<li>Like a Boss, Adam Rakunas<li>Bones of Starlight , Eva Elasigue<li>Waypoint Kangaroo, Curtis Chen</ul>Campbell Winner:<ul><li>Eva Elasigue<li>Adam Rakunas</ul>Novella<ul><li>\"Penric and the Shamen\", Lois McMaster Bujold</ul>Series:<ul><li>Discworld <li>1632 / Ring of Fire<li>Expanse series<li>Mercy Thompson</ul>Movies / Long Form:<ul><li>Rogue One<li>Arrival<li>The Man in the High Castle, Season One<li>A Monster Calls (maybe for next year)<li>Colony<li>West World<li>Kubo and the Two Strings<li>\"DC comic crossover - Supergirl/Flash\"<li>X-man Apocalypse<li>Star Trek Beyond</ul>Podcast<ul><li>\"Sword and Laser\"<li>\"Starship Sofa\"<li>\"Hidden Almanac\"<li>\"Welcome to Nightvale\"</ul>Fanzines:<ul><li>Blackgate<li>Journey Planet<li>\"Rec Center\"</ul>Best Related Work:<ul><li>Autobiography of James T. Kirk, <li>\"For the Love of Spock\", Adam Nimoy</ul></p>",
                                 "slots": 2
                             },
                             {
@@ -231,14 +234,15 @@
                         ], [], [],[],
                         [
                             {
-                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\" followed by dicussion",
+                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\" followed by discussion",
                                 "class": "planned",
+                                "details": "Reading by Hank Graham.",
                                 "slots": 2
                             },
                             {
-                                "label": "Tea Earl Grey, Hot",
+                                "label": "Tea. Earl Grey. Hot.",
                                 "class": "openspace",
-                                "details": "In Hospitality.",
+                                "details": "Demo and Discuss. Talk and try the most popular of scifi teas (and others) in Hospitality.  Stefanie and Wing",
                                 "slots": 2
                             }
                         ], [],
@@ -246,39 +250,39 @@
                             {
                                 "label": "Peak Experiences",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. What life experience do you return to when you need inspiration and confidence. Karen Anderson",
                                 "slots": 2
                             },
                             {
                                 "label": "The Latest in Science",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. What have you just learned in any science? Leading Edge or New to You. Eva Elasigue",
                                 "slots": 2
                             },
                             {
                                 "label": "Readings",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Sign Up in the commons",
                                 "slots": 4
                             }
                         ], [],
                         [
                             {
-                                "label": "Favotite Program Items",
+                                "label": "Favorite Program Items",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. What programming do you most enjoy? Disappointed if its not there?  Help be Program MiniCon in April! Alice Bentley",
                                 "slots": 2
                             },
                             {
                                 "label": "Laws of Magic",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. As a group, Create a fictional set of rules of magic that would create an interesting and consistent world to explore. Dave W",
                                 "slots": 2
                             },
                             {
                                 "label": "Magic: The Gathering Cube Draft",
                                 "class": "openspace",
-                                "details": "Come draft my all-unc ommons cube! Traditional booster with as many games as you can fit. Cards and Lands provided.  Name not provided. ",
+                                "details": "Come draft my all-uncommons cube! Traditional booster with as many games as you can fit. Cards and Lands provided.  Name not provided. ",
                                 "slots": 4
                             }
                         ], [],
@@ -294,13 +298,13 @@
                             {
                                 "label": "Appreciation of Patricia Briggs and Mike Briggs",
                                 "class": "planned",
-                                "details": "",
+                                "details": "An appreciation of Patricia Briggs, the late Michael Briggs, and their work in urban fantasy. The panel will include authors J.A. Pitts and Scott James Magner, and Patti Ludwig representing the Hurog community. (Patricia is not be able to attend as Guest of Honor because of Michael's recent passing.)",
                                 "slots": 2
                             },
                             {
-                                "label": "Actually I was promised a corporate state distopia",
+                                "label": "Actually I was promised a corporate state dystopia",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. SF dystopias, esp the cyberpunk dystopias of the 1980s",
                                 "slots": 2
                             }
                         ], [],
@@ -308,13 +312,13 @@
                             {
                                 "label": "This Foolscap Thing",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. So this might be the penultimate Foolscap.  Lets talk about where (and whether) Foolscap's future is going. Jason, Dave, Lile",
                                 "slots": 2
                             },
                             {
                                 "label": "NaNoWriMo - worth it or waste of time",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. National Novel Writing Month - pros, cons, experiences, lessons learned.  For participants who've done if before, and those who are curious what it is like.  Shel Tozer-Kitts",
                                 "slots": 2
                             }
                         ],
@@ -325,7 +329,7 @@
                             {
                                 "label": "Writing Prompts - Tea & Cookies Writing Slam",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "1. Pick prompts from a hat. 2. Write for 10 minutes 3. Read you short.  Karen Anderson",
                                 "slots": 2
                             },
                             {
@@ -388,53 +392,64 @@
                 "hourly": {
                     "start-time": "9",
                     "half-hour-slot-count": "15",
+                    "time-minutes-offset": "30",
                     "time-slots": [
                         [],
                         [
                             {
                                 "label": "Formative Fiction - What Hooked You",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. What book turned you into a life-long reader.  What makes a book formative?  Does it change over time? Beth Mitcham",
                                 "slots": 2
                             },
                             {
-                                "label": "Dystopian Resistance w/Tech.  Asking for a Frienc",
+                                "label": "Dystopian Resistance w/Today's Technologies.  Asking for a Friend",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Lets plan ahead and utilize technology to prevent a Dystopia! Doug",
+                                "slots": 2
+                            },
+                            {
+                                "label": "Open Writing",
+                                "class": "openspace",
+                                "details": "Hang out and write with other creators.  David Levine",
                                 "slots": 2
                             }
                         ], [],
                         [
                             {
-                                "label": "Crosover Genres",
+                                "label": "Crossover Genres",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. SF, F, Western, Mystery, Romance.  Whats up, what do you like? Eva L Elasigue",
                                 "slots": 2
                             },
                             {
                                 "label": "Should I Stay or Should I Go",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion.  When to leave a fandom? An organization? Red flags? guilt vs sanity/safety? Ranting negotiated at beginning of discussion. Wing",
                                 "slots": 2
                             }
+
                         ], [],
                         [
                             {
                                 "label": "Ask a Black Girl 201: Implicit Bias and You",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Open Discussion. We're all a little racist, and its not OK.  Talk about the nature of implicit/unconscious bias, and how to correct it.Roots of bias. Points for good allyship. Elizabeth Adams",
                                 "slots": 2
                             },
                             {
                                 "label": "The Last Questions",
                                 "class": "openspace",
-                                "details": "",
+                                "details": "Some of us, or our parents, are not immortal.  Practical aspects.  Lawyer given Beneficiaries list, experience from my father's passing.  Also artistic work and copyright.  Beth Mitcham and Linda Deneroff",
+                                "slots": 2
+                            },
+                            {
                                 "slots": 2
                             },
                             {
                                 "label": "Massage Demo/Discussion",
                                 "class": "openspace",
-                                "details": "Commons - at massage table. Tom Whitmore.",
+                                "details": "Demo.  See Pamela Rapinan and Tom Whitmore demonstrate their massage styles on each other and describe what they're doing..",
                                 "slots": 2
                             }
                         ], [],
@@ -445,28 +460,31 @@
                                 "slots": 2,
                                 "colspan": 2
                             },
+                            {},
                             {
-                                "label": "<a href=\"/events/#banquet\">Banquet</a>",
+                                "label": "<a href=\"/events/#banquet\">Banquet [commons]</a>",
                                 "class": "planned",
                                 "slots": 2,
                                 "colspan": 1
                             }
                         ], [],
                         [
+                            {},{},{},
                             {
                                 "label": "<a href=\"/events/#auction\">Foolscap Auction</a>",
                                 "class": "planned",
                                 "slots": 2,
-                                "colspan": 3
+                                "colspan": 1
                             }
                         ], [],
                         [], [],
                         [
+                            {},
                             {
                                 "label": "Closing Ceremony & Foolscap Feedback",
                                 "class": "planned",
                                 "slots": 2,
-                                "colspan": 3
+                                "colspan": 1
                             }
                         ], [],
                         []
