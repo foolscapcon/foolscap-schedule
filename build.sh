@@ -5,8 +5,9 @@
 # gem install liquid
 # gem install liquid-cli
 
-template="schedule-template.md.liquid"
-file="${template}"
+template_name="schedule-template"
+template_ext=".md.liquid"
+
 
 
 
@@ -14,6 +15,16 @@ mkdir -p build
 
 #cat $file | liquid "$(< $json)"
 for datafile in *.json; do
+    year="${datafile//[!0-9]/}"
+    echo $year
+    # check to see if there is a specialized template for the year '-NNNN'
+    file="${template_name}-${year}${template_ext}"
+    if [ -f "${template_name}-${year}${template_ext}" ]; then
+        echo "custom ${year} template"
+    else
+        file="${template_name}${template_ext}"
+    fi
+
     filename="${datafile%%.*}"
     json="${filename}.json"
     out="build/${filename}.out.markdown"
