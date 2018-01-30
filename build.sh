@@ -8,6 +8,7 @@
 template_name="schedule-template"
 template_ext=".md.liquid"
 
+bundle install
 
 
 
