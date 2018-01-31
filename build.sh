@@ -12,7 +12,7 @@ bundle install
 
 
 
-mkdir -p build
+mkdir -p $1
 
 #cat $file | liquid "$(< $json)"
 for datafile in *.json; do
@@ -28,8 +28,8 @@ for datafile in *.json; do
 
     filename="${datafile%%.*}"
     json="${filename}.json"
-    out="build/${filename}.html"
-    error="build/${filename}.error"    
+    out="$1/${filename}.html"
+    error="$1/${filename}.error"    
     echo "build ${file} with ${datafile} to ${out}"
     ruby run.rb "$file" "$json" "${out}" 2> "${error}"
     if [ "$?" -ne 0 ]; then
