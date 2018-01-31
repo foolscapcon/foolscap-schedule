@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/foolscapcon/foolscap-schedule.svg?branch=master)](https://travis-ci.org/foolscapcon/foolscap-schedule)
 # foolscap-schedule
 # to run
 # bash README.md | pbcopy && bash README.md > test.md
