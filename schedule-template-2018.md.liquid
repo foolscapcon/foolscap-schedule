@@ -1,178 +1,203 @@
 {%- assign debug = false %}
-<style> 
- .hourly {
-     display: grid;
-     grid-template-columns: 1fr, repeat(3, 10fr);     
-     position: relative;
-     left: calc(-48vw + 50%);
-     width: 96vw;
- }
- .schedule .time {
-     font-size: 75%;
-     grid-column: 1;
- }
- 
- .schedule .planned {border: 1px solid black;}
- .schedule .break {
-     text-align: center;
-     vertical-align: middle;
-     background-color: #999;
- }
- .schedule .openspace {text-align: center; border: 1px solid black;}
- @media all {
-     .page-break { display: none; }
-     .schedule-print-grind { display: none; }
-     .hide-on-normal { display: none; }
-     p     .hide-on-print { display: block; }
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
- }
- @media print {
-     .hide-on-print { display: none; }
-     .hide-on-normal { display: block; }
-     .page-break { display: block; page-break-before: always; }
-     .schedule-print-grind { display: block; }
-     .site-head { display: none; }
-     .topnav_anchor { display: none; }
-     .topnav { display: none; }
-     .site-footer { display: none; }
-     .post-title { display: none; }
-     .schedule-grid { display: none; }
-     img { display: none; }
-
-     h3 { font-size: 400%; }
-     h4 { font-size: 200%; }
-     .grid-label { font-size: 700%; }
-     .panel-detail { font-size: 225%; line-height: 1.1 }
-     .time { height: 3.5in; margin: 0; padding: 0; }
-     //  .time:nth-of-type(odd) { page-break-before: always; }
-     .time { page-break-before: always; }     
-     .panel-page { page-break-before: always; }
-     .room { page-break-before: always; }
-
-     @page {size: landscape; }
- }
-</style>
+        <link rel="stylesheet" type="text/css" href="http://foolscap.org/assets/css/font-awesome.css?v=4ebb9b5d70" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
 
 
-{%- for day in schedule.calendar %}
-<h2 class="hide-on-print"> {{ day.label }} </h2>
-<div class="schedule-grid">
-<table class="{{ schedule.class-type }}">
-<!-- all-day -->
-{%- for event in day.all-day %}
-  <tr>
-    <td>{{event.label}}
-    <td>{{event.start-time}}
-    <td>{{event.stop-time}}
-  </tr>
-{%- endfor %}
-</table>
+        <style>
+         .schedule-grid {
 
-<!-- hourly -->
-{% assign row_num = 1 %}
-{% assign col_num = 1 %}            
-<div class="{{ schedule.class-type }} hourly" >
-    {%- for column in day.columns %}
-        {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
-        {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
-<h3 {{width}} style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{column.label}}</h3>
-            {% assign col_num = col_num | plus: 1 %}            
-    {%- endfor %}
+         }
+         .hourly {
+             display: grid;
+             grid-template-columns: 1fr repeat(3, 10fr);
 
-    {% assign row_num = row_num | plus: 1 %}
+         }
+         .schedule .time {
+             font-size: 75%;
+             grid-column: 1;
+         }
+
+         .schedule .planned {border: 1px solid black;}
+         .schedule .break {
+             text-align: center;
+             vertical-align: middle;
+             background-color: #999;
+         }
+         .schedule .openspace {text-align: center; border: 1px solid black;}
+         @media all {
+             .page-break { display: none; }
+             .schedule-print-grind { display: none; }
+             .hide-on-normal { display: none; }
+             p     .hide-on-print { display: block; }
+
+         }
+         @media print {
+             .hide-on-print { display: none; }
+             .hide-on-normal { display: block; }
+             .page-break { display: block; page-break-before: always; }
+             .schedule-print-grind { display: block; }
+             .site-head { display: none; }
+             .topnav_anchor { display: none; }
+             .topnav { display: none; }
+             .site-footer { display: none; }
+             .post-title { display: none; }
+             .schedule-grid { display: none; }
+             img { display: none; }
+
+             h3 { font-size: 400%; }
+             h4 { font-size: 200%; }
+             .grid-label { font-size: 700%; }
+             .panel-detail { font-size: 225%; line-height: 1.1 }
+             .time { height: 3.5in; margin: 0; padding: 0; }
+             //  .time:nth-of-type(odd) { page-break-before: always; }
+             .time { page-break-before: always; }
+             .panel-page { page-break-before: always; }
+             .room { page-break-before: always; }
+
+             @page {size: landscape; }
+         }
+        </style>
+    </head>
+    <body>
+        <!-- header class="site-head">
+             <div class="vertical">
+             <div class="site-head-content inner">
+             <a class="blog-logo" href="http://www.foolscap.org"><img src="http://foolscap.org/content/images/2014/Apr/logo-full-3col-0300x0100.png" alt="Foolscap" /></a>
+             <div class="head-info">Feb. 2&dash;4, 2018<br>
+             Hilton Seattle Airport<br>
+             Seattle, WA 98188
+             </div>
+             </div>
+             </div>
+             </header>-->
+        <div class="schedule-grid">
+            {%- for day in schedule.calendar %}
+
+                <h2 class="hide-on-print"> {{ day.label }} </h2>
+                <table class="{{ schedule.class-type }}">
+                    <!-- all-day -->
+                    {%- for event in day.all-day %}
+                        <tr>
+                            <td>{{event.label}}
+                            <td>{{event.start-time}}
+                            <td>{{event.stop-time}}
+                        </tr>
+                    {%- endfor %}
+                </table>
+
+                <!-- hourly -->
+                {% assign row_num = 1 %}
+                {% assign col_num = 1 %}
+                <br>
+                <div class="{{ schedule.class-type }} hourly" >
+                    {%- for column in day.columns %}
+                        {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
+                        {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
+                        <h3  style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{column.label}}</h3>
+                        {% assign col_num = col_num | plus: 1 %}
+                    {%- endfor %}
+
+                    {% assign row_num = row_num | plus: 1 %}
 
 
-    {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
-        {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
-        {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
-        
-        {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-        {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+                    {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
+                        {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
+                        {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
 
-<!-- must be left justified or markdown problems -->    
-        {% assign row_num = row_num | plus: 1 %}
-        {% assign col_num = 1 %}            
-<h4 class="time" style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{time}}</h4>
-        {% assign col_num = col_num | plus: 1 %}
-        {%- for panel in day.hourly.time-slots[forloop.index0] %}
-            {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
-            {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
-            {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
-            {%- save cap_id, fulltime %}
-<h4 class="{{panel.class}}" style="grid-column: {{col_num}}; grid-row: {{row_num}};" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a></h4>
-            {% assign col_num = col_num | plus: 1 %}            
-            {%- for panel in day.hourly.time-slots[forloop.index0] %}
+                        {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+                        {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+
+                        <!-- must be left justified or markdown problems -->
+                        {% assign row_num = row_num | plus: 1 %}
+                        {% assign col_num = 1 %}
+                        <h4 class="time" style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{time}}</h4>
+                        {% assign col_num = col_num | plus: 1 %}
+                        {%- for panel in day.hourly.time-slots[forloop.index0] %}
+                            {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
+                            {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
+                            {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
+                            {%- save cap_id, fulltime %}
+                            <h4 class="{{panel.class}}" style="grid-column: {{col_num}}; grid-row: {{row_num}};" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a></h4>
+                            {% assign col_num = col_num | plus: 1 %}
+                            {%- for panel in day.hourly.time-slots[forloop.index0] %}
+                            {%- endfor %}
+                        {%- endfor %}
+                    {%- endfor %}
             {%- endfor %}
-        {%- endfor %}
-    {%- endfor %}
-{%- endfor %}
-</div>
-<img src="/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
+                </div>
+                <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
 
-<h2 class="hide-on-print"> Panel Details </h2>
+                <h2 class="hide-on-print"> Panel Details </h2>
 
-{%- for day in schedule.calendar %}
-   {%- for time-slot in day.hourly.time-slots %}
-      {%- for panel in time-slot %}
-          {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
-          {%- if panel.class == "openspace" or panel.class == "planned" %}
-<div class="panel-page">
-              {% capture time %}{% save cap_id %}{% endcapture %}
-<h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
-<h4 class="hide-on-print">{{time}}</h4>
-<div class="panel-detail">
-    {%- if panel.details != %}
-        <p>
-            {{panel.details}}
-        </p>
-    {%- endif %}
-    {%- if panel.notes != %}
-        <p class="hide-on-print">
-            <h5>Panels Notes</h5>
-            {{panel.notes}}
-        </p>
-    {%- endif %}    
-</div>
-</div>
+                {%- for day in schedule.calendar %}
+                    {%- for time-slot in day.hourly.time-slots %}
+                        {%- for panel in time-slot %}
+                            {%- capture cap_id %}{% increment slot_detail_id %}{% endcapture %}
+                            {%- if panel.class == "openspace" or panel.class == "planned" %}
+                                <div class="panel-page">
+                                    {% capture time %}{% save cap_id %}{% endcapture %}
+                                    <h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
+                                    <h4 class="hide-on-print">{{time}}</h4>
+                                    <div class="panel-detail">
+                                        {%- if panel.details != %}
+                                            <p>
+                                                {{panel.details}}
+                                            </p>
+                                        {%- endif %}
+                                        {%- if panel.notes != %}
+                                            <p class="hide-on-print">
+                                                <h5>Panels Notes</h5>
+                                                {{panel.notes}}
+                                            </p>
+                                        {%- endif %}
+                                    </div>
+                                </div>
 
-<!-- panel print with time for room -->
-<div class="panel-page hide-on-normal">
-    <h3>{{panel.label}}</h3>
-    <h4 class="">  {{time}} </h4>
-    <div class="panel-detail">
-        {%- if panel.details != %}
-            {{panel.details}}
-        {%- endif %}
-    </div>
-</div>
-          {%- endif %}
-      {%- endfor %}
-   {%- endfor %}
-{%- endfor %}
+                                <!-- panel print with time for room -->
+                                <div class="panel-page hide-on-normal">
+                                    <h3>{{panel.label}}</h3>
+                                    <h4 class="">  {{time}} </h4>
+                                    <div class="panel-detail">
+                                        {%- if panel.details != %}
+                                            {{panel.details}}
+                                        {%- endif %}
+                                    </div>
+                                </div>
+                            {%- endif %}
+                        {%- endfor %}
+                    {%- endfor %}
+                {%- endfor %}
 
 
-{%- for column in day.columns %}
-    {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
-    {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
-    <th {{width}}>{{column.label}}</th>
-{%- endfor %}
+                {%- for column in day.columns %}
+                    {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
+                    {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
+                    <th >{{column.label}}</th>
+                {%- endfor %}
 
-<!-- wall schedule grid labels for print -->
-<div class="hide-on-normal">
-    {%- for day in schedule.calendar %}
-        <!-- {{day.label}} -->
-        {%- for column in day.columns %}
-            {%- if column.hide == true or column.label == "" %}<!-- skip -->{%- continue %}{%- endif %}
-            <h1 class="grid-label room">{{column.label}}</h1>
-        {%- endfor %}
+                <!-- wall schedule grid labels for print -->
+                <div class="hide-on-normal">
+                    {%- for day in schedule.calendar %}
+                        <!-- {{day.label}} -->
+                        {%- for column in day.columns %}
+                            {%- if column.hide == true or column.label == "" %}<!-- skip -->{%- continue %}{%- endif %}
+                            <h1 class="grid-label room">{{column.label}}</h1>
+                        {%- endfor %}
 
-        {%- for hour in (day.hourly.start-time..24) %}
-            {%- assign hour-minutes = day.hourly.time-minutes-offset %}
-            {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
-            <h1 class="grid-label time">{{time}}
-        {%- endfor %}
-    {%- endfor %}
-    </div>
-</div>
-<div class="page-break"></div>
+                        {%- for hour in (day.hourly.start-time..24) %}
+                            {%- assign hour-minutes = day.hourly.time-minutes-offset %}
+                            {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+                            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+                            <h1 class="grid-label time">{{time}}
+                        {%- endfor %}
+                    {%- endfor %}
+                </div>
+        </div>
+        <div class="page-break"></div>
+    </body>
+</html>
