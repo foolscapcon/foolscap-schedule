@@ -11,9 +11,12 @@ template_ext=".md.liquid"
 bundle install
 
 
+build_dir=${1:-"."}
+if [ ! -d "$build_dir" ]; then
+    mkdir -p "$build_dir"
+fi
 
-mkdir -p $1
-
+echo "build_dir is '$build_dir'"
 #cat $file | liquid "$(< $json)"
 for datafile in *.json; do
     year="${datafile//[!0-9]/}"
@@ -28,8 +31,8 @@ for datafile in *.json; do
 
     filename="${datafile%%.*}"
     json="${filename}.json"
-    out="$1/${filename}.html"
-    error="$1/${filename}.error"    
+    out="$build_dir/${filename}.html"
+    error="$build_dir/${filename}.error"
     echo "build ${file} with ${datafile} to ${out}"
     ruby run.rb "$file" "$json" "${out}" 2> "${error}"
     if [ "$?" -ne 0 ]; then
@@ -38,5 +41,6 @@ for datafile in *.json; do
     fi
 done
 
-cat "${out}" | pbcopy        
-echo "build complete and copied to pasteboard [$out] $(date)"
+#cat "${out}" | pbcopy
+echo "build complete $(wc *.html)"
+#and copied to pasteboard [$out] $(date)"
