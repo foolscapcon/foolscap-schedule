@@ -8,6 +8,7 @@
 template_name="schedule-template"
 template_ext=".md.liquid"
 
+bundle install
 
 
 
@@ -27,7 +28,7 @@ for datafile in *.json; do
 
     filename="${datafile%%.*}"
     json="${filename}.json"
-    out="build/${filename}.out.markdown"
+    out="build/${filename}.html"
     error="build/${filename}.error"    
     echo "build ${file} with ${datafile} to ${out}"
     ruby run.rb "$file" "$json" "${out}" 2> "${error}"

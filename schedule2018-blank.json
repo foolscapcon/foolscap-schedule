@@ -11,7 +11,7 @@
                     {
                         "label": "Registration",
                         "start-time": "3:00 PM",
-                        "stop-time": "8:00 PM"
+                        "stop-time": "6:00 PM"
                     },
                     {
                         "label": "Art Show",
@@ -49,25 +49,25 @@
                     }
                 ],
                 "hourly": {
-                    "start-time": "17",
+                    "start-time": "16",
                     "half-hour-slot-count": "14",
                     "time-minutes-offset": "00",
                     "time-slots": [
                         [
                             {}, {},
                             {
-                                "label": "Opening Ceremony",
+                                "label": "Opening Ceremony<br>Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
                                 "class": "planned",
-                                "slots": 1,
+                                "slots": 2,
                                 "colspan": 1
                             }
                         ],
                         [
                             {},
                             {
-                                "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
+                                "label": "",
                                 "class": "planned",
-                                "slots": 2,
+                                "slots": 1,
                                 "colspan": 1
                             },
                             {}
@@ -75,9 +75,9 @@
                         [],
                         [
                             {
-                                "label": "Dinner (1.5 hrs)",
+                                "label": "Dinner (2 hrs)",
                                 "class": "break",
-                                "slots": 3,
+                                "slots": 4,
                                 "colspan": 3
                             }
                         ], [], [],
@@ -199,7 +199,6 @@
                                 "label": "Next Hugo",
                                 "class": "openspace",
                                 "details": "What have you read (watched, heard) that we should nominate for a Hugo?  Beth Mitcham, Tom?",
-                                "notes": "<p>2016 Hugo Possibilities: These are the things we (people in the room) might personally nominateNovel<ul><li>Arabella of Mars, David Levine<li>Shepherd's Crown, Terry Pratchett<li>Lovecraft Country, Matt Ruff<li>Obelisk Gate, N.K. Jemison<li>Raven and the Raindeer, Ursula Vernon /  T. Kingfisher<li>Central Station, Lavie Tidhar<li>Like a Boss, Adam Rakunas<li>Bones of Starlight , Eva Elasigue<li>Waypoint Kangaroo, Curtis Chen</ul>Campbell Winner:<ul><li>Eva Elasigue<li>Adam Rakunas</ul>Novella<ul><li>\"Penric and the Shamen\", Lois McMaster Bujold</ul>Series:<ul><li>Discworld <li>1632 / Ring of Fire<li>Expanse series<li>Mercy Thompson</ul>Movies / Long Form:<ul><li>Rogue One<li>Arrival<li>The Man in the High Castle, Season One<li>A Monster Calls (maybe for next year)<li>Colony<li>West World<li>Kubo and the Two Strings<li>\"DC comic crossover - Supergirl/Flash\"<li>X-man Apocalypse<li>Star Trek Beyond</ul>Podcast<ul><li>\"Sword and Laser\"<li>\"Starship Sofa\"<li>\"Hidden Almanac\"<li>\"Welcome to Nightvale\"</ul>Fanzines:<ul><li>Blackgate<li>Journey Planet<li>\"Rec Center\"</ul>Best Related Work:<ul><li>Autobiography of James T. Kirk, <li>\"For the Love of Spock\", Adam Nimoy</ul></p>",
                                 "slots": 2
                             },
                             {
