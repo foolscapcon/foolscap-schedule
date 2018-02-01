@@ -10,12 +10,14 @@ module Liquid
     end
 
     def render(input)
-      Template.parse(input, :error_mode => :strict)
-        .render(context, {
-                  strict_variables: true,
+      template = Template.parse(input, :error_mode => :strict)
+      template.render!(context, {
+                  strict_variables: false,
                   strict_filters: true
                 }
-               )
+                     )
+      #File.open("liq.error", 'w') { |file| file.puts(template.errors.to_s) }
+      #$stderr.puts template.errors
     end
 
     private
@@ -43,6 +45,20 @@ module TimeToRow
 end
 
 Liquid::Template.register_filter(TimeToRow)
+
+
+ 
+module DefaultName
+  def default_name(input, first, verb, last)
+      if !input || input.respond_to?(:empty?) && input.empty?
+        first.to_s + " " + verb.to_s + " " + last.to_s 
+      else
+        input
+      end
+  end
+end
+
+Liquid::Template.register_filter(DefaultName)
 
 class Save < Liquid::Tag
   def initialize(tag_name, markup, tokens)
