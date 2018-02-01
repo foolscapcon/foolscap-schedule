@@ -1,8 +1,89 @@
 {
 
     "schedule" : {
+        "columns": [
+            "c_time",
+            "c_columbia_a",
+            "c_columbia_b",
+            "c_other"
+        ],
+        "room": {
+            "Columbia A": {
+                "name": "Columbia A",
+                "location": "Columbia A",
+                "column": "c_columbia_a"
+            },
+            "Columbia B": {
+                "name": "Columbia B",
+                "location": "Columbia B",
+                "column": "c_columbia_b"
+            },
+            "Conference Room": {
+                "name": "Conference Room",
+                "location": "Board Room",
+                "column": "c_other"
+            },
+            "Hospitality": {
+                "name": "Hospitality",
+                "location": "Room 2015",
+                "column": "c_other"
+            },
+            "Commons": {
+                "name": "Commons",
+                "location": "Summit Ballroom",
+                "column": "c_other"
+            }
+            
+        },
         "class-type": "schedule",
-
+        "day-time-ranges": {
+            "Friday": {
+                "start-time": "15",
+                "stop-time": "21"
+            },
+            "Saturday": {
+                "start-time": "10",
+                "stop-time": "21"
+            },
+            "Sunday": {
+                "start-time": "10",
+                "stop-time": "15"
+            }          
+        },
+        "day-events" : 
+        {
+            "Friday": [
+                {
+                    "room": "Commons",
+                        "name": "Registration Opens",
+                        "hour": "15"
+                        
+                    },
+                    {
+                        "room": "Commons",
+                        "name": "Art Show Opens",
+                        "hour": "16"
+                        
+                    },
+                    {
+                        "room": "Commons",
+                        "name": "Dealer's Room Opens",
+                        "hour": "16"
+                        
+                    },
+                    {
+                        "room": "Columbia A",
+                        "name": "Opening Ceremony & Open Space Generation",
+                        "class": "planned",
+                        "hour": "16"
+                        
+                    }
+                ],
+                "Saturday": [
+                ],
+                "Sunday": [
+                ]                
+            },
         "calendar" : [
             {
                 "label": "Friday",
@@ -32,20 +113,16 @@
                 ],
                 "columns": [
                     {
-                        "label": "<!-- time -->",
-                        "width": "1*"
+                        "label": "<!-- time -->"
                     },
                     {
-                        "label": "Columbia A<!-- Columbia A -->",
-                        "width": "10*"
+                        "label": "Columbia A<!-- Columbia A -->"
                     },
                     {
-                        "label": "Columbia B<!-- Columbia B -->",
-                        "width": "10*"
+                        "label": "Columbia B<!-- Columbia B -->"
                     },
                     {
-                        "label": "Commons <!-- Commons -->",
-                        "width": "10*"
+                        "label": "Commons & More <!-- Commons -->"
                     }
                 ],
                 "hourly": {
@@ -390,7 +467,7 @@
                     }
                 ],
                 "hourly": {
-                    "start-time": "9",
+                    "start-time": "10",
                     "half-hour-slot-count": "15",
                     "time-minutes-offset": "30",
                     "time-slots": [
