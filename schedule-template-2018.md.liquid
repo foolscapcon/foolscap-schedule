@@ -104,30 +104,19 @@
             {%- for day in schedule.calendar %}
 
                 <h2 class="hide-on-print"> {{ day.label }} </h2>
-                <table class="{{ schedule.class-type }}">
-                    <!-- all-day -->
-                    {%- for event in day.all-day %}
-                        <tr>
-                            <td>{{event.label}}
-                            <td>{{event.start-time}}
-                            <td>{{event.stop-time}}
-                        </tr>
-                    {%- endfor %}
-                </table>
 
                 <!-- hourly -->
-                {% assign row_num = 1 %}
-                {% assign col_num = 1 %}
+                {%- assign row_num = 1 %}
+                {%- assign col_num = 1 %}
                 <br>
                 <div class="{{ schedule.class-type }} hourly {{ day.label }}" >
                     {%- for column in day.columns %}
-                        {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
-                        {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
+
                         <h3  style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{column.label}}</h3>
-                        {% assign col_num = col_num | plus: 1 %}
+                        {%- assign col_num = col_num | plus: 1 %}
                     {%- endfor %}
 
-                    {% assign row_num = row_num | plus: 1 %}
+                    {%- assign row_num = row_num | plus: 1 %}
                     
                     <!-- time for {{day.label}} -->
                     {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
@@ -138,7 +127,7 @@
                         {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
 
 
-                        {% assign col_num = 1 %}
+                        {%- assign col_num = 1 %}
                         <h4 class="time" style="grid-column: c_time; grid-row: {{row_num}};">{{time}}</h4>
                         {% comment %}
                         {% assign col_num = col_num | plus: 1 %}
@@ -162,15 +151,15 @@
                         {%- assign day-name = day-hash[0] %}
                         <!-- events for {{day-name}} -->
                         {%- for event in day-hash[1] %}
-                            <h4 class="{{event.class}}" style="grid-column: {{ event.room | room_to_column }}; grid-row: {{ event.hour | time_to_row: day-name }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{event.name}}</a> </h4>
+                            <h4 class="{{event.class}}" style="grid-column: {{ event.room | room_to_column }}; grid-row: {{ event.hour | time_to_row: day-name }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
                         {%- endfor %}
                     {%- endfor %}
                 </div>                    
             {%- endfor %}
             
-
+            <h2 class="hide-on-print"> Map </h2>
                 
-                <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
+            <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
 
                 <h2 class="hide-on-print"> Panel Details </h2>
 
@@ -215,17 +204,15 @@
 
 
                 {%- for column in day.columns %}
-                    {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
-                    {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
                     <th >{{column.label}}</th>
                 {%- endfor %}
+
 
                 <!-- wall schedule grid labels for print -->
                 <div class="hide-on-normal">
                     {%- for day in schedule.calendar %}
                         <!-- {{day.label}} -->
                         {%- for column in day.columns %}
-                            {%- if column.hide == true or column.label == "" %}<!-- skip -->{%- continue %}{%- endif %}
                             <h1 class="grid-label room">{{column.label}}</h1>
                         {%- endfor %}
 

@@ -77,7 +77,18 @@
                         "class": "planned",
                         "hour": "16"
                         
+                    },
+                    {
+                        "room": "Columbia A",
+                        "hour": "17"
+                        
+                    },
+                                    {
+                        "room": "Columbia B",
+                        "hour": "17"
+                        
                     }
+                
                 ],
                 "Saturday": [
                 ],
