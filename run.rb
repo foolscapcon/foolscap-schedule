@@ -26,32 +26,44 @@ module Liquid
   end
 end
 
-module RoomToColumn 
+module RoomToColumn
   def room_to_column(room)
-    @context['schedule']['room'][room]['column'] if room
+    if room
+      @context['schedule']['room'][room]['column']
+    else
+      "2/3"
+      end
   end
 end
 
 Liquid::Template.register_filter(RoomToColumn)
 
+# rows are on the 1/2 hour
 module TimeToRow
-  def time_to_row(input, string)
-    time = input.to_i
-    day = string
+  def time_to_row(hour_s, day, hour_end_s = nil, hour_subdivisions = 2, start_row = 2)
+    hour = hour_s.to_i
+    hour_end = (hour_end_s.nil?) ? nil : hour_end_s.to_i
+
     start_time = @context['schedule']['day-time-ranges'][day]['start-time'].to_i
-    2 + time - start_time
-    #" day " + day.to_s + " time " + time.to_s + " start_time " + start_time.to_s
+    event_start_row = start_row +
+                      hour_subdivisions*(hour - start_time)
+    event_end_row = event_start_row + hour_subdivisions if not hour_end
+    event_end_row = start_row +
+                    hour_subdivisions*(hour_end - start_time) + 1 if hour_end
+    # goes into the begining of specified row
+    "#{event_start_row}/#{event_end_row}"
+
   end
 end
 
 Liquid::Template.register_filter(TimeToRow)
 
 
- 
+
 module DefaultName
   def default_name(input, first, verb, last)
       if !input || input.respond_to?(:empty?) && input.empty?
-        first.to_s + " " + verb.to_s + " " + last.to_s 
+        first.to_s + " " + verb.to_s + " " + last.to_s
       else
         input
       end
@@ -68,7 +80,7 @@ class Save < Liquid::Tag
   end
 
   def render(context)
-    #binding.pry    
+    #binding.pry
     context.registers[:savevalue] ||= Hash.new(0)
     if @value
       context.stack do
@@ -85,13 +97,13 @@ class Save < Liquid::Tag
       end
     end
   end
-    
+
   def variables_from_string(markup)
     markup.split(',').collect do |var|
       var =~ /\s*(#{Liquid::QuotedFragment})\s*/o
       $1 ? Liquid::Expression.parse($1) : nil
     end.compact
-  end  
+  end
 end
 Liquid::Template.register_tag('save', Save)
 
@@ -104,14 +116,14 @@ if files.empty?
 elsif files.size == 1
   json = File.open(files.pop)
 elsif files.size == 2
-  json = File.open(files.pop)  
+  json = File.open(files.pop)
   template = File.open(files.pop)
 else
   out = File.open(files.pop, 'w')
-  json = File.open(files.pop)  
+  json = File.open(files.pop)
   template = File.open(files.pop)
 end
-      
+
 out.write(
   Liquid::Cli.new(json.read || '{}').render(template.read)
 )

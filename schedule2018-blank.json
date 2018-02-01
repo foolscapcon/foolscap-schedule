@@ -55,45 +55,50 @@
             "Friday": [
                 {
                     "room": "Commons",
-                        "name": "Registration Opens",
-                        "hour": "15"
-                        
-                    },
-                    {
-                        "room": "Commons",
-                        "name": "Art Show Opens",
-                        "hour": "16"
-                        
-                    },
-                    {
-                        "room": "Commons",
-                        "name": "Dealer's Room Opens",
-                        "hour": "16"
-                        
-                    },
-                    {
-                        "room": "Columbia A",
-                        "name": "Opening Ceremony & Open Space Generation",
-                        "class": "planned",
-                        "hour": "16"
-                        
-                    },
-                    {
-                        "room": "Columbia A",
-                        "hour": "17"
-                        
-                    },
-                                    {
-                        "room": "Columbia B",
-                        "hour": "17"
-                        
-                    }
+                    "name": "Registration Opens",
+                    "hour": "15"
+                    
+                },
+                {
+                    "room": "Commons",
+                    "name": "Art Show Opens",
+                    "hour": "16"
+                    
+                },
+                {
+                    "room": "Commons",
+                    "name": "Dealer's Room Opens",
+                    "hour": "16"
+                    
+                },
+                {
+                    "room": "Columbia A",
+                    "name": "Opening Ceremony & Open Space Generation",
+                    "hour": "16"
+                    
+                },
+                {
+                    "class": "openspace",                    
+                    "room": "Columbia A",
+                    "hour": "17"
+                },
+                {
+                    "class": "openspace",
+                    "room": "Columbia B",
+                    "hour": "17"
+                },
+                {
+                    "class": "break",
+                    "name": "Dinner",
+                    "hour": "18",
+                    "hour-end": "19"
+                }                
                 
-                ],
-                "Saturday": [
-                ],
-                "Sunday": [
-                ]                
+            ],
+            "Saturday": [
+            ],
+            "Sunday": [
+            ]                
             },
         "calendar" : [
             {
