@@ -14,9 +14,34 @@
          }
          .hourly {
              display: grid;
-             grid-template-columns: 1fr repeat(3, 10fr);
+             grid-template-columns: [ {{schedule.columns[0]}} ] 1fr [ {{schedule.columns[1]}} ] 10fr [ {{schedule.columns[2]}} ] 10fr [ {{schedule.columns[3]}} ] 10fr;
 
          }
+
+         {%- for day in schedule.calendar %}
+         .hourly .{{ day.label }} {
+             
+             
+             <!-- time for {{day.label}} -->
+             {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
+             {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
+             {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
+             
+             {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+             {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+                 
+                 {%- assign col_num = 1 %}
+                 {%- if forloop.first %}
+                 grid-template-areas: "row_{{time | escape }}"
+                 {%- elsif  forloop.last %}
+             "row_{{time}}";
+                 {%- else  %}
+             "row_{{time}}"
+                 {%- endif %}
+             {%- endfor %}
+         }
+         {%- endfor %}
+
          .schedule .time {
              font-size: 75%;
              grid-column: 1;
@@ -94,7 +119,7 @@
                 {% assign row_num = 1 %}
                 {% assign col_num = 1 %}
                 <br>
-                <div class="{{ schedule.class-type }} hourly" >
+                <div class="{{ schedule.class-type }} hourly {{ day.label }}" >
                     {%- for column in day.columns %}
                         {%- if column.hide == true %}<!-- skip -->{%- continue %}{%- endif %}
                         {%- capture width %}{%- if column.width != nil %}width="{{column.width}}"{%- endif %}{%- endcapture %}
@@ -103,8 +128,8 @@
                     {%- endfor %}
 
                     {% assign row_num = row_num | plus: 1 %}
-
-
+                    
+                    <!-- time for {{day.label}} -->
                     {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
                         {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
                         {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
@@ -112,24 +137,39 @@
                         {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
                         {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
 
-                        <!-- must be left justified or markdown problems -->
-                        {% assign row_num = row_num | plus: 1 %}
+
                         {% assign col_num = 1 %}
-                        <h4 class="time" style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{time}}</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: {{row_num}};">{{time}}</h4>
+                        {% comment %}
+                        {% assign col_num = col_num | plus: 1 %}
+                        
+                        {%- for panel in day.hourly.time-slots[forloop.index0] %}
+                        {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
+                        {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
+                        {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
+                        {%- save cap_id, fulltime %}
+                        <h4 class="{{panel.class}}" style="grid-column: {{col_num}}; grid-row: {{row_num}};" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a></h4>
                         {% assign col_num = col_num | plus: 1 %}
                         {%- for panel in day.hourly.time-slots[forloop.index0] %}
-                            {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
-                            {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
-                            {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
-                            {%- save cap_id, fulltime %}
-                            <h4 class="{{panel.class}}" style="grid-column: {{col_num}}; grid-row: {{row_num}};" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a></h4>
-                            {% assign col_num = col_num | plus: 1 %}
-                            {%- for panel in day.hourly.time-slots[forloop.index0] %}
-                            {%- endfor %}
+                        {%- endfor %}
+                        {%- endfor %}
+                        {% endcomment %}
+
+                        
+                        {%- assign row_num = row_num | plus: 1 %}
+                    {%- endfor %}
+                    {%- for day-hash in schedule.day-events  %}
+                        {%- assign day-name = day-hash[0] %}
+                        <!-- events for {{day-name}} -->
+                        {%- for event in day-hash[1] %}
+                            <h4 class="{{event.class}}" style="grid-column: {{ event.room | room_to_column }}; grid-row: {{ event.hour | time_to_row: day-name }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{event.name}}</a> </h4>
                         {%- endfor %}
                     {%- endfor %}
+                </div>                    
             {%- endfor %}
-                </div>
+            
+
+                
                 <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
 
                 <h2 class="hide-on-print"> Panel Details </h2>
@@ -144,12 +184,12 @@
                                     <h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
                                     <h4 class="hide-on-print">{{time}}</h4>
                                     <div class="panel-detail">
-                                        {%- if panel.details != %}
+                                        {%- if panel.details != empty %}
                                             <p>
                                                 {{panel.details}}
                                             </p>
                                         {%- endif %}
-                                        {%- if panel.notes != %}
+                                        {%- if panel.notes != empty %}
                                             <p class="hide-on-print">
                                                 <h5>Panels Notes</h5>
                                                 {{panel.notes}}
@@ -163,7 +203,7 @@
                                     <h3>{{panel.label}}</h3>
                                     <h4 class="">  {{time}} </h4>
                                     <div class="panel-detail">
-                                        {%- if panel.details != %}
+                                        {%- if panel.details != empty %}
                                             {{panel.details}}
                                         {%- endif %}
                                     </div>
