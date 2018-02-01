@@ -42,5 +42,5 @@ for datafile in *.json; do
 done
 
 #cat "${out}" | pbcopy
-echo "build complete $(wc ${build_dir}/*.html)"
+echo "build complete $(wc ${build_dir}/*.html ${build_dir}/*.error)"
 #and copied to pasteboard [$out] $(date)"
