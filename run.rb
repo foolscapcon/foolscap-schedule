@@ -10,7 +10,12 @@ module Liquid
     end
 
     def render(input)
-      Template.parse(input).render(context, :error_mode => :strict)
+      Template.parse(input, :error_mode => :strict)
+        .render(context, {
+                  strict_variables: true,
+                  strict_filters: true
+                }
+               )
     end
 
     private
@@ -18,6 +23,26 @@ module Liquid
     attr_reader :context
   end
 end
+
+module RoomToColumn 
+  def room_to_column(room)
+    @context['schedule']['room'][room]['column']
+  end
+end
+
+Liquid::Template.register_filter(RoomToColumn)
+
+module TimeToRow
+  def time_to_row(input, string)
+    time = input.to_i
+    day = string
+    start_time = @context['schedule']['day-time-ranges'][day]['start-time'].to_i
+    2 + time - start_time
+    #" day " + day.to_s + " time " + time.to_s + " start_time " + start_time.to_s
+  end
+end
+
+Liquid::Template.register_filter(TimeToRow)
 
 class Save < Liquid::Tag
   def initialize(tag_name, markup, tokens)

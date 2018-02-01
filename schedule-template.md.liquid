@@ -108,12 +108,12 @@
 <h3> <a id="slot_detail_{{cap_id}}" href="#slot_{{cap_id}}">{{panel.label}} </a> </h3>
 <h4 class="hide-on-print">{{time}}</h4>
 <div class="panel-detail">
-    {%- if panel.details != %}
+    {%- if panel.details != empty %}
         <p>
             {{panel.details}}
         </p>
     {%- endif %}
-    {%- if panel.notes != %}
+    {%- if panel.notes != empty %}
         <p class="hide-on-print">
             <h5>Panels Notes</h5>
             {{panel.notes}}
@@ -127,7 +127,7 @@
     <h3>{{panel.label}}</h3>
     <h4 class="">  {{time}} </h4>
     <div class="panel-detail">
-        {%- if panel.details != %}
+        {%- if panel.details != empty %}
             {{panel.details}}
         {%- endif %}
     </div>
