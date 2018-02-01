@@ -18,33 +18,9 @@
 
          }
 
-         {%- for day in schedule.calendar %}
-         .hourly .{{ day.label }} {
-             
-             
-             <!-- time for {{day.label}} -->
-             {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
-             {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
-             {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
-             
-             {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-             {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
-                 
-                 {%- assign col_num = 1 %}
-                 {%- if forloop.first %}
-                 grid-template-areas: "row_{{time | escape }}"
-                 {%- elsif  forloop.last %}
-             "row_{{time}}";
-                 {%- else  %}
-             "row_{{time}}"
-                 {%- endif %}
-             {%- endfor %}
-         }
-         {%- endfor %}
-
          .schedule .time {
              font-size: 75%;
-             grid-column: 1;
+             grid-column: c_time;
          }
 
          .schedule .planned {border: 1px solid black;}
@@ -53,7 +29,14 @@
              vertical-align: middle;
              background-color: #999;
          }
-         .schedule .openspace {text-align: center; border: 1px solid black;}
+         .schedule .openspace {
+             text-align: center;
+             border: 1px dashed black;
+         }
+         .schedule .openspace .closed {
+             text-align: center;
+             border: 1px solid black;
+         }         
          @media all {
              .page-break { display: none; }
              .schedule-print-grind { display: none; }
@@ -151,7 +134,10 @@
                         {%- assign day-name = day-hash[0] %}
                         <!-- events for {{day-name}} -->
                         {%- for event in day-hash[1] %}
-                            <h4 class="{{event.class}}" style="grid-column: {{ event.room | room_to_column }}; grid-row: {{ event.hour | time_to_row: day-name }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
+                            {%- assign col = event.room | room_to_column  %}
+                            {%- assign row = event.hour | time_to_row: day-name, event.hour-end  %}
+                            {%- assign class = event.class | default: "planned" %}
+                            <h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
                         {%- endfor %}
                     {%- endfor %}
                 </div>                    

@@ -17,85 +17,10 @@
              grid-template-columns: [ c_time ] 1fr [ c_columbia_a ] 10fr [ c_columbia_b ] 10fr [ c_other ] 10fr;
 
          }
-         .hourly .Friday {
-             
-             
-             <!-- time for Friday -->
-                 grid-template-areas: "row_3:00 PM"
-             "row_3:30 PM"
-             "row_4:00 PM"
-             "row_4:30 PM"
-             "row_5:00 PM"
-             "row_5:30 PM"
-             "row_6:00 PM"
-             "row_6:30 PM"
-             "row_7:00 PM"
-             "row_7:30 PM"
-             "row_8:00 PM"
-             "row_8:30 PM"
-             "row_9:00 PM"
-             "row_9:30 PM"
-             "row_10:00 PM";
-         }
-         .hourly .Saturday {
-             
-             
-             <!-- time for Saturday -->
-                 grid-template-areas: "row_10:00 AM"
-             "row_10:30 AM"
-             "row_11:00 AM"
-             "row_11:30 AM"
-             "row_12:00 PM"
-             "row_12:30 PM"
-             "row_1:00 PM"
-             "row_1:30 PM"
-             "row_2:00 PM"
-             "row_2:30 PM"
-             "row_3:00 PM"
-             "row_3:30 PM"
-             "row_4:00 PM"
-             "row_4:30 PM"
-             "row_5:00 PM"
-             "row_5:30 PM"
-             "row_6:00 PM"
-             "row_6:30 PM"
-             "row_7:00 PM"
-             "row_7:30 PM"
-             "row_8:00 PM"
-             "row_8:30 PM"
-             "row_9:00 PM"
-             "row_9:30 PM"
-             "row_10:00 PM"
-             "row_10:30 PM"
-             "row_11:00 PM"
-             "row_11:30 PM"
-             "row_12:00 PM";
-         }
-         .hourly .Sunday {
-             
-             
-             <!-- time for Sunday -->
-                 grid-template-areas: "row_10:00 AM"
-             "row_10:30 AM"
-             "row_11:00 AM"
-             "row_11:30 AM"
-             "row_12:00 PM"
-             "row_12:30 PM"
-             "row_1:00 PM"
-             "row_1:30 PM"
-             "row_2:00 PM"
-             "row_2:30 PM"
-             "row_3:00 PM"
-             "row_3:30 PM"
-             "row_4:00 PM"
-             "row_4:30 PM"
-             "row_5:00 PM"
-             "row_5:30 PM";
-         }
 
          .schedule .time {
              font-size: 75%;
-             grid-column: 1;
+             grid-column: c_time;
          }
 
          .schedule .planned {border: 1px solid black;}
@@ -104,7 +29,14 @@
              vertical-align: middle;
              background-color: #999;
          }
-         .schedule .openspace {text-align: center; border: 1px solid black;}
+         .schedule .openspace {
+             text-align: center;
+             border: 1px dashed black;
+         }
+         .schedule .openspace .closed {
+             text-align: center;
+             border: 1px solid black;
+         }         
          @media all {
              .page-break { display: none; }
              .schedule-print-grind { display: none; }
@@ -168,43 +100,44 @@
                         <h3  style="grid-column: 4; grid-row: 1;">Commons & More <!-- Commons --></h3>
                     
                     <!-- time for Friday -->
-                        <h4 class="time" style="grid-column: c_time; grid-row: 2;">3:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 2;">3:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 3;">3:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 3;">3:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 4;">4:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 4;">4:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 5;">4:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 5;">4:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 6;">5:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 6;">5:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 7;">5:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 7;">5:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 8;">6:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 8;">6:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 9;">6:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 9;">6:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 10;">7:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 10;">7:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 11;">7:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 11;">7:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 12;">8:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 12;">8:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 13;">8:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 13;">8:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 14;">9:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 14;">9:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 15;">9:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 15;">9:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 16;">10:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 16;">10:00 PM</h4>
                         
                         <!-- events for Friday -->
-                            <h4 class="" style="grid-column: c_other; grid-row: 2;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
-                            <h4 class="planned" style="grid-column: c_columbia_a; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_b; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 2/4;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_a; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_b; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="break" style="grid-column: 2/3; grid-row: 8/11;"> <a id="slot_" href="#slot_detail_">Dinner</a> </h4>
                         <!-- events for Saturday -->
                         <!-- events for Sunday -->
                 </div>
@@ -226,71 +159,72 @@
                         <h3  style="grid-column: 5; grid-row: 1;">Commons <!-- Commons --></h3>
                     
                     <!-- time for Saturday -->
-                        <h4 class="time" style="grid-column: c_time; grid-row: 2;">10:30 AM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 2;">10:00 AM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 3;">10:00 AM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 3;">10:30 AM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 4;">11:30 AM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 4;">11:00 AM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 5;">11:00 AM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 5;">11:30 AM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 6;">12:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 6;">12:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 7;">12:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 7;">12:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 8;">1:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 8;">1:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 9;">1:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 9;">1:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 10;">2:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 10;">2:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 11;">2:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 11;">2:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 12;">3:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 12;">3:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 13;">3:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 13;">3:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 14;">4:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 14;">4:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 15;">4:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 15;">4:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 16;">5:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 16;">5:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 17;">5:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 17;">5:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 18;">6:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 18;">6:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 19;">6:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 19;">6:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 20;">7:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 20;">7:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 21;">7:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 21;">7:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 22;">8:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 22;">8:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 23;">8:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 23;">8:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 24;">9:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 24;">9:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 25;">9:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 25;">9:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 26;">10:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 26;">10:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 27;">10:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 27;">10:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 28;">11:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 28;">11:00 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 29;">11:00 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 29;">11:30 PM</h4>
                         
-                        <h4 class="time" style="grid-column: c_time; grid-row: 30;">12:30 PM</h4>
+                        <h4 class="time" style="grid-column: c_time; grid-row: 30;">12:00 PM</h4>
                         
                         <!-- events for Friday -->
-                            <h4 class="" style="grid-column: c_other; grid-row: 2;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
-                            <h4 class="planned" style="grid-column: c_columbia_a; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_b; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 2/4;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_a; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_b; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="break" style="grid-column: 2/3; grid-row: 8/11;"> <a id="slot_" href="#slot_detail_">Dinner</a> </h4>
                         <!-- events for Saturday -->
                         <!-- events for Sunday -->
                 </div>
@@ -345,12 +279,13 @@
                         <h4 class="time" style="grid-column: c_time; grid-row: 17;">5:30 PM</h4>
                         
                         <!-- events for Friday -->
-                            <h4 class="" style="grid-column: c_other; grid-row: 2;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
-                            <h4 class="" style="grid-column: c_other; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
-                            <h4 class="planned" style="grid-column: c_columbia_a; grid-row: 3;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
-                            <h4 class="" style="grid-column: c_columbia_b; grid-row: 4;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 2/4;"> <a id="slot_" href="#slot_detail_">Registration Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Art Show Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_other; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Dealer's Room Opens</a> </h4>
+                            <h4 class="" style="grid-column: c_columbia_a; grid-row: 4/6;"> <a id="slot_" href="#slot_detail_">Opening Ceremony & Open Space Generation</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_a; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia A</a> </h4>
+                            <h4 class="openspace" style="grid-column: c_columbia_b; grid-row: 6/8;"> <a id="slot_" href="#slot_detail_">17 in Columbia B</a> </h4>
+                            <h4 class="break" style="grid-column: 2/3; grid-row: 8/11;"> <a id="slot_" href="#slot_detail_">Dinner</a> </h4>
                         <!-- events for Saturday -->
                         <!-- events for Sunday -->
                 </div>
