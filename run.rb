@@ -28,7 +28,7 @@ end
 
 module RoomToColumn 
   def room_to_column(room)
-    @context['schedule']['room'][room]['column']
+    @context['schedule']['room'][room]['column'] if room
   end
 end
 
