@@ -49,10 +49,11 @@
                     }
                 ],
                 "hourly": {
-                    "start-time": "16",
+                    "start-time": "15",
                     "half-hour-slot-count": "14",
                     "time-minutes-offset": "00",
                     "time-slots": [
+                        [],  [],
                         [
                             {}, {},
                             {
@@ -63,11 +64,16 @@
                             }
                         ],
                         [
-                            {},
                             {
                                 "label": "",
-                                "class": "planned",
-                                "slots": 1,
+                                "class": "openspace",
+                                "slots": 2,
+                                "colspan": 1
+                            },
+                            {
+                                "label": "",
+                                "class": "openspace",
+                                "slots": 2,
                                 "colspan": 1
                             },
                             {}
