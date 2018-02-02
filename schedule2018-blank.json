@@ -81,7 +81,7 @@
                 {
                     "room": "Commons",
                     "class": "planned bottomless",
-                    "name": "Bring Your Own Music<br>8-11pm",
+                    "name": "Bring Your Own Music [Commons]",
                     "details": "BYOM<p>Music, music, music!<p>Friday night we’ll be holding a Foolscap first - the BYOM* dance. Bring CDs or MP3s with songs you want to share, and come hear what everyone else brought. So everyone gets a turn, we prefer songs under 4-5 minutes, but you can bring more than one. Oh, and we’ll provide snacks!<p>*Bring Your Own Music, of course",
                     "hour": "20",
                     "hour-end": "23"
@@ -133,14 +133,14 @@
                 { "room": "Columbia A", "hour": "21", "class": "openspace" },
                 { "room": "Columbia B", "hour": "21", "class": "openspace" },
 
-                { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo." },
-                { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr." }
+                { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo. [Conference Room]" },
+                { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr. [Conference Room]" }
             ],
             "Sunday": [
                 { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "12.5"},
-                { "room": "Commons", "name": "Bite of Foolscap", "hour": "12.5",
+                { "room": "Commons", "name": "Bite of Foolscap [Commons]", "hour": "12.5",
                   "details": "We are continuing our tradition of a brunch-style banquet for our Sunday mornings: the Bite of Foolscap! Come join us for conversation and good food. Here’s the complete menu: Fresh Chilled Orange & Cranberry Juice; Scrambled Egg Station with Toppings: Bacon Bits, Sour Cream, Green Onions, Shredded Cheddar Cheese, Salsa; Sliced Seasonal Fresh Fruit; Applewood Bacon; A Variety of Pastries, “Crescents”, Doughnuts, and Apple Fritters; Cinnamon French Toast; an Oatmeal Station, Served with Dried Cranberries, Golden Raisins, Brown Sugar & Milk; Taraza Bold Blend Coffee and Tazo Tea" },
-                { "room": "Commons", "name": "Foolscap Auction", "hour": "13.5" },
+                { "room": "Commons", "name": "Foolscap Auction [Commons]", "hour": "13.5" },
                 { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
                 { "room": "Event", "name": "Art Show Closes", "hour": "12" },
                 { "room": "Event", "name": "Dealer's Room Closes", "hour": "15" },
