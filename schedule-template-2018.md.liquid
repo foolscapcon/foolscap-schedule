@@ -82,7 +82,10 @@
          }
          @media print {
              .hide-on-print { display: none; }
-             .hide-on-normal { display: block; }
+             .hide-on-normal {
+                 display: block;
+                 background-color: white;
+             }
              .page-break { display: block; page-break-before: always; }
              .schedule-print-grind { display: block; }
              .site-head { display: none; }
@@ -93,8 +96,14 @@
              .schedule-grid { display: none; }
              img { display: none; }
 
-             h3 { font-size: 400%; }
-             h4 { font-size: 200%; }
+             h3 {
+                 font-size: 400%;
+                 display: block;
+             }
+             h4 {
+                 font-size: 200%;
+                 display: block;
+             }
              .grid-label { font-size: 700%; }
              .panel-detail { font-size: 225%; line-height: 1.1 }
              .time { height: 3.5in; margin: 0; padding: 0; }
@@ -166,85 +175,85 @@
                     {%- endfor %}
                 </div>
             {%- endfor %}
+        </div>
+        <h2 class="hide-on-print"> Map </h2>
 
-            <h2 class="hide-on-print"> Map </h2>
-
-            <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
-            
-            <h2 class="hide-on-print"> Panel Details </h2>
-            
-            {%- for event-hash in schedule.day-events %}
-                {%- assign day = event-hash[0] %}
-                {%- assign day-events = event-hash[1] %}
-                <!-- details for {{day}} -->
-                {%- for event in day-events %}
-                    {%- assign col = event.room | room_to_column  %}
-                    {%- assign row = event.hour | time_to_row: day, event.hour-end  %}
-                    {%- assign class = event.class | default: "planned" %}
-                    {%- assign event_anchor = day | event_anchor: row, col, event.room %}
-                    {%- assign hour = event.hour | round: 4 %}
-                    {%- assign hour-minutes = hour | modulo: 1 | times: 60 | floor %}
-                    {%- assign hour = hour | floor %}
-                    {%- if hour-minutes < 9 %}
-                        {%- assign hour-minutes = "0" | append: hour-minutes %}
-                    {%- endif %}
-                    {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-                    {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}                    
-                    <!-- h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="event_{{event_anchor}}" href="#event_detail_{{event_anchor}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4 -->
-                    {%- if class == "break" or event.room == "Event" %}
-                        {%- continue %}
-                    {%- endif %}
-                    <div class="panel-page">
-                        <h3> <a id="event_detail_{{event_anchor}}" href="#event_{{event_anchor}}">{{ event.name | default_name: "Open Space", event.hour, "in", event.room }}</a> </h3>
-                        <h4 class="hide-on-print">{{day}} at {{time}} in {{event.room}}</h4>
-                        <div class="panel-detail">
-                            {%- if event.details != nil and event.details != empty %}
-                                <p>
-                                    {{event.details}}
-                                </p>
-                            {%- endif %}
-                            {%- if event.notes != nil and event.notes != empty %}
-                                <p class="hide-on-print">
-                                    <h5>Panel Notes</h5>
-                                    {{event.notes}}
-                                </p>
-                            {%- endif %}
-                        </div>
-                    </div>
-
-                    <!-- panel print with time for room -->
-                    <div class="panel-page hide-on-normal">
-                        <h3>{{event.name}}</h3>
-                        <h4 class="">  {{time}} </h4>
-                        <div class="panel-detail">
-                            {%- if event.details != empty %}
+        <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
+        
+        <h2 class="hide-on-print"> Panel Details </h2>
+        
+        {%- for event-hash in schedule.day-events %}
+            {%- assign day = event-hash[0] %}
+            {%- assign day-events = event-hash[1] %}
+            <!-- details for {{day}} -->
+            {%- for event in day-events %}
+                {%- assign col = event.room | room_to_column  %}
+                {%- assign row = event.hour | time_to_row: day, event.hour-end  %}
+                {%- assign class = event.class | default: "planned" %}
+                {%- assign event_anchor = day | event_anchor: row, col, event.room %}
+                {%- assign hour = event.hour | round: 4 %}
+                {%- assign hour-minutes = hour | modulo: 1 | times: 60 | floor %}
+                {%- assign hour = hour | floor %}
+                {%- if hour-minutes < 9 %}
+                    {%- assign hour-minutes = "0" | append: hour-minutes %}
+                {%- endif %}
+                {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+                {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}                    
+                <!-- h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="event_{{event_anchor}}" href="#event_detail_{{event_anchor}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4 -->
+                {%- if class == "break" or event.room == "Event" %}
+                    {%- continue %}
+                {%- endif %}
+                <div class="panel-page">
+                    <h3> <a id="event_detail_{{event_anchor}}" href="#event_{{event_anchor}}">{{ event.name | default_name: "Open Space", event.hour, "in", event.room }}</a> </h3>
+                    <h4 class="hide-on-print">{{day}} at {{time}} in {{event.room}}</h4>
+                    <div class="panel-detail">
+                        {%- if event.details != nil and event.details != empty %}
+                            <p>
                                 {{event.details}}
-                            {%- endif %}
-                        </div>
+                            </p>
+                        {%- endif %}
+                        {%- if event.notes != nil and event.notes != empty %}
+                            <p class="hide-on-print">
+                                <h5>Panel Notes</h5>
+                                {{event.notes}}
+                            </p>
+                        {%- endif %}
                     </div>
+                </div>
 
+                <!-- panel print with time for room -->
+                <div class="panel-page hide-on-normal">
+                    <h3>{{event.name}}</h3>
+                    <h4 class="">  {{time}} </h4>
+                    <div class="panel-detail">
+                        {%- if event.details != empty %}
+                            {{event.details}}
+                        {%- endif %}
+                    </div>
+                </div>
+
+            {%- endfor %}
+        {%- endfor %}
+
+
+
+        <!-- wall schedule grid labels for print -->
+        <div class="hide-on-normal">
+            {%- for day in schedule.calendar %}
+                <!-- {{day}} -->
+                {%- for column in day.columns %}
+                    <h1 class="grid-label room">{{column.label}}</h1>
+                {%- endfor %}
+
+                {%- for hour in (day.hourly.start-time..24) %}
+                    {%- assign hour-minutes = day.hourly.time-minutes-offset %}
+                    {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
+                    {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
+                    <h1 class="grid-label time">{{time}}
                 {%- endfor %}
             {%- endfor %}
-
-
-
-                <!-- wall schedule grid labels for print -->
-                <div class="hide-on-normal">
-                    {%- for day in schedule.calendar %}
-                        <!-- {{day}} -->
-                        {%- for column in day.columns %}
-                            <h1 class="grid-label room">{{column.label}}</h1>
-                        {%- endfor %}
-
-                        {%- for hour in (day.hourly.start-time..24) %}
-                            {%- assign hour-minutes = day.hourly.time-minutes-offset %}
-                            {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
-                            {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
-                            <h1 class="grid-label time">{{time}}
-                        {%- endfor %}
-                    {%- endfor %}
-                </div>
         </div>
+        
         <div class="page-break"></div>
     </body>
 </html>
