@@ -8,7 +8,7 @@
 template_name="schedule-template"
 template_ext=".md.liquid"
 
-bundle install
+bundle install --with development
 
 
 build_dir=${1:-"."}
