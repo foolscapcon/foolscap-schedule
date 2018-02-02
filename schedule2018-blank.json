@@ -28,7 +28,7 @@
                 "name": "",
                 "location": "",
                 "column": "c_event"
-            },                        
+            },
             "Conference Room": {
                 "name": "Conference Room",
                 "location": "Board Room",
@@ -44,7 +44,7 @@
                 "location": "Summit Ballroom",
                 "column": "c_other"
             }
-            
+
         },
         "class-type": "schedule",
         "day-time-ranges": {
@@ -59,60 +59,45 @@
             "Sunday": {
                 "start-time": "10",
                 "stop-time": "15"
-            }          
+            }
         },
-        "day-events" : 
+        "day-events" :
         {
             "Friday": [
                 {
                     "room": "Commons",
                     "name": "Registration Opens",
                     "hour": "15"
-                    
+
                 },
-                {
-                    "room": "Event",
-                    "name": "Art Show, <wbr>Dealer's Room Opens",
-                    "hour": "16"
-                    
-                },
-                {
-                    "room": "Event",
-                    "name": "Art Show, <wbr>Dealer's Room Closes",
-                    "hour": "20"
-                    
-                },                
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "16" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Closes", "hour": "20" },
                 {
                     "room": "Columbia A",
                     "name": "Opening Ceremony & Open Space Generation",
-                    "hour": "16"
-                    
+                    "hour": "16",
+                    "details": "Open Space Programming<p>Open Space Programming enables the people at the convention to talk about what truly interests them. It encourages participation and communication - and because of that, it’s ideal for a convention like Foolscap. It was developed in 1984 as a way of changing how organizations hold meetings and it’s been used in groups as small as five and as large as 2,100. Our organizers have had experience with groups from 60 to 300, and really like how it works:<p>1. You come to the convention with ideas.<p>2. You come to Columbia A for that day’s hour-long Program Generation Session on Friday at 4 pm and Saturday at 11 am. There the organizers supply forms and pens so you can write down your idea. It can be a topic for round-table discussion, a conversation you want to have with someone else at the convention that you’d like others to watch, a demonstration of something cool you know about, a game you want to play, a problem you want help solving, or any other idea.<p>3. After everyone’s ideas are written down, we read them out. Sometimes ideas are similar and can be combined, with the consent of the proposers.<p>4. Everyone at the session, proposers and audience, is given a strip of five dot stickers. We lay out all the proposals for topics so they’re visible and folks go around and put dots on the items they most want to see happen. If you really want a topic - give it multiple dots!<p>5. We schedule the topics into our Open Space time slots.<p>6. Enjoy yourself! If you’re not enjoying yourself, move to another item and enjoy yourself there.<p>Tom Whitmore, Open Space Coordinator"
                 },
                 {
                     "room": "Commons",
-                    "class": "byom",
+                    "class": "planned bottomless",
                     "name": "Bring Your Own Music<br>8-11pm",
+                    "details": "BYOM<p>Music, music, music!<p>Friday night we’ll be holding a Foolscap first - the BYOM* dance. Bring CDs or MP3s with songs you want to share, and come hear what everyone else brought. So everyone gets a turn, we prefer songs under 4-5 minutes, but you can bring more than one. Oh, and we’ll provide snacks!<p>*Bring Your Own Music, of course",
                     "hour": "20",
                     "hour-end": "23"
                 },
                 {
-                    "class": "openspace",                    
-                    "room": "Columbia A",
-                    "hour": "17"
+                    "room": "Columbia A", "hour": "17", "class": "openspace"
+
                 },
                 {
                     "class": "openspace",
                     "room": "Columbia B",
                     "hour": "17"
                 },
+                { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
                 {
-                    "class": "break",
-                    "name": "Dinner",
-                    "hour": "18",
-                    "hour-end": "19"
-                },
-                {
-                    "class": "openspace",                    
+                    "class": "openspace",
                     "room": "Columbia A",
                     "hour": "20"
                 },
@@ -120,498 +105,52 @@
                     "class": "openspace",
                     "room": "Columbia B",
                     "hour": "20"
-                }                
-                
+                }
+
             ],
             "Saturday": [
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Closes", "hour": "18" },
+                { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "13" },
+                { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
+                { "room": "Columbia A", "hour": "10", "class": "openspace" },
+                { "room": "Columbia B", "hour": "10", "class": "openspace" },
+                { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
+
+                { "room": "Columbia A", "hour": "14", "class": "openspace" },
+                { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo" },
+                { "room": "Columbia A", "hour": "15", "hour-end":"16", "name": "Conversation with Seanan McGuire" },
+                { "room": "Columbia B", "hour": "15", "class": "openspace" },
+                { "room": "Columbia B", "hour": "16", "class": "openspace" },
+                { "room": "Columbia A", "hour": "17", "class": "openspace" },
+                { "room": "Columbia B", "hour": "17", "class": "openspace" },
+
+                { "room": "Columbia A", "hour": "13", "name": "Radio Play Auditions" },
+                { "room": "Hospitality", "hour": "17", "name": "Radio Play Rehersal [Hospitality]" },
+                { "room": "Columbia A", "hour": "20", "name": "Radio Play" },
+
+                { "room": "Columbia B", "hour": "20", "class": "openspace" },
+                { "room": "Columbia A", "hour": "21", "class": "openspace" },
+                { "room": "Columbia B", "hour": "21", "class": "openspace" },
+
+                { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo." },
+                { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr." }
             ],
             "Sunday": [
-            ]                
-            },
-        "calendar" : [
-            {
-                "label": "Friday",
+                { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "12.5"},
+                { "room": "Commons", "name": "Bite of Foolscap", "hour": "12.5",
+                  "details": "We are continuing our tradition of a brunch-style banquet for our Sunday mornings: the Bite of Foolscap! Come join us for conversation and good food. Here’s the complete menu: Fresh Chilled Orange & Cranberry Juice; Scrambled Egg Station with Toppings: Bacon Bits, Sour Cream, Green Onions, Shredded Cheddar Cheese, Salsa; Sliced Seasonal Fresh Fruit; Applewood Bacon; A Variety of Pastries, “Crescents”, Doughnuts, and Apple Fritters; Cinnamon French Toast; an Oatmeal Station, Served with Dried Cranberries, Golden Raisins, Brown Sugar & Milk; Taraza Bold Blend Coffee and Tazo Tea" },
+                { "room": "Commons", "name": "Foolscap Auction", "hour": "13.5" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
+                { "room": "Event", "name": "Art Show Closes", "hour": "12" },
+                { "room": "Event", "name": "Dealer's Room Closes", "hour": "15" },
+                { "room": "Columbia A", "hour": "10", "class": "openspace" },
+                { "room": "Columbia B", "hour": "10", "class": "openspace" },
+                { "room": "Columbia A", "hour": "11", "class": "openspace" },
+                { "room": "Columbia B", "hour": "11", "class": "openspace" },
+                { "room": "Columbia A", "hour": "15", "name": "Deconstructing Foolscap" }
+            ]
+        }
 
-                "all-day": [
-                    {
-                        "label": "Registration",
-                        "start-time": "3:00 PM",
-                        "stop-time": "6:00 PM"
-                    },
-                    {
-                        "label": "Art Show",
-                        "start-time": "4:00 PM",
-                        "stop-time": "8:00 PM"
-                    },
-                    {
-                        "label": "Dealers",
-                        "start-time": "4:00 PM",
-                        "stop-time": "8:00 PM"
-                    },
-                    {
-                        "label": "Hospitality (Room 2105)",
-                        "start-time": "7:30 PM",
-                        "stop-time": "11:30 PM"
-                    }
-
-                ],
-                "columns": [
-                    {
-                        "label": "<!-- time -->"
-                    },
-                    {
-                        "label": "Columbia A<!-- Columbia A -->"
-                    },
-                    {
-                        "label": "Columbia B<!-- Columbia B -->"
-                    },
-                    {
-                        "label": "Commons & More <!-- Commons -->"
-                    }
-                ],
-                "hourly": {
-                    "start-time": "15",
-                    "half-hour-slot-count": "14",
-                    "time-minutes-offset": "00",
-                    "time-slots": [
-                        [],  [],
-                        [
-                            {}, {},
-                            {
-                                "label": "Opening Ceremony<br>Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
-                                "class": "planned",
-                                "slots": 2,
-                                "colspan": 1
-                            }
-                        ],
-                        [
-                            {
-                                "label": "",
-                                "class": "openspace",
-                                "slots": 2,
-                                "colspan": 1
-                            },
-                            {
-                                "label": "",
-                                "class": "openspace",
-                                "slots": 2,
-                                "colspan": 1
-                            },
-                            {}
-                        ],
-                        [],
-                        [
-                            {
-                                "label": "Dinner (2 hrs)",
-                                "class": "break",
-                                "slots": 4,
-                                "colspan": 3
-                            }
-                        ], [], [],
-                        [
-                            {
-                                "label": "What have you discovered this year?",
-                                "class": "openspace",
-                                "slots": 2,
-                                "details": "Open Discussion. Group discussion of what books, games, movies, or TV we have discovered this year. Dave W "
-
-                            },
-                            {
-                                "label": "Organizing Against Oppression",
-                                "class": "openspace",
-                                "slots": 2,
-                                "details": "Open Discussion. Exchange of ideas and resources for effective political organization to defy an oppressive regime. David Levine"
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Seeing yourself in other species.",
-                                "class": "openspace",
-                                "details": "Open Discussion. People have an affinity for animals and see human traits in them Why? AKA Wither furries? Jason W",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Ask a black girl 101",
-                                "class": "openspace",
-                                "details": "Open Discussion.  Elizabeth Adams.  In this hour I'll answer to the best of my ability, questions about race, racism, and allyship. Be prepared for me to go into why the premise of the question is racist as part of the answer.  There may be ranting.  <b>Trigger Warning</b>",
-                                "slots": 2
-                            }
-                        ],
-                        [ {}, {},
-                          {
-                              "label": "Yes and No",
-                              "class": "openspace",
-                              "details": "Game. A touching improve game about consent for all ages.  Gavin White.",
-                              "slots": 2
-                        } ],
-                        [
-                            {}, {},
-                            {
-                                "label": "Pandemic",
-                                "class": "openspace",
-                                "details": "Game. Play the boardgame Pandemic with Doug and Beth.",
-                                "slots": 2
-                            }
-                        ]
-                    ]
-                }
-            },
-            {
-                "label": "Saturday",
-                "all-day": [
-                    {
-                        "label": "Registration",
-                        "start-time": "10:00 AM",
-                        "stop-time": "5:30 PM"
-                    },
-                    {
-                        "label": "Art Show",
-                        "start-time": "10:00 AM",
-                        "stop-time": "8:00 PM"
-                    },
-                    {
-                        "label": "Dealers",
-                        "start-time": "10:00 AM",
-                        "stop-time": "6:30 PM"
-                    },
-                    {
-                        "label": "Hospitality (Room 2105) [Closed for Dinner]",
-                        "start-time": "9:30 AM",
-                        "stop-time": "11:00 PM"
-                    }
-                ],
-                "columns": [
-                    {
-                        "label": "<!-- time -->",
-                        "width": "2*"
-                    },
-                    {
-                        "label": "Columbia A<!-- Columbia A -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Columbia B<!-- Columbia B -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Board Room<!-- Board Room -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Commons <!-- Commons -->",
-                        "width": "10*"
-                    }
-                ],
-                "hourly": {
-                    "start-time": "10",
-                    "half-hour-slot-count": "28",
-                    "time-minutes-offset": "00",
-                    "time-slots": [
-                        [
-                            {
-                                "label": "Extermomorph/Normamorph",
-                                "class": "openspace",
-                                "details": "Open/Panel Discussion. I've [Dave Howell] ... most people experience the world quite differently than I: Discuss.",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Fountain Pens",
-                                "class": "openspace",
-                                "details": "Discuss and play with analogue tools, especially Fountain Pens.",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Next Hugo",
-                                "class": "openspace",
-                                "details": "What have you read (watched, heard) that we should nominate for a Hugo?  Beth Mitcham, Tom?",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Art & Money",
-                                "class": "openspace",
-                                "details": "Open Discussion.  Cultural devaluation of creativity, esp myths of \"starving\" vs. \"selling out\". Candid discussions about realities of make ends meet (outside help, partners with day jobs, insurance)",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {},
-                            {
-                                "label": "Meet to Create <a href=\"/events/#participatory-programming\">Open Programming</a>",
-                                "class": "planned",
-                                "slots": 2,
-                                "colspan": 1
-                            },
-                            {}
-                        ], [],
-                        [
-                            {
-                                "label": "Lunch (2 hrs)",
-                                "class": "break",
-                                "slots": 4,
-                                "colspan": 3
-                            }
-                        ], [], [],[],
-                        [
-                            {
-                                "label": "Reading from Patricia Briggs's upcoming book, \"Silence Fallen\" followed by discussion",
-                                "class": "planned",
-                                "details": "Reading by Hank Graham.",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Tea. Earl Grey. Hot.",
-                                "class": "openspace",
-                                "details": "Demo and Discuss. Talk and try the most popular of scifi teas (and others) in Hospitality.  Stefanie and Wing",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Peak Experiences",
-                                "class": "openspace",
-                                "details": "Open Discussion. What life experience do you return to when you need inspiration and confidence. Karen Anderson",
-                                "slots": 2
-                            },
-                            {
-                                "label": "The Latest in Science",
-                                "class": "openspace",
-                                "details": "Open Discussion. What have you just learned in any science? Leading Edge or New to You. Eva Elasigue",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Readings",
-                                "class": "openspace",
-                                "details": "Sign Up in the commons",
-                                "slots": 4
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Favorite Program Items",
-                                "class": "openspace",
-                                "details": "Open Discussion. What programming do you most enjoy? Disappointed if its not there?  Help be Program MiniCon in April! Alice Bentley",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Laws of Magic",
-                                "class": "openspace",
-                                "details": "Open Discussion. As a group, Create a fictional set of rules of magic that would create an interesting and consistent world to explore. Dave W",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Magic: The Gathering Cube Draft",
-                                "class": "openspace",
-                                "details": "Come draft my all-uncommons cube! Traditional booster with as many games as you can fit. Cards and Lands provided.  Name not provided. ",
-                                "slots": 4
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Dinner (2 hrs)",
-                                "class": "break",
-                                "slots": 4,
-                                "colspan": 3
-                            }
-                        ], [], [],[],
-                        [
-                            {
-                                "label": "Appreciation of Patricia Briggs and Mike Briggs",
-                                "class": "planned",
-                                "details": "An appreciation of Patricia Briggs, the late Michael Briggs, and their work in urban fantasy. The panel will include authors J.A. Pitts and Scott James Magner, and Patti Ludwig representing the Hurog community. (Patricia is not be able to attend as Guest of Honor because of Michael's recent passing.)",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Actually I was promised a corporate state dystopia",
-                                "class": "openspace",
-                                "details": "Open Discussion. SF dystopias, esp the cyberpunk dystopias of the 1980s",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "This Foolscap Thing",
-                                "class": "openspace",
-                                "details": "Open Discussion. So this might be the penultimate Foolscap.  Lets talk about where (and whether) Foolscap's future is going. Jason, Dave, Lile",
-                                "slots": 2
-                            },
-                            {
-                                "label": "NaNoWriMo - worth it or waste of time",
-                                "class": "openspace",
-                                "details": "Open Discussion. National Novel Writing Month - pros, cons, experiences, lessons learned.  For participants who've done if before, and those who are curious what it is like.  Shel Tozer-Kitts",
-                                "slots": 2
-                            }
-                        ],
-                        [],
-                        [
-                            {},
-                            {},
-                            {
-                                "label": "Writing Prompts - Tea & Cookies Writing Slam",
-                                "class": "openspace",
-                                "details": "1. Pick prompts from a hat. 2. Write for 10 minutes 3. Read you short.  Karen Anderson",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Pandemic",
-                                "class": "openspace",
-                                "details": "Game, Hospitality. Play the boardgame Pandemic with Doug and Beth.",
-                                "slots": 2
-                            }
-                        ],
-                        []
-                    ]
-                }
-            },
-            {
-                "label": "Sunday",
-                "all-day": [
-                    {
-                        "label": "Registration",
-                        "start-time": "10:00 AM",
-                        "stop-time": "4:00 PM"
-                    },
-                    {
-                        "label": "Art Show",
-                        "start-time": "10:00 AM",
-                        "stop-time": "12:00 PM"
-                    },
-                    {
-                        "label": "Dealers",
-                        "start-time": "10:00 AM",
-                        "stop-time": "3:00 PM"
-                    },
-                    {
-                        "label": "Hospitality (Room 2105)",
-                        "start-time": "9:00 AM",
-                        "stop-time": "5:00 PM"
-                    }
-                ],
-                "columns": [
-                    {
-                        "label": "<!-- time -->",
-                        "width": "2*"
-                    },
-                    {
-                        "label": "Columbia A<!-- Columbia A -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Columbia B<!-- Columbia B -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Board Room<!-- Board Room -->",
-                        "width": "10*"
-                    },
-                    {
-                        "label": "Commons <!-- Commons -->",
-                        "width": "10*"
-                    }
-                ],
-                "hourly": {
-                    "start-time": "10",
-                    "half-hour-slot-count": "15",
-                    "time-minutes-offset": "30",
-                    "time-slots": [
-                        [],
-                        [
-                            {
-                                "label": "Formative Fiction - What Hooked You",
-                                "class": "openspace",
-                                "details": "Open Discussion. What book turned you into a life-long reader.  What makes a book formative?  Does it change over time? Beth Mitcham",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Dystopian Resistance w/Today's Technologies.  Asking for a Friend",
-                                "class": "openspace",
-                                "details": "Lets plan ahead and utilize technology to prevent a Dystopia! Doug",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Open Writing",
-                                "class": "openspace",
-                                "details": "Hang out and write with other creators.  David Levine",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Crossover Genres",
-                                "class": "openspace",
-                                "details": "Open Discussion. SF, F, Western, Mystery, Romance.  Whats up, what do you like? Eva L Elasigue",
-                                "slots": 2
-                            },
-                            {
-                                "label": "Should I Stay or Should I Go",
-                                "class": "openspace",
-                                "details": "Open Discussion.  When to leave a fandom? An organization? Red flags? guilt vs sanity/safety? Ranting negotiated at beginning of discussion. Wing",
-                                "slots": 2
-                            }
-
-                        ], [],
-                        [
-                            {
-                                "label": "Ask a Black Girl 201: Implicit Bias and You",
-                                "class": "openspace",
-                                "details": "Open Discussion. We're all a little racist, and its not OK.  Talk about the nature of implicit/unconscious bias, and how to correct it.Roots of bias. Points for good allyship. Elizabeth Adams",
-                                "slots": 2
-                            },
-                            {
-                                "label": "The Last Questions",
-                                "class": "openspace",
-                                "details": "Some of us, or our parents, are not immortal.  Practical aspects.  Lawyer given Beneficiaries list, experience from my father's passing.  Also artistic work and copyright.  Beth Mitcham and Linda Deneroff",
-                                "slots": 2
-                            },
-                            {
-                                "slots": 2
-                            },
-                            {
-                                "label": "Massage Demo/Discussion",
-                                "class": "openspace",
-                                "details": "Demo.  See Pamela Rapinan and Tom Whitmore demonstrate their massage styles on each other and describe what they're doing..",
-                                "slots": 2
-                            }
-                        ], [],
-                        [
-                            {
-                                "label": "Lunch",
-                                "class": "break",
-                                "slots": 2,
-                                "colspan": 2
-                            },
-                            {},
-                            {
-                                "label": "<a href=\"/events/#banquet\">Banquet [commons]</a>",
-                                "class": "planned",
-                                "slots": 2,
-                                "colspan": 1
-                            }
-                        ], [],
-                        [
-                            {},{},{},
-                            {
-                                "label": "<a href=\"/events/#auction\">Foolscap Auction</a>",
-                                "class": "planned",
-                                "slots": 2,
-                                "colspan": 1
-                            }
-                        ], [],
-                        [], [],
-                        [
-                            {},
-                            {
-                                "label": "Closing Ceremony & Foolscap Feedback",
-                                "class": "planned",
-                                "slots": 2,
-                                "colspan": 1
-                            }
-                        ], [],
-                        []
-                    ]
-                }
-            }
-        ]
     }
 }

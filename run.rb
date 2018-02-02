@@ -51,32 +51,48 @@ module FoolscapScheduleFilters
     ""
   end
 
-  def event_href(day, time, column, room)
+  def event_anchor(*args)
+    args.join "-"
   end
 
   # rows are on the 1/2 hour
 
   def time_to_row(hour_s, day, hour_end_s = nil, hour_subdivisions = 2, start_row = 2)
-    hour = hour_s.to_i
-    hour_end = (hour_end_s.nil?) ? nil : hour_end_s.to_i
+    hour = hour_s.to_f
+    hour_end = (hour_end_s.nil?) ? nil : hour_end_s.to_f
 
-    start_time = @context['schedule']['day-time-ranges'][day]['start-time'].to_i
+    start_time = @context['schedule']['day-time-ranges'][day]['start-time'].to_f
     event_start_row = start_row +
                       hour_subdivisions*(hour - start_time)
     event_end_row = event_start_row + hour_subdivisions if not hour_end
     event_end_row = start_row +
                     hour_subdivisions*(hour_end - start_time) + hour_subdivisions if hour_end
+
+    # local_variables.each { |sym| puts sym.to_s + " " + eval(sym.to_s).inspect }
+    #binding.pry if hour.modulo(1) > 0
+
+#     hour_s "19.5"
+# day "Saturday"
+# hour_end_s "21.5"
+# hour_subdivisions 2
+# start_row 2
+# hour 19.5
+# hour_end 21.5
+# start_time 10.0
+# event_start_row 21.0
+# event_end_row 27.0
     # goes into the begining of specified row
-    "#{event_start_row}/#{event_end_row}"
+    "#{event_start_row.to_i}/#{event_end_row.to_i}"
 
   end
 
-  def default_name(input, first, verb, last)
-      if !input || input.respond_to?(:empty?) && input.empty?
-        first.to_s + " " + verb.to_s + " " + last.to_s
-      else
-        input
-      end
+  def default_name(*args)
+    input = args[0]
+    if !input || input.respond_to?(:empty?) && input.empty?
+      args.drop(1).join(" ")
+    else
+      input
+    end
   end
 end
 
