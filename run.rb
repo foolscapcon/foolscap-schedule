@@ -1,6 +1,5 @@
 require 'json'
 require 'liquid'
-#require 'pry'
 
 
 module Liquid
@@ -25,6 +24,19 @@ module Liquid
     attr_reader :context
   end
 end
+
+module LiquidHash
+  def hash(hash, key)
+    if hash and key
+      result = hash[key]
+    end
+    require 'pry'
+    pry
+    result
+  end
+end
+
+Liquid::Template.register_filter(LiquidHash)
 
 module RoomToColumn
   def room_to_column(room)
