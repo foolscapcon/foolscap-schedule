@@ -14,29 +14,54 @@
          }
          .hourly {
              display: grid;
+             justify-content: center;
+             grid-gap: 2px;
+             align-content: center;
+             align-items: stretch;
              grid-template-columns: [ {{schedule.columns[0]}} ] 1fr [ {{schedule.columns[1]}} ] 10fr [ {{schedule.columns[2]}} ] 10fr [ {{schedule.columns[3]}} ] 10fr;
 
+         }
+         .hourly > * {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin: 0;
+             border: 1px solid black;
+             padding: 2px;
+             text-align: center;
+             vertical-align: middle;
          }
 
          .schedule .time {
              font-size: 75%;
              grid-column: c_time;
+             border: none;
          }
 
-         .schedule .planned {border: 1px solid black;}
+         .schedule .planned {
+         }
+
          .schedule .break {
-             text-align: center;
-             vertical-align: middle;
+
              background-color: #999;
          }
+
          .schedule .openspace {
              text-align: center;
              border: 1px dashed black;
          }
+
+         .schedule .byom {
+             border-bottom: none;
+         }
+
          .schedule .openspace .closed {
              text-align: center;
-             border: 1px solid black;
-         }         
+         }
+
+         span.line {
+             display: inline-block;
+         }
          @media all {
              .page-break { display: none; }
              .schedule-print-grind { display: none; }
@@ -84,7 +109,11 @@
              </div>
              </header>-->
         <div class="schedule-grid">
-            {%- for day in schedule.calendar %}
+            {%- for day-hash in schedule.day-time-ranges %}
+                {%- assign day = day-hash[0] %}
+                {%- assign start-time = day-hash[1].start-time %}
+                {%- assign stop-time = day-hash[1].stop-time %}
+                {%- assign row-count = stop-time | minus: start-time | times: 2 %}
 
                 <h2 class="hide-on-print"> {{ day.label }} </h2>
 
@@ -93,17 +122,18 @@
                 {%- assign col_num = 1 %}
                 <br>
                 <div class="{{ schedule.class-type }} hourly {{ day.label }}" >
-                    {%- for column in day.columns %}
-
-                        <h3  style="grid-column: {{col_num}}; grid-row: {{row_num}};">{{column.label}}</h3>
+                    {%- for grid_column in schedule.columns %}
+                        {%- assign room = grid_column | column_to_room %}
+                        {%- assign name = room.name %}
+                        <h3  style="grid-column: {{grid_column}}; grid-row: {{row_num}};">{{name}}</h3>
                         {%- assign col_num = col_num | plus: 1 %}
                     {%- endfor %}
 
                     {%- assign row_num = row_num | plus: 1 %}
-                    
+
                     <!-- time for {{day.label}} -->
-                    {%- for half-hour in (0..day.hourly.half-hour-slot-count) %}
-                        {%- assign hour = half-hour | divided_by: 2 | plus: day.hourly.start-time %}
+                    {%- for half-hour in (0..row-count) %}
+                        {%- assign hour = half-hour | divided_by: 2 | plus: start-time %}
                         {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
 
                         {%- capture ampm %}{%- if hour >= 12 %}PM{%- else %}AM{%- endif %}{%- endcapture %}
@@ -112,23 +142,8 @@
 
                         {%- assign col_num = 1 %}
                         <h4 class="time" style="grid-column: c_time; grid-row: {{row_num}};">{{time}}</h4>
-                        {% comment %}
-                        {% assign col_num = col_num | plus: 1 %}
-                        
-                        {%- for panel in day.hourly.time-slots[forloop.index0] %}
-                        {%- capture colspan %}{%- if panel.colspan != nil %}colspan="{{panel.colspan}}"{%- endif %}{%- endcapture %}
-                        {%- capture cap_id %}{% increment slot_id %}{% endcapture %}
-                        {%- capture fulltime %}{{day.label}} {{time}} in {{day.columns[forloop.index].label}}{% endcapture %}
-                        {%- save cap_id, fulltime %}
-                        <h4 class="{{panel.class}}" style="grid-column: {{col_num}}; grid-row: {{row_num}};" rowspan="{{panel.slots}}" {{colspan}}> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{panel.label}}</a></h4>
-                        {% assign col_num = col_num | plus: 1 %}
-                        {%- for panel in day.hourly.time-slots[forloop.index0] %}
-                        {%- endfor %}
-                        {%- endfor %}
-                        {% endcomment %}
-
-                        
                         {%- assign row_num = row_num | plus: 1 %}
+
                     {%- endfor %}
                     {%- for day-hash in schedule.day-events  %}
                         {%- assign day-name = day-hash[0] %}
@@ -140,11 +155,11 @@
                             <h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
                         {%- endfor %}
                     {%- endfor %}
-                </div>                    
+                </div>
             {%- endfor %}
-            
+
             <h2 class="hide-on-print"> Map </h2>
-                
+
             <img src="http://foolscap.org/content/images/2017/02/foolscap-map.png" alt="Hotel Map" class="hide-on-print">
 
                 <h2 class="hide-on-print"> Panel Details </h2>

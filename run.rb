@@ -28,15 +28,30 @@ end
 
 module RoomToColumn
   def room_to_column(room)
-    if room
+    if room and @context['schedule']['room'].key?(room)
       @context['schedule']['room'][room]['column']
     else
-      "2/3"
-      end
+      "2/-1"
+    end
   end
 end
 
 Liquid::Template.register_filter(RoomToColumn)
+
+module ColumnToRoom
+  def column_to_room(column)
+    if column
+      for _,values in @context['schedule']['room']
+        if values['column'] == column
+          return values
+        end
+      end
+    end
+    ""
+  end
+end
+
+Liquid::Template.register_filter(ColumnToRoom)
 
 # rows are on the 1/2 hour
 module TimeToRow
@@ -49,7 +64,7 @@ module TimeToRow
                       hour_subdivisions*(hour - start_time)
     event_end_row = event_start_row + hour_subdivisions if not hour_end
     event_end_row = start_row +
-                    hour_subdivisions*(hour_end - start_time) + 1 if hour_end
+                    hour_subdivisions*(hour_end - start_time) + hour_subdivisions if hour_end
     # goes into the begining of specified row
     "#{event_start_row}/#{event_end_row}"
 
