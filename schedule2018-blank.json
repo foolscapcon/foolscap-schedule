@@ -65,8 +65,8 @@
         {
             "Friday": [
                 {
-                    "room": "Commons",
-                    "name": "Registration Opens",
+                    "room": "Event",
+                    "name": "Registration Opens [Commons]",
                     "hour": "15"
 
                 },
@@ -138,7 +138,7 @@
             ],
             "Sunday": [
                 { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "12.5"},
-                { "room": "Commons", "name": "Bite of Foolscap [Commons]", "hour": "12.5",
+                { "room": "Commons", "name": "Bite of Foolscap [Commons]", "hour": "12", "hour-end": 12.5,
                   "details": "We are continuing our tradition of a brunch-style banquet for our Sunday mornings: the Bite of Foolscap! Come join us for conversation and good food. Here’s the complete menu: Fresh Chilled Orange & Cranberry Juice; Scrambled Egg Station with Toppings: Bacon Bits, Sour Cream, Green Onions, Shredded Cheddar Cheese, Salsa; Sliced Seasonal Fresh Fruit; Applewood Bacon; A Variety of Pastries, “Crescents”, Doughnuts, and Apple Fritters; Cinnamon French Toast; an Oatmeal Station, Served with Dried Cranberries, Golden Raisins, Brown Sugar & Milk; Taraza Bold Blend Coffee and Tazo Tea" },
                 { "room": "Commons", "name": "Foolscap Auction [Commons]", "hour": "13.5" },
                 { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
