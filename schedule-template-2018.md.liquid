@@ -183,7 +183,8 @@
                     {%- assign class = event.class | default: "planned" %}
                     {%- assign event_anchor = day | event_anchor: row, col, event.room %}
                     {%- assign hour = event.hour | round: 4 %}
-                    {%- assign hour-minutes = hour | modulo: 1 | times: 60 %}
+                    {%- assign hour-minutes = hour | modulo: 1 | times: 60 | floor %}
+                    {%- assign hour = hour | floor %}
                     {%- if hour-minutes < 9 %}
                         {%- assign hour-minutes = "0" | append: hour-minutes %}
                     {%- endif %}
