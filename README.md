@@ -4,4 +4,6 @@
 # ./debug.sh build 
 # ./build.sh build
 [schedule2018-blank.html](/schedule2018-blank.html)
+[schedule2018-stage.html](/schedule2018-stage.html)
+[schedule2018.html](/schedule2018.html)
 

@@ -131,7 +131,7 @@
 
                     {%- assign row_num = row_num | plus: 1 %}
 
-                    <!-- time for {{day.label}} -->
+                    <!-- time for {{day}} -->
                     {%- for half-hour in (0..row-count) %}
                         {%- assign hour = half-hour | divided_by: 2 | plus: start-time %}
                         {%- capture hour-minutes %}{%- cycle day.label: '00', '30' %}{%- endcapture %}
@@ -143,17 +143,15 @@
                         {%- assign col_num = 1 %}
                         <h4 class="time" style="grid-column: c_time; grid-row: {{row_num}};">{{time}}</h4>
                         {%- assign row_num = row_num | plus: 1 %}
-
                     {%- endfor %}
-                    {%- for day-hash in schedule.day-events  %}
-                        {%- assign day-name = day-hash[0] %}
-                        <!-- events for {{day-name}} -->
-                        {%- for event in day-hash[1] %}
-                            {%- assign col = event.room | room_to_column  %}
-                            {%- assign row = event.hour | time_to_row: day-name, event.hour-end  %}
-                            {%- assign class = event.class | default: "planned" %}
-                            <h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
-                        {%- endfor %}
+                    
+                    {%- assign day-events = schedule.day-events | hash:day  %}
+                    <!-- events for {{day}} {{day-events}}-->
+                    {%- for event in day-events %}
+                        {%- assign col = event.room | room_to_column  %}
+                        {%- assign row = event.hour | time_to_row: day, event.hour-end  %}
+                        {%- assign class = event.class | default: "planned" %}
+                        <h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="slot_{{cap_id}}" href="#slot_detail_{{cap_id}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4>
                     {%- endfor %}
                 </div>
             {%- endfor %}

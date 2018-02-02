@@ -1,6 +1,5 @@
 require 'json'
 require 'liquid'
-#require 'pry'
 
 
 module Liquid
@@ -25,8 +24,14 @@ module Liquid
     attr_reader :context
   end
 end
+  
+module FoolscapScheduleFilters
+  def hash(hash, key)
+    if hash and key
+      hash[key]
+    end
+  end
 
-module RoomToColumn
   def room_to_column(room)
     if room and @context['schedule']['room'].key?(room)
       @context['schedule']['room'][room]['column']
@@ -34,11 +39,7 @@ module RoomToColumn
       "2/-1"
     end
   end
-end
 
-Liquid::Template.register_filter(RoomToColumn)
-
-module ColumnToRoom
   def column_to_room(column)
     if column
       for _,values in @context['schedule']['room']
@@ -49,12 +50,12 @@ module ColumnToRoom
     end
     ""
   end
-end
 
-Liquid::Template.register_filter(ColumnToRoom)
+  def event_href(day, time, column, room)
+  end
 
-# rows are on the 1/2 hour
-module TimeToRow
+  # rows are on the 1/2 hour
+
   def time_to_row(hour_s, day, hour_end_s = nil, hour_subdivisions = 2, start_row = 2)
     hour = hour_s.to_i
     hour_end = (hour_end_s.nil?) ? nil : hour_end_s.to_i
@@ -69,13 +70,7 @@ module TimeToRow
     "#{event_start_row}/#{event_end_row}"
 
   end
-end
 
-Liquid::Template.register_filter(TimeToRow)
-
-
-
-module DefaultName
   def default_name(input, first, verb, last)
       if !input || input.respond_to?(:empty?) && input.empty?
         first.to_s + " " + verb.to_s + " " + last.to_s
@@ -85,7 +80,7 @@ module DefaultName
   end
 end
 
-Liquid::Template.register_filter(DefaultName)
+Liquid::Template.register_filter(FoolscapScheduleFilters)
 
 class Save < Liquid::Tag
   def initialize(tag_name, markup, tokens)
@@ -139,6 +134,4 @@ else
   template = File.open(files.pop)
 end
 
-out.write(
-  Liquid::Cli.new(json.read || '{}').render(template.read)
-)
+out.write( Liquid::Cli.new(json.read || '{}').render(template.read) )
