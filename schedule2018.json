@@ -125,12 +125,12 @@
                 { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "13" },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
                 { "room": "Columbia A", "hour": "10", "class": "openspace",
-                  "name": "Realisitc AI in Ficition",
-                  "details": ""
+                  "name": "Realistic AI in Ficition",
+                  "details": "How to write stories containing artificial intelligence that is realisitc based on today's cutting-edge AI research - Dave"
                 },
                 { "room": "Columbia B", "hour": "10", "class": "openspace",
-                  "name": "Urban Fantasy - From Eddie he Fey to October Daye",
-                  "details": "Come chat about your fa orite urban fantasy glassics or show up to tell us about the new classics-to-be that you've discovered.  - Shel"
+                  "name": "Urban Fantasy - From Eddie the Fey to October Daye",
+                  "details": "Come chat about your favorite urban fantasy classics or show up to tell us about the new classics-to-be that you've discovered.  - Shel"
                 },
                 { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
 
