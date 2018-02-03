@@ -185,10 +185,25 @@
                 { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
                 { "room": "Event", "name": "Art Show Closes", "hour": "12" },
                 { "room": "Event", "name": "Dealer's Room Closes", "hour": "15" },
-                { "room": "Columbia A", "hour": "10", "class": "openspace" },
-                { "room": "Columbia B", "hour": "10", "class": "openspace" },
-                { "room": "Columbia A", "hour": "11", "class": "openspace" },
-                { "room": "Columbia B", "hour": "11", "class": "openspace" },
+                { "room": "Commons", "hour": "10", "class": "openspace",
+                  "name":"Crafting Fun Times",
+                  "details":"Let's sit in the same space and make some stuff. Maybe talk about making stuff too? I figured we'd be doing this in the commons but it'd be cool to have a specific time -Wing"
+                },
+                { "room": "Columbia A", "hour": "10", "class": "openspace",
+                  "name":"Romance Novels for geeky people",
+                  "details":"Romane novels are experiencing a revolution, currently. There are also many cross overs with SF, Fantasy, urban fantasy, historical eras, and modern geek culture. Ask for recommendations or bring suggestions -Rebecca Newman"},
+                { "room": "Columbia B", "hour": "10", "class": "openspace",
+                  "name":"E-Books and Dead Trees",
+                  "details":"Discuss the pros and cons of ebooks and paper books."
+                },
+                { "room": "Columbia A", "hour": "11", "class": "openspace",
+                  "name":"Why Decide?",
+                  "details":"30+ topics in 50 minutes. Bring all ideas (I will steal from Foolscap) and I'll set a timer. Lets see how many we get through. -Beth"
+                },
+                { "room": "Columbia B", "hour": "11", "class": "openspace",
+                  "name":"Fountain Pens - Tools from a more civilized age",
+                  "details":"Show off your pens!Learn about pens! Discuss the best paper for pens! -Shel"
+                },
                 { "room": "Columbia A", "hour": "15", "name": "Deconstructing Foolscap" }
             ]
         }
