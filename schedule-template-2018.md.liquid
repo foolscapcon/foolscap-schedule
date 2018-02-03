@@ -225,7 +225,7 @@
                 {%- capture time %}{%- if hour > 12 %}{{ hour | minus: 12 }}{%- else %}{{hour}}{%- endif %}:{{ hour-minutes }} {{ampm}}{%- endcapture %}
                 {%- assign where = day | append: " at " | append: time | append: " in " | append: event.room %}
                 <!-- h4 class="{{event.class}}" style="grid-column: {{ col }}; grid-row: {{ row }};"> <a id="event_{{event_anchor}}" href="#event_detail_{{event_anchor}}">{{ event.name | default_name: event.hour, "in", event.room }}</a> </h4 -->
-                {%- if class == "break" or event.room == "Event" %}
+                {%- if event.room == "Event" %}
                     {%- continue %}
                 {%- endif %}
                 <div class="panel-page">
@@ -247,6 +247,10 @@
                         {%- endif %}
                     </div>
                 </div>
+                {%- if class == "break" or event.room == "Event" %}
+                    {%- continue %}
+                {%- endif %}
+                
 
                 <!-- panel print with time for room -->
                 <div class="panel-page hide-on-normal">
