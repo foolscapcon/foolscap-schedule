@@ -90,16 +90,16 @@
                 },
                 {
                     "room": "Columbia A", "hour": "17", "class": "openspace",
-                    "name": "Read?",
-                    "details": "Tell Beth what to read"
+                    "name": "WHAT SHOULD I READ?",
+                    "details": "Tell me what books you've read in the past year that you recommend. Also movies, podcasts, etc. My TBR is hungry!"
 
                 },
                 {
                     "class": "openspace",
                     "room": "Columbia B",
                     "hour": "17",
-                    "name": "",
-                    "details": ""
+                    "name": "Ask a Black Girl.",
+                    "details": "tbd"
                     
                 },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
