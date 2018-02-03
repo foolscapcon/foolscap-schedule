@@ -168,12 +168,11 @@
                   "details": "I've been 3D printing for 30 days and I have stories. 3D printing can have a steep learning curve. Come and share your experiences. - Lauren" },
                 { "room": "Columbia B", "hour": "21", "class": "openspace",
                   "name": "Foolscap Song <strike>Circle</strike> Polygon",
-                  "details": "tdb" },
+                  "details": " Let's get together, sit in a circle and share songs. Sing-alongs? Things with rousing choruses? Something you literally just wrote? Obscure folk songs?" },
 
                 { "room": "Commons", "hour": "22", "class": "openspace",
-                  "name": "Foolscap Song <strike>Circle</strike> Polygon",
-                  "details": "Let's get together, sit in a circle and share songs. Sing-alongs? Things with rousing choruses? Something you literally just wrote? Obscure folk songs?" },                
-
+                  "name": " Action Castle -- In the spirit of Zork",
+                  "details": "by Live Parsley. A Text adventure in the spirit of Zork. Doug will be the computer. - Doug"
                 { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo. [Conference Room]" },
                 { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr. [Conference Room]" }
             ],
