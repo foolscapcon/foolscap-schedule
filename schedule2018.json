@@ -108,7 +108,7 @@
                     "room": "Columbia B",
                     "hour": "20",
                     "name": "Beyond Disney - less well know fairy and folk tales",
-                    "details": "What are you favorite lesser known fairylaes? Do you have opnions about d'A???? vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
+                    "details": "What are you favorite lesser known fairylaes? Do you have opnions about d'Autery vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
                 },
                 {
                     "class": "openspace",
@@ -135,7 +135,8 @@
                 { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
 
                 { "room": "Columbia A", "hour": "14", "class": "openspace" },
-                { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo" },
+                { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo",
+                  "details": "Demonstrate One-on-One Rapier Techniques"},
                 { "room": "Columbia A", "hour": "15", "hour-end":"16", "name": "Conversation with Seanan McGuire" },
                 { "room": "Columbia B", "hour": "15", "class": "openspace" },
                 { "room": "Columbia B", "hour": "16", "class": "openspace" },
