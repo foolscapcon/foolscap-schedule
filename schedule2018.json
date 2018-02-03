@@ -91,7 +91,7 @@
                 {
                     "room": "Columbia A", "hour": "17", "class": "openspace",
                     "name": "Read?",
-                    "description": "Tell Beth what to read"
+                    "details": "Tell Beth what to read"
 
                 },
                 {
@@ -99,7 +99,7 @@
                     "room": "Columbia B",
                     "hour": "17",
                     "name": "",
-                    "description": ""
+                    "details": ""
                     
                 },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
@@ -108,14 +108,14 @@
                     "room": "Columbia B",
                     "hour": "20",
                     "name": "Beyond Disney - less well know fairy and folk tales",
-                    "description": "What are you favorite lesser known fairylaes? Do you have opnions about d'A???? vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
+                    "details": "What are you favorite lesser known fairylaes? Do you have opnions about d'A???? vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
                 },
                 {
                     "class": "openspace",
                     "room": "Columbia A",
                     "hour": "20",
                     "name": "Introduce an Adult to SF",
-                    "description": "What are good entry books for people who don't read 'genre' books? - Beth"
+                    "details": "What are good entry books for people who don't read 'genre' books? - Beth"
                 }
 
             ],
@@ -124,8 +124,14 @@
                 { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Closes", "hour": "18" },
                 { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "13" },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
-                { "room": "Columbia A", "hour": "10", "class": "openspace" },
-                { "room": "Columbia B", "hour": "10", "class": "openspace" },
+                { "room": "Columbia A", "hour": "10", "class": "openspace",
+                  "name": "Realisitc AI in Ficition",
+                  "details": ""
+                },
+                { "room": "Columbia B", "hour": "10", "class": "openspace",
+                  "name": "Urban Fantasy - From Eddie he Fey to October Daye",
+                  "details": "Come chat about your fa orite urban fantasy glassics or show up to tell us about the new classics-to-be that you've discovered.  - Shel"
+                },
                 { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
 
                 { "room": "Columbia A", "hour": "14", "class": "openspace" },
