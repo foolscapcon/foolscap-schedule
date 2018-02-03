@@ -90,7 +90,7 @@
                 },
                 {
                     "room": "Columbia A", "hour": "17", "class": "openspace",
-                    "name": "WHAT SHOULD I READ?",
+                    "name": "What Should I Read?",
                     "details": "Tell me what books you've read in the past year that you recommend. Also movies, podcasts, etc. My TBR is hungry!"
 
                 },
@@ -99,7 +99,7 @@
                     "room": "Columbia B",
                     "hour": "17",
                     "name": "Ask a Black Girl.",
-                    "details": "tbd"
+                    "details": "The perennially popular opportunity to ask questions that might be quite awkward as a general rule."
                     
                 },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
@@ -107,8 +107,8 @@
                     "class": "openspace",
                     "room": "Columbia B",
                     "hour": "20",
-                    "name": "Beyond Disney - less well know fairy and folk tales",
-                    "details": "What are you favorite lesser known fairylaes? Do you have opnions about d'Autery vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
+                    "name": "Beyond Disney: Less Well Known Fairy & Folk Tales",
+                    "details": "What are you favorite lesser known fairy tales? Do you have opinions about d'Autery vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  &emdash; Rebecca"
                 },
                 {
                     "class": "openspace",
@@ -125,11 +125,11 @@
                 { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "13" },
                 { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
                 { "room": "Columbia A", "hour": "10", "class": "openspace",
-                  "name": "Realistic AI in Ficition",
-                  "details": "How to write stories containing artificial intelligence that is realisitc based on today's cutting-edge AI research - Dave"
+                  "name": "Realistic AI in Fiction",
+                  "details": "How to write stories containing artificial intelligence that is realistic based on today's cutting-edge AI research - Dave"
                 },
                 { "room": "Columbia B", "hour": "10", "class": "openspace",
-                  "name": "Urban Fantasy - From Eddie the Fey to October Daye",
+                  "name": "Urban Fantasy: From Eddie the Fey to October Daye",
                   "details": "Come chat about your favorite urban fantasy classics or show up to tell us about the new classics-to-be that you've discovered.  - Shel"
                 },
                 { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
@@ -139,7 +139,7 @@
                 { "room": "Hospitality", "hour": "14", "class": "openspace",
                   "name": "Tea Thing", "details": "A taste of 5 true teas and discussion thereof" },                
                 { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo",
-                  "details": "Demonstrate One-on-One Rapier Techniques"},
+                  "details": "A demonstration of one-on-one rapier techniques."},
                 { "room": "Columbia A", "hour": "15", "hour-end":"16", "name": "Conversation with Seanan McGuire" },
                 { "room": "Columbia B", "hour": "15", "class": "openspace",
                   "name": "Learn you a Language Good",
