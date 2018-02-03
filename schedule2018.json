@@ -135,7 +135,7 @@
                 { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
 
                 { "room": "Columbia A", "hour": "14", "class": "openspace",
-                  "name": "Le Guin", "details": "tbd - Beth" },
+                  "name": "Le Guin", "details": "Let's remember her. What was the first book you read or your favorite book. Tell us your memories or conversations with her. Let's talk about the themes in her work. - Beth" },
                 { "room": "Hospitality", "hour": "14", "class": "openspace",
                   "name": "Tea Thing", "details": "A taste of 5 true teas and discussion thereof" },                
                 { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo",
@@ -171,7 +171,7 @@
                   "details": "tdb" },
 
                 { "room": "Commons", "hour": "22", "class": "openspace",
-                  "name": "Action Castle tbd",
+                  "name": "Foolscap Song <strike>Circle</strike> Polygon",
                   "details": "tdb" },                
 
                 { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo. [Conference Room]" },
