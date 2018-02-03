@@ -143,36 +143,36 @@
                 { "room": "Columbia A", "hour": "15", "hour-end":"16", "name": "Conversation with Seanan McGuire" },
                 { "room": "Columbia B", "hour": "15", "class": "openspace",
                   "name": "Learn you a Language Good",
-                  "details": "tips and shared experiences in learning z second laungage - Kai"
+                  "details": "Tips and shared experiences in learning a second laungage - Kai"
                 },
                 { "room": "Columbia B", "hour": "16", "class": "openspace",
-                  "name": "Problematic Creators tbd ",
-                  "details": "tbd - Beverly"
+                  "name": "Problematic Creators ",
+                  "details": "Creaters such as Lovecraft, Marion Zimmer Bradley, Orson Scott Card. How much can we separate the art we like from the artist's behavior and/or beliefs that we reject? Should we even try? Is a canon full of problematic creators a barrier to entry for more diversity in fandom? - Beverly"
                 },
                 { "room": "Columbia A", "hour": "17", "class": "openspace",
-                  "name": "un-conventional art",
-                  "details": "tbd" },
+                  "name": "Un-conventional art",
+                  "details": "SF/Fantasy art is thriving on the internet and venues other that SF convention art shows. Who are your favorite artists who are working primarily online, at larger comic/media conventions, or other special interest venues? What tresaures have you found while roaming the back aisles of small tables at ComiCon?" },
                 { "room": "Columbia B", "hour": "17", "class": "openspace",
                   "name": "Re-Reading",
-                  "details": "tbd - Beth" },
+                  "details": "There is a school of thought that re-reading is a juvenile habit, something children demand as a way to gain comfort. Yet most fans re-read. All critics do. What is it we gain from re-reading, do some texts bear more re-reading than others? And does this notion of comfort reading have any validity?" },
 
                 { "room": "Columbia A", "hour": "13", "name": "Radio Play Auditions" },
                 { "room": "Hospitality", "hour": "17", "name": "Radio Play Rehersal [Hospitality]" },
                 { "room": "Columbia A", "hour": "20", "name": "Radio Play" },
 
                 { "room": "Columbia B", "hour": "20", "class": "openspace",
-                  "name": "'Bitch Fest' tbd",
-                  "details": "tbd - Eileen" },
+                  "name": "'Bitch Fest' - Books We Disliked",
+                  "details": "We each get 3 minutes to say what you didn't like about a specific book. Be concise so we all get our turn. - Eileen" },
                 { "room": "Columbia A", "hour": "21", "class": "openspace",
-                  "name": "3D Printing tbd",
-                  "details": "tbd - Lauren" },
+                  "name": "3D Printing: Noob Confessions",
+                  "details": "I've been 3D printing for 30 days and I have stories. 3D printing can have a steep learning curve. Come and share your experiences. - Lauren" },
                 { "room": "Columbia B", "hour": "21", "class": "openspace",
                   "name": "Foolscap Song <strike>Circle</strike> Polygon",
                   "details": "tdb" },
 
                 { "room": "Commons", "hour": "22", "class": "openspace",
                   "name": "Foolscap Song <strike>Circle</strike> Polygon",
-                  "details": "tdb" },                
+                  "details": "Let's get together, sit in a circle and share songs. Sing-alongs? Things with rousing choruses? Something you literally just wrote? Obscure folk songs?" },                
 
                 { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo. [Conference Room]" },
                 { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr. [Conference Room]" }
