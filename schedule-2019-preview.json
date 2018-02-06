@@ -1,0 +1,167 @@
+{
+
+    "schedule" : {
+        "columns": [
+            "c_time",
+            "c_columbia_a",
+            "c_columbia_b",
+            "c_other",
+            "c_event"
+        ],
+        "room": {
+            "Columbia A": {
+                "name": "Columbia A",
+                "location": "Columbia A",
+                "column": "c_columbia_a"
+            },
+            "Columbia B": {
+                "name": "Columbia B",
+                "location": "Columbia B",
+                "column": "c_columbia_b"
+            },
+            "Other": {
+                "name": "Commons & More",
+                "location": "Other",
+                "column": "c_other"
+            },
+            "Event": {
+                "name": "",
+                "location": "",
+                "column": "c_event"
+            },
+            "Conference Room": {
+                "name": "Conference Room",
+                "location": "Board Room",
+                "column": "c_other"
+            },
+            "Hospitality": {
+                "name": "Hospitality",
+                "location": "Room 2015",
+                "column": "c_other"
+            },
+            "Commons": {
+                "name": "Commons",
+                "location": "Summit Ballroom",
+                "column": "c_other"
+            }
+
+        },
+        "class-type": "schedule",
+        "day-time-ranges": {
+            "Friday": {
+                "start-time": "15",
+                "stop-time": "21"
+            },
+            "Saturday": {
+                "start-time": "10",
+                "stop-time": "21"
+            },
+            "Sunday": {
+                "start-time": "10",
+                "stop-time": "15"
+            }
+        },
+        "day-events" :
+        {
+            "Friday": [
+                {
+                    "room": "Event",
+                    "name": "Registration Opens [Commons]",
+                    "hour": "15"
+
+                },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "16" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Closes", "hour": "20" },
+                {
+                    "room": "Columbia A",
+                    "name": "Opening Ceremony & Open Space Generation",
+                    "hour": "16",
+                    "details": "Open Space Programming<p>Open Space Programming enables the people at the convention to talk about what truly interests them. It encourages participation and communication - and because of that, it’s ideal for a convention like Foolscap. It was developed in 1984 as a way of changing how organizations hold meetings and it’s been used in groups as small as five and as large as 2,100. Our organizers have had experience with groups from 60 to 300, and really like how it works:<p>1. You come to the convention with ideas.<p>2. You come to Columbia A for that day’s hour-long Program Generation Session on Friday at 4 pm and Saturday at 11 am. There the organizers supply forms and pens so you can write down your idea. It can be a topic for round-table discussion, a conversation you want to have with someone else at the convention that you’d like others to watch, a demonstration of something cool you know about, a game you want to play, a problem you want help solving, or any other idea.<p>3. After everyone’s ideas are written down, we read them out. Sometimes ideas are similar and can be combined, with the consent of the proposers.<p>4. Everyone at the session, proposers and audience, is given a strip of five dot stickers. We lay out all the proposals for topics so they’re visible and folks go around and put dots on the items they most want to see happen. If you really want a topic - give it multiple dots!<p>5. We schedule the topics into our Open Space time slots.<p>6. Enjoy yourself! If you’re not enjoying yourself, move to another item and enjoy yourself there.<p>Tom Whitmore, Open Space Coordinator",
+                    "excerpt": "Come pitch a panel. It can be a topic for round-table discussion, a conversation you want to have with someone else at the convention that you’d like others to watch, a demonstration of something cool you know about, a game you want to play, a problem you want help solving, or any other idea.<p>Everyone at the session, proposers and audience, is given a strip of five dot stickers. We lay out all the proposals for topics so they’re visible and folks go around and put dots on the items they most want to see happen. If you really want a topic - give it multiple dots! We schedule the topics into our Open Space time slots."
+                    
+                },
+                {
+                    "room": "Commons",
+                    "class": "planned bottomless",
+                    "name": "Bring Your Own Music [Commons]",
+                    "details": "BYOM<p>Music, music, music!<p>Friday night we’ll be holding a Foolscap first - the BYOM* dance. Bring CDs or MP3s with songs you want to share, and come hear what everyone else brought. So everyone gets a turn, we prefer songs under 4-5 minutes, but you can bring more than one. Oh, and we’ll provide snacks!<p>*Bring Your Own Music, of course",
+                    "hour": "20",
+                    "hour-end": "23"
+                },
+                {
+                    "room": "Columbia A", "hour": "17", "class": "openspace",
+                    "name": "Read?",
+                    "description": "Tell Beth what to read"
+
+                },
+                {
+                    "class": "openspace",
+                    "room": "Columbia B",
+                    "hour": "17",
+                    "name": "",
+                    "description": ""
+                    
+                },
+                { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
+                {
+                    "class": "openspace",
+                    "room": "Columbia B",
+                    "hour": "20",
+                    "name": "Beyond Disney - less well know fairy and folk tales",
+                    "description": "What are you favorite lesser known fairylaes? Do you have opnions about d'A???? vs Peralt vs Anderson?  Come share your favorite stories that people might not know.  <b>R-rated/potentially triggering content.  - Rebecca"
+                },
+                {
+                    "class": "openspace",
+                    "room": "Columbia A",
+                    "hour": "20",
+                    "name": "Introduce an Adult to SF",
+                    "description": "What are good entry books for people who don't read 'genre' books? - Beth"
+                }
+
+            ],
+            "Saturday": [
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Closes", "hour": "18" },
+                { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "13" },
+                { "class": "break", "name": "Dinner", "hour": "18", "hour-end": "19" },
+                { "room": "Columbia A", "hour": "10", "class": "openspace" },
+                { "room": "Columbia B", "hour": "10", "class": "openspace" },
+                { "room": "Columbia A", "hour": "11", "name": "Open Space Generation" },
+
+                { "room": "Columbia A", "hour": "14", "class": "openspace" },
+                { "room": "Columbia B", "hour": "14", "name": "<i>Black Tigers</i>: Sword Demo" },
+                { "room": "Columbia A", "hour": "15", "hour-end":"16", "name": "Conversation with Seanan McGuire" },
+                { "room": "Columbia B", "hour": "15", "class": "openspace" },
+                { "room": "Columbia B", "hour": "16", "class": "openspace" },
+                { "room": "Columbia A", "hour": "17", "class": "openspace" },
+                { "room": "Columbia B", "hour": "17", "class": "openspace" },
+
+                { "room": "Columbia A", "hour": "13", "name": "Radio Play Auditions" },
+                { "room": "Hospitality", "hour": "17", "name": "Radio Play Rehersal [Hospitality]" },
+                { "room": "Columbia A", "hour": "20", "name": "Radio Play" },
+
+                { "room": "Columbia B", "hour": "20", "class": "openspace" },
+                { "room": "Columbia A", "hour": "21", "class": "openspace" },
+                { "room": "Columbia B", "hour": "21", "class": "openspace" },
+
+                { "room": "Conference Room", "hour": "10", "hour-end":"12", "name": "Writer’s Workshops: “Them’s Fighting Words” (writing fight scenes) with Mark Teppo. [Conference Room]" },
+                { "class": "planned bottomless", "room": "Conference Room", "hour": "19.5", "hour-end":"21.5", "name": "Writer’s Workshops: “Writing Sex Scenes with a Purpose” with Sienna Saint Cyr. [Conference Room]" }
+            ],
+            "Sunday": [
+                { "class": "break", "name": "Lunch", "hour": "12", "hour-end": "12.5"},
+                { "room": "Commons", "name": "Bite of Foolscap [Commons]", "hour": "12", "hour-end": 12.5,
+                  "details": "We are continuing our tradition of a brunch-style banquet for our Sunday mornings: the Bite of Foolscap! Come join us for conversation and good food. Here’s the complete menu: Fresh Chilled Orange & Cranberry Juice; Scrambled Egg Station with Toppings: Bacon Bits, Sour Cream, Green Onions, Shredded Cheddar Cheese, Salsa; Sliced Seasonal Fresh Fruit; Applewood Bacon; A Variety of Pastries, “Crescents”, Doughnuts, and Apple Fritters; Cinnamon French Toast; an Oatmeal Station, Served with Dried Cranberries, Golden Raisins, Brown Sugar & Milk; Taraza Bold Blend Coffee and Tazo Tea" },
+                { "room": "Commons", "name": "Foolscap Auction [Commons]", "hour": "13.5" },
+                { "room": "Event", "name": "Art Show, <wbr>Dealer's Room Opens", "hour": "10" },
+                { "room": "Event", "name": "Art Show Closes", "hour": "12" },
+                { "room": "Event", "name": "Dealer's Room Closes", "hour": "15" },
+                { "room": "Columbia A", "hour": "10", "class": "openspace" },
+                { "room": "Columbia B", "hour": "10", "class": "openspace" },
+                { "room": "Columbia A", "hour": "11", "class": "openspace" },
+                { "room": "Columbia B", "hour": "11", "class": "openspace" },
+                { "room": "Columbia A", "hour": "15", "name": "Deconstructing Foolscap" }
+            ]
+        }
+
+    }
+}
