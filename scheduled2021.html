@@ -1,0 +1,457 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Foolscap 2021 Schedule</title>
+
+    <p>Times are in PST.</p>
+    <hr/>
+    
+  <style>
+      
+     .scrollwrapper {
+      }
+
+@media screen and (max-width: 800px) {
+     .scrollwrapper {
+        overflow-x: scroll;
+      }
+}
+    .schedule {
+      display: grid;
+      grid-template-columns:
+        [time-start] auto [time-end primary-start] 1fr [primary-end secondary-start] 1fr [secondary-end];
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
+      grid-row-gap: 0.4rem;
+      grid-column-gap: 0.3rem;
+      width: 80vw;
+    }
+
+@media screen and (max-width: 800px) {
+    .schedule {
+      width: 90vw;
+      grid-template-columns:
+        [time-start] 4em [time-end primary-start] 18em [primary-end secondary-start] 18em [secondary-end];
+    }
+}
+
+    .schedule .summary {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 80%;
+    }
+
+    .schedule div {
+      padding: 2px;
+      border-radius: 4px;
+    }
+
+    .schedule .event .title {
+      font-weight: bold;
+    }
+    .schedule .event .room::before {
+      content: " – "
+    }
+    ul.participants {
+      list-style: none;
+      padding: 0px;
+    }
+    ul.participants li {
+      display: inline;
+    }
+    ul.participants li::after {
+      content: ", ";
+    }
+    ul.participants li:last-child::after {
+      content: "";
+    }
+
+    .header {
+      grid-row: 1;
+      font-weight: bold;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 1rem;
+      text-align: center;
+    }
+
+    .time {
+      grid-column: time;
+      font-weight: bold;
+      font-size: 70%;
+    }
+
+    .schedule .break {
+      background-color: lightsteelblue;
+    }
+
+    .schedule .event {
+      background-color: mintcream;
+    }
+
+    .schedule .tbd {
+      background-color: bisque;
+    }
+
+    .schedule .closed {
+      background-color: lightpink;
+    }
+
+    .panel {
+      grid-column: primary;
+    }
+
+    .commons {
+      grid-column: secondary;
+    }
+
+    .art {
+      grid-column: secondary;
+    }
+
+    .hospitality {
+      grid-column: secondary;
+    }
+
+
+    .friday .t18h00 {
+      grid-row-start: 2;
+    }
+
+    .friday .t19h00 {
+      grid-row-start: 3;
+    }
+
+    .friday .t20h00 {
+      grid-row-start: 4;
+    }
+
+    .friday .t21h00 {
+      grid-row-start: 5;
+    }
+
+    .friday .t22h00 {
+      grid-row-start: 6;
+    }
+
+
+
+    .sat .t10h00 {
+      grid-row-start: 2;
+    }
+
+    .sat .t11h00 {
+      grid-row-start: 3;
+    }
+
+    .sat .t12h00 {
+      grid-row-start: 4;
+    }
+
+    .sat .t13h00 {
+      grid-row-start: 5;
+    }
+
+    .sat .t14h00 {
+      grid-row-start: 6;
+    }
+
+    .sat .t15h00 {
+      grid-row-start: 7;
+    }
+
+    .sat .t16h00 {
+      grid-row-start: 8;
+    }
+
+    .sat .t17h00 {
+      grid-row-start: 9;
+    }
+
+    .sat .t18h00 {
+      grid-row-start: 10;
+    }
+
+    .sat .t19h00 {
+      grid-row-start: 11;
+    }
+
+    .sat .t20h00 {
+      grid-row-start: 12;
+    }
+
+    .sat .t21h00 {
+      grid-row-start: 13;
+    }
+
+    .sat .t22h00 {
+      grid-row-start: 14;
+    }
+
+
+    .eventdescs .event {
+      font-family: 'heuristica';
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid black;
+    }
+
+    .eventdescs .event h3,
+    .eventdescs .event .info {
+      margin: 0;
+      padding: 0.2rem;
+    }
+
+    .eventdescs .event h3 {
+      padding-bottom: 0.25rem;
+    }
+
+    .eventdescs .event .info {
+      font-size: 80%;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+    <div class="scrollwrapper">
+
+        <h2>Friday, Feb. 12</h2>
+        <div class="schedule friday">
+        <div class="header panel">Panels</div>
+        <div class="header commons">Other Items</div>
+
+        <div class="time t18h00"> 6:00 PM</div>
+        <div class="time t19h00"> 7:00 PM</div>
+        <div class="time t20h00"> 8:00 PM</div>
+        <div class="time t21h00"> 9:00 PM</div>
+        <div class="time t22h00">10:00 PM</div>
+
+        <div class="event commons t18h00">
+          <span class="title">Open con: hang out to greet & meet</span>
+          <span class="room">The Commons</span>
+        </div>
+        <div class="event panel t19h00">
+          <span class="title">Opening Ceremony & Icebreaker: PowerPoint Karaoke</span>
+          <ul class="participants">
+            <li>Jeff Alexander</li>
+            <li>David Levine</li>
+          </ul>
+           <div class="summary">
+               You have ten never-before-seen slides on a random topic and five minutes to create an informative and/or humorous presentation speech to go with them in this improv comedy drill. David Levine will go first to show how it's done, then he'll host as we accept volunteers from the crowd. If you've ever wanted to give your own TED Talk, this is for you.
+            </div>
+        </div>
+        <div class="event panel t20h00">
+          <span class="title">What Have You Enjoyed This Year?</span>
+          <ul class="participants">
+            <li>Beth Mitcham</li>
+          </ul>
+        </div>
+        <div class="event panel t21h00">
+          <span class="title">“Bring Your Own Book” Game: bring a book - any book - electronic
+            or paper</span>
+        </div>
+        <div class="event panel t22h00">
+          <span class="title">You Can Dance If You Want To: a Foolscap music social</span>
+          <ul class="participants">
+            <li>Jason Wodicka</li>
+          </ul>
+          <div class="summary">
+            Been to any good concerts lately? Neither have we - but that doesn’t mean it’s been a bad
+            year for music! We’re putting together a playlist of new music discoveries we’ve made in
+            2020, and inviting you to share the music you’ve found during our year in quarantine, along
+            with some of the songs that helped you make it through. This will be a mics-off, text-based
+            conversation, to let us focus on the music. If you’ve got music to share, bringing a
+            Bandcamp or Youtube link will help!
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+        <h2>Saturday, Feb. 13</h2>
+        <div class="schedule sat">
+        <div class="header panel">Panels</div>
+        <div class="header commons">Other Items</div>
+
+        <div class="time t10h00">10:00 AM</div>
+        <div class="time t11h00">11:00 AM</div>
+        <div class="time t12h00">12:00 PM</div>
+        <div class="time t13h00"> 1:00 PM</div>
+        <div class="time t14h00"> 2:00 PM</div>
+        <div class="time t15h00"> 3:00 PM</div>
+        <div class="time t16h00"> 4:00 PM</div>
+        <div class="time t17h00"> 5:00 PM</div>
+        <div class="time t18h00"> 6:00 PM</div>
+        <div class="time t19h00"> 7:00 PM</div>
+        <div class="time t20h00"> 8:00 PM</div>
+        <div class="time t21h00"> 9:00 PM</div>
+        <div class="time t22h00">10:00 PM</div>
+
+        <div class="event hospitality t10h00">
+          <span class="title">Cooking Demo: Dutch Babies</span>
+          <span class="room">Hospitality</span>
+          <ul class="participants">
+            <li>Jeff Alexander</li>
+            <li>Steve Stadnicki</li>
+          </ul>
+          <div class="summary">
+            You may not be able to have Hospitality’s Dutch babies this year, but we’ll gladly show you
+            how to make your own! Make sure you have eggs, milk, flour, sugar, butter, and either a
+            cast-iron skillet or 9x9ish glass or ceramic baking dish. We’ll give you the recipe, some
+            techniques, and a few general kitchen tips along the way!
+          </div>
+        </div>
+        <div class="event panel t11h00">
+          <span class="title">Greg Bear: <em>The Unfinished Land</em></span>
+          <ul class="participants">
+            <li>Greg Bear</li>
+          </ul>
+        </div>
+        <div class="event commons break t12h00">
+          <span class="title">Lunch Break: Mealtime Meet Ups!</span>
+          <span class="room">The Commons</span>
+        </div>
+        <div class="event panel t12h00">
+          <span class="title">Group Game: Tribes</span>
+          <ul class="participants">
+            <li>Kevin Mitcham</li>
+          </ul>
+          <div class="summary">
+              <B>This event is on Discord.</b> A mostly-cooperative group storytelling-and-society-building game by Steve Jackson and David Brin. Players are men and women who hunt, gather, and build a society while keeping the kids alive.
+          </div>
+        </div>
+        <div class="event panel t13h00">
+          <span class="title">A Puppet Shows You How to Look Your Best on Zoom</span>
+          <ul class="participants">
+            <li>Mary Robinette Kowal</li>
+          </ul>
+          <div class="summary">
+            Look your best on a Zoom call or panel — not with fancy backgrounds but with body language
+            that will help you communicate clearly and appropriately – and entertainingly - to everyone
+            who is watching. Novelist, puppeteer, and writing instructor Mary Robinette Kowal will
+            demonstrate and take questions.
+          </div>
+        </div>
+        <div class="event hospitality t13h00">
+          <span class="title">Virtual Tea</span>
+          <span class="room">Hospitality</span>
+          <ul class="participants">
+            <li>Wing L. Mui</li>
+            <li>Stefanie Stadnicki</li>
+          </ul>
+          <div class="summary">
+            Stefanie and Wing answer your questions about brewing and serving tea, talk a bit about its
+            long history, and show off some of their more unusual blends and brewing tools.
+          </div>
+        </div>
+        <div class="event panel t14h00">
+          <span class="title">Aging in Fandom: You're <em>how</em> old?</span>
+          <ul class="participants">
+            <li>Astrid Bear</li>
+            <li>Sairah McMinn</li>
+            <li>Mel White</li>
+            <li>Tom Whitmore</li>
+          </ul>
+          <div class="summary">
+              A lively exploration of the history of fandom with all its foibles and quirks. And panelists Astrid Bear, Sairah McMinn, Mel White, and Tom Whitmore are just the group to lead this expedition!               
+          </div>              
+        </div>
+        <div class="event panel t15h00">
+          <span class="title">A Communications Guru Talks About Creativity (Digital and Otherwise)</span>
+          <ul class="participants">
+            <li>Howard Rheingold</li>
+          </ul>
+          <div class="summary">
+            Howard Rheingold, one of the pioneers of virtual community, shows off his virtual office,
+            and talks about his artwork, digital and otherwise. Come talk with a Burning Man regular, a
+            teacher about cooperation studies, and a wonderful raconteur!
+          </div>
+        </div>
+        <div class="event art t15h00">
+          <span class="title">Fiber Artists</span>
+          <span class="room">Art Show</span>
+          <ul class="participants">
+            <li>Astrid Bear</li>
+            <li>Syne Mitchell</li>
+            <li>Kier Salmon</li>
+          </ul>
+          <div class="summary">
+              A maker's panel on Fiber Art, featuring Astrid Bear, Kier Salmon, and Syne Mitchell. They will talk about their work ranging from dyeing, weaving, crocheting, costuming, pretty much anything! Join in the fun, ask questions, and see some cool things.              
+          </div>
+        </div>
+        <div class="event panel t16h00">
+          <span class="title">Game Design of Sidereal Confluence</span>
+          <ul class="participants">
+            <li>TauCeti Deichmann</li>
+          </ul>
+          <div class="summary">
+              Sidereal Confluence is an unusual game. Set in an original science fictional world, it challenges players to shape a multi-species alliance to reflect their species’ priorities. It’s a trading game with simultaneous turns, open information, binding deals and nine distinct, asymmetric factions. It isn’t a cooperative game, but the most effective strategies involve working together, making it remarkably friendly. Designer TauCeti Deichmann will show the game and chat about the process of engineering the game’s systems, and how the game design and the setting’s fiction shaped and improved each other.
+          </div>            
+        </div>
+        <div class="event art t16h00">
+          <span class="title">“Artists At Work” Live Art Show</span>
+          <span class="room">Art Show</span>
+          <ul class="participants">
+            <li>Wing L. Mui</li>
+            <li>Jeff Olhoeft</li>
+            <li>Steve Stadnicki</li>
+          </ul>
+        </div>
+        <div class="event commons break t17h00">
+          <span class="title">Dinner Break: Mealtime Meet Ups!</span>
+          <span class="room">The Commons</span>
+        </div>
+        <div class="event panel t18h00">
+          <span class="title">Costuming</span>
+          <ul class="participants">
+            <li>Betty Bigelow</li>
+          </ul>
+          <div class="summary">
+              Betty Bigelow, master SF costumer, talks about costuming, how to do it and why. Come learn some basics from someone who really knows how to build a functional costume! Betty is known for her Klingon costumes, and has won awards at multiple SF conventions, including Worldcons. She's also the artistic director of the Shahrazad Dance Ensemble of Seattle.
+          </div>
+        </div>
+        <div class="event panel t19h00">
+          <span class="title">Creating and Publishing Serials</span>
+          <ul class="participants">
+            <li>Curtis Chen</li>
+            <li>Mark Ferrari</li>
+          </ul>
+          <div class="summary">
+            Serialized fiction is enjoying a revival online in podcasts and websites. Mark Ferrari
+            (Twice: The Serial) and Curtis Chen (Ninth Step Station) are at forefront of this trend.
+            They’ll talk about the challenges of writing and publishing serials and take some questions.
+          </div>
+        </div>
+        <div class="event panel t20h00">
+          <span class="title">The Pros and Cons of Patreons for Artists and Writers</span>
+          <ul class="participants">
+            <li>Chaz Brenchley</li>
+            <li>Laura Anna Gilman</li>
+          </ul>
+        </div>
+        <div class="event panel t21h00">
+          <span class="title">Name That Meme Game</span>
+          <ul class="participants">
+            <li>Karen Anderson</li>
+          </ul>
+        </div>
+        <div class="event panel t22h00">
+          <span class="title">The Wild World of Calligraphy Inks</span>
+          <ul class="participants">
+            <li>Elizabeth Adams</li>
+          </ul>
+          <div class="summary">
+              The things in the art supply store labeled "calligraphy ink" are...somewhat limited, and in this panel we will explore some other options. Starting with the basics of watercolor &amp; acrylics (including mixing colors and using mica powders), we'll move on to using "special effects" media (glow, etc.) and to applying the unique properties of fountain pen inks to non-fountain-pen uses.<br/>
+              Elizabeth Adams (she/her) is an artist, jeweler, and occasional "amateur chemist" who enjoys finding off-label uses for things and just might have missed a calling in Materials Engineering.
+          </div>
+        </div>
+      </div>
+        
+    </div>
+</body>
+
+</html>	
